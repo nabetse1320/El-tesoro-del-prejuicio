@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - interruptor
+  - PasarNivel
+  - Totem
+  - Bala
+  - ObInteract
+  - Terreno
+  - Detener
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Terreno
+  - Player1
+  - Player2
+  - Gancho
+  - Fondo
+  - Enemigo
+  - Totem
+  - EnemigoCollider
+  - Objetos
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 1373707261
+    locked: 0
+  - name: Barcos
+    uniqueID: 355376999
+    locked: 0
+  - name: Terreno
+    uniqueID: 2481871089
+    locked: 0
+  - name: Enemigos
+    uniqueID: 3111453581
+    locked: 0
+  - name: Player
+    uniqueID: 2172854779
+    locked: 0
+  - name: otros
+    uniqueID: 3098651107
+    locked: 0

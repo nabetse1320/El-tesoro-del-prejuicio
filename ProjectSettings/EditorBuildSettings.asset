@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LoadScene.unity
+    guid: a1c8378c8e537f74e9598cefd9991302
+  - enabled: 1
+    path: "Assets/Scenes/Men\xFA.unity"
+    guid: 369b29c9155473a4184327c6522312bd
+  - enabled: 1
+    path: Assets/Scenes/Animacion1.unity
+    guid: b13a07837b7098140ae369a0cc171996
+  - enabled: 1
+    path: Assets/Scenes/Mar.unity
+    guid: 61fcc33b1f16f0840b81a695e5028cc5
+  - enabled: 1
+    path: Assets/Scenes/BarcoInterior.unity
+    guid: 909ec0a20fa672e43b33a250b7c41bb9
+  - enabled: 1
+    path: Assets/Scenes/Mar2.unity
+    guid: adc179c7e3401774c9d6e29f3f32781d
+  - enabled: 0
+    path: Assets/Scenes/PruebaScene.unity
+    guid: 261c37c32abec8c46ae5356abdd87f72
+  - enabled: 0
+    path: Assets/Scenes/Playa.unity
+    guid: 89bc0ee143754084fbf6ba46b7977976
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
