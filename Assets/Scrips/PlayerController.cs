@@ -31,8 +31,11 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip clipAtaque;
     [SerializeField] private AudioClip clipResivirDano;
-    //[SerializeField] private int dañoGolpe;
+    //[SerializeField] private int daï¿½oGolpe;
     //[SerializeField] private PlayerInput;
+
+    [SerializeField] private Interactor interactor;
+    
     private bool isIdle = true;
     public bool IsIdle
     {
@@ -106,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
         bool isAlmostIdle = isGrounded && rb.velocity.magnitude < 0.1f;
 
-        // Actualizar isIdle a true si el personaje está en reposo, de lo contrario, actualizar a false
+        // Actualizar isIdle a true si el personaje estï¿½ en reposo, de lo contrario, actualizar a false
         isIdle = isAlmostIdle;
 
         if (!IsIdle)
@@ -194,7 +197,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Si el player está en pausa (modo ocio), no está realizando ninguna acción activa.
+                // Si el player estï¿½ en pausa (modo ocio), no estï¿½ realizando ninguna acciï¿½n activa.
                 // Entonces, actualiza isIdle a true.
                 isIdle = true;
             }
@@ -235,7 +238,7 @@ public class PlayerController : MonoBehaviour
     //    foreach (Collider2D colicionador in objetos) {
     //        if (colicionador.CompareTag("Enemy"))
     //        {
-    //            colicionador.transform.GetComponent<Enemigo>().ResivirDaño(dañoGolpe);
+    //            colicionador.transform.GetComponent<Enemigo>().ResivirDaï¿½o(daï¿½oGolpe);
     //        }
     //    }
     //}
@@ -272,6 +275,14 @@ public class PlayerController : MonoBehaviour
     {
         muerto = false;
         DesausarPlayer();
+    }
+
+    public void OnInteractStarted(InputAction.CallbackContext value)
+    {
+        if (value.performed)
+        {
+            interactor.Interact();
+        }
     }
 
     //private IEnumerator EsperarAnimacionMuerte()
