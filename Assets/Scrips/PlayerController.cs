@@ -284,6 +284,14 @@ public class PlayerController : MonoBehaviour
             interactor.Interact();
         }
     }
+    public void OnInteractCanceled(InputAction.CallbackContext value)
+    {
+        if (value.canceled)
+        {
+            interactor.EndInteract();
+            //interactor.Interact();
+        }
+    }
 
     //private IEnumerator EsperarAnimacionMuerte()
     //{

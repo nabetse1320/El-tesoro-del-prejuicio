@@ -8,4 +8,8 @@ public class TestInteract : MonoBehaviour, IInteractable
     {
         Debug.Log("Interactuamos con un objeto");
     }
+    public void EndInteract()
+    {
+
+    }
 }

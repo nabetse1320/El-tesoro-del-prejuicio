@@ -7,6 +7,7 @@ using UnityEngine;
 interface IInteractable
 {
     public void Interact();
+    public void EndInteract();
 }
 
 public class Interactor : MonoBehaviour
@@ -21,24 +22,34 @@ public class Interactor : MonoBehaviour
         if (other.gameObject.TryGetComponent(out IInteractable interactObj))
         {
             Interactable = other.gameObject;
-            Debug.Log("Interactuable");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         Interactable = null;
-        Debug.Log("Exit");
+
+    }
+    public void EndInteract()
+    {
+        if (Interactable != null)
+        {
+            if (Interactable.TryGetComponent(out IInteractable interactObj))
+            {
+                interactObj.EndInteract();
+            }
+        }
     }
 
     public void Interact()
     {
-        
-        
-        if (Interactable.TryGetComponent(out IInteractable interactObj)) {
+        if (Interactable!=null)
+        {
+            if (Interactable.TryGetComponent(out IInteractable interactObj))
+            {
                 interactObj.Interact();
-                Debug.Log("Interactor");
-        }
+            }
+        } 
         
     }
 }
