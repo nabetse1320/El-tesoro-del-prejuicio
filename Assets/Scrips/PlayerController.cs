@@ -277,9 +277,9 @@ public class PlayerController : MonoBehaviour
         DesausarPlayer();
     }
 
-    public void OnInteractStarted(InputAction.CallbackContext value)
+    public void OnInteractPerformed(InputAction.CallbackContext value)
     {
-        if (value.performed)
+        if (value.started)
         {
             interactor.Interact();
         }

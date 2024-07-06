@@ -11,26 +11,37 @@ public class Rope : MonoBehaviour, IInteractable
     private Vector3 velocity = Vector3.zero;
     private Vector3 MovementEnd;
     [SerializeField] private float Speed;
+    private bool rappeling;
 
     private void Start()
     {
+        rappeling = false;
         MovementEnd = EndPoint.position;
+    }
+    private void Update()
+    {
+        if (rappeling)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+            Transform PlayerTransform = Player.transform;
+            MovementStart = PlayerTransform.position;
+
+            Debug.Log("Interactuamos con una tiroleza");
+
+
+            Player.GetComponent<Rigidbody2D>().gravityScale = 0;
+            Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            Player.transform.position = Vector3.Lerp(MovementStart, MovementEnd, Speed * Time.deltaTime);
+        }
     }
 
     public void Interact()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        Transform PlayerTransform = Player.transform;
-        MovementStart = PlayerTransform.position;
         
-        Debug.Log("Interactuamos con una tiroleza");
-
-
-        Player.GetComponent<Rigidbody2D>().gravityScale = 0;
         
-        PlayerTransform.position = Vector3.SmoothDamp(MovementStart, MovementEnd,ref velocity, Speed);
+        rappeling = true;
         
-        Player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        //Player.GetComponent<Rigidbody2D>().gravityScale = 1;
 
     }
 }
