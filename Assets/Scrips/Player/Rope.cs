@@ -12,8 +12,7 @@ public class Rope : MonoBehaviour, IInteractable
     [SerializeField] private float threshold;
     private Vector3 velocity = Vector3.zero;
     private Vector3 MovementEnd;
-    [SerializeField] private float Speed;
-    [SerializeField] private bool rappeling;
+    private bool rappeling;
     private float currentTime;
     [SerializeField] private float totalDuration;
     [SerializeField] private AnimationCurve myEasingCurve;
@@ -28,13 +27,13 @@ public class Rope : MonoBehaviour, IInteractable
     }
     private void FixedUpdate()
     {
-        if (rappeling)
+        Player = GameObject.FindGameObjectWithTag("Player");
+        if (rappeling&&Player.layer== 7)
         {
-            Player = GameObject.FindGameObjectWithTag("Player");
             Transform PlayerTransform = Player.transform;
             MovementStart = PlayerTransform.position;
-
-
+            Eventos.eve.CancelSwitches.Invoke();
+            Eventos.eve.PausarPlayer.Invoke();
             Player.GetComponent<Rigidbody2D>().gravityScale = 0;
             Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
@@ -65,6 +64,8 @@ public class Rope : MonoBehaviour, IInteractable
     }
     public void EndInteract()
     {
+        Eventos.eve.ActivateSwitches.Invoke();
+        Eventos.eve.DespausarPlayer.Invoke();
         currentTime=0;
         t = 0;
         easingValue = 0;

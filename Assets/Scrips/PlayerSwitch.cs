@@ -30,6 +30,7 @@ public class PlayerSwitch : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip clipCambioPersonajeHombre;
     [SerializeField] private AudioClip clipCambioPersonajeMujer;
+    private bool NotSwitch;
 
     private void Awake()
     {
@@ -71,18 +72,30 @@ public class PlayerSwitch : MonoBehaviour
 
     private void OnEnable()
     {
+        Eventos.eve.ActivateSwitches.AddListener(ActivateSwitch);
+        Eventos.eve.CancelSwitches.AddListener(CancelSwitch);
         //inputs.Player.Switch.started += OnSwitchStarted;
     }
     private void OnDisable()
     {
+        Eventos.eve.ActivateSwitches.RemoveListener(ActivateSwitch);
+        Eventos.eve.CancelSwitches.RemoveListener(CancelSwitch);
         //inputs.Player.Switch.started -= OnSwitchStarted;
+    }
+    private void CancelSwitch() 
+    {
+        NotSwitch = true;
+    }
+    private void ActivateSwitch()
+    {
+        NotSwitch = false;
     }
 
     public void OnSwitchStarted(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            if (((player1.isGrounded) || (player2.isGrounded)))
+            if (((player1.isGrounded) || (player2.isGrounded))&&!NotSwitch)
             {
                 SwitchPlayer();
             }

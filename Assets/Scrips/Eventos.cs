@@ -34,6 +34,7 @@ public class Eventos : MonoBehaviour
     public UnityEvent<int> DesactivarCuerda;
     public UnityEvent<float> cambiarBarraCoolDown;
     public UnityEvent IniciarDialogo2;
+    // Players
     public UnityEvent PausarPlayer;
     public UnityEvent pausarP;
     public UnityEvent PausarPlayer2;
@@ -43,9 +44,14 @@ public class Eventos : MonoBehaviour
     public UnityEvent perderVida;
     public UnityEvent MuertePlayer;
     public UnityEvent RevivirPlayer;
+    //Lvl
     public UnityEvent<int> PasarNivel;
+    //Enemys
     public UnityEvent disparoEnemigo;
 
+    //switch
+    public UnityEvent CancelSwitches;
+    public UnityEvent ActivateSwitches;
 
 
 
