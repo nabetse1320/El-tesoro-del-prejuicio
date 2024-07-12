@@ -682,6 +682,8 @@ GameObject:
   - component: {fileID: 4241398322094884243}
   - component: {fileID: 1237270029649613759}
   - component: {fileID: 4635516507765516805}
+  - component: {fileID: 6649403803698931821}
+  - component: {fileID: 7456172275189766612}
   - component: {fileID: 6249292411930242624}
   m_Layer: 7
   m_Name: Player
@@ -828,7 +830,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.06759882, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 7.2252626
+  m_Distance: 11.298891
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!70 &4831392529128520592
@@ -898,6 +900,7 @@ MonoBehaviour:
   speed: 5
   clipAtaque: {fileID: 0}
   clipResivirDano: {fileID: 8300000, guid: 7cddb6305cb5e14468d061831fd48ecc, type: 3}
+  interactor: {fileID: 6649403803698931821}
 --- !u!114 &7355203521621416210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1060,56 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6649403803698931821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823397797735916969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2524664a2413f4b83ac1e883b5f0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interactable: {fileID: 0}
+  InteractRange: {fileID: 7456172275189766612}
+--- !u!58 &7456172275189766612
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823397797735916969}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 2.48}
+  m_Radius: 1.8043263
 --- !u!114 &6249292411930242624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,6 +1319,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bd1edbad-3630-47f7-b78a-089396d791ab
     m_ActionName: 'Player/PasarDialogos[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a293f4f-e02c-4311-9790-e37c77efcd4e
+    m_ActionName: 'Player/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
