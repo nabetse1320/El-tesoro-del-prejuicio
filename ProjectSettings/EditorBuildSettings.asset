@@ -15,13 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Animacion1.unity
     guid: b13a07837b7098140ae369a0cc171996
   - enabled: 1
-    path: Assets/Scenes/Mar.unity
+    path: Assets/Scenes/Nivel 1 - 1.unity
     guid: 61fcc33b1f16f0840b81a695e5028cc5
   - enabled: 1
-    path: Assets/Scenes/BarcoInterior.unity
+    path: Assets/Scenes/Nivel 1 - 2.unity
     guid: 909ec0a20fa672e43b33a250b7c41bb9
   - enabled: 1
-    path: Assets/Scenes/Mar2.unity
+    path: Assets/Scenes/Nivel 1 - 3.unity
     guid: adc179c7e3401774c9d6e29f3f32781d
   - enabled: 0
     path: Assets/Scenes/PruebaScene.unity

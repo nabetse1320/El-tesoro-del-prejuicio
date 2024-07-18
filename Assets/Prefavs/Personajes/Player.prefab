@@ -316,7 +316,7 @@ MonoBehaviour:
   player: {fileID: 8222467240792456500}
   grappleRope: {fileID: 6591820156198507365}
   grappleToAll: 0
-  grappableLayerNumber: 6
+  grappableLayerNumber: 15
   m_camera: {fileID: 0}
   gunHolder: {fileID: 7549102027404842520}
   gunPivot: {fileID: 3535020937334002509}
@@ -830,7 +830,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.06759882, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 11.298891
+  m_Distance: 5.41492
   m_DampingRatio: 1
   m_Frequency: 1
 --- !u!70 &4831392529128520592
@@ -1104,7 +1104,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1320,7 +1320,31 @@ MonoBehaviour:
     m_ActionId: bd1edbad-3630-47f7-b78a-089396d791ab
     m_ActionName: 'Player/PasarDialogos[/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8222467240792456500}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInteractPerformed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8222467240792456500}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInteractCanceled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6a293f4f-e02c-4311-9790-e37c77efcd4e
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0

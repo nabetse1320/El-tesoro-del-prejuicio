@@ -23,10 +23,11 @@ public class Rope : MonoBehaviour, IInteractable
     {
         
         rappeling = false;
-        MovementEnd = EndPoint.position;
+        
     }
     private void FixedUpdate()
     {
+        MovementEnd = EndPoint.position;
         Player = GameObject.FindGameObjectWithTag("Player");
         if (rappeling&&Player.layer== 7)
         {
@@ -43,7 +44,7 @@ public class Rope : MonoBehaviour, IInteractable
             Player.transform.position = newPosition;
 
             currentTime += Time.deltaTime;
-            //Player.transform.position = Vector3.Lerp(MovementStart, MovementEnd, Speed * Time.deltaTime);
+
 
             if (Math.Abs(Player.transform.position.x - MovementEnd.x) <= threshold)
             {
@@ -55,12 +56,7 @@ public class Rope : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-
-        
         rappeling = true;
-        
-        //Player.GetComponent<Rigidbody2D>().gravityScale = 1;
-
     }
     public void EndInteract()
     {

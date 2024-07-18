@@ -288,6 +288,7 @@ public class PlayerController : MonoBehaviour
     {
         if (value.canceled)
         {
+            
             interactor.EndInteract();
             //interactor.Interact();
         }
