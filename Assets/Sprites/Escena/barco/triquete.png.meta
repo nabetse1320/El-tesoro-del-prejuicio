@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      triquete_0: 5968757705293940161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
