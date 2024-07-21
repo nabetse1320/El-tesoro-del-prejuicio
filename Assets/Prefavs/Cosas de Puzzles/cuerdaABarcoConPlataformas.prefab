@@ -835,6 +835,7 @@ MonoBehaviour:
   child: {fileID: 1947130881954946398}
   multiInterruptor: 0
   numeroInterruptores: 2
+  audioSource: {fileID: 0}
 --- !u!1 &8315651917271228483
 GameObject:
   m_ObjectHideFlags: 0

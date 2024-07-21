@@ -12,6 +12,7 @@ public class cambiarNivel : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private GameObject hijo;
 
+    private Collider2D col;
     public int SceneSig;
     private float transitionTime;
     private bool bajarVol =false;
@@ -19,8 +20,13 @@ public class cambiarNivel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GetComponent<Collider2D>()!=null)
+        {
+            col= GetComponent<Collider2D>();
+        }
         transitionAnimator = hijo.GetComponent<Animator>();
         transitionTime = clipTransition.length;
+        hijo.SetActive(true);
         subirVol = true;
         Invoke("ActivarCanva", transitionTime);
 
@@ -84,6 +90,14 @@ public class cambiarNivel : MonoBehaviour
             Eventos.eve.PausarPlayer.Invoke();
             Eventos.eve.PausarPlayer2.Invoke();
             LoadNextScene(SceneSig);
+        }
+    }
+
+    public void ActivarCollider()
+    {
+        if (col!=null) 
+        { 
+            col.enabled = true;
         }
     }
 

@@ -15,11 +15,25 @@ public class ProducirSonido : MonoBehaviour
 
     public void Sonar()
     {
-        if (!audioSource.isPlaying)
+        if (!secuenceManager.PuzzleIsFinish)
         {
+            //if (!audioSource.isPlaying)
+            //{
+            //    audioSource.Play();
+            //}
+
             audioSource.Play();
-        }
-        int soundIndex = secuenceManager.sounds.IndexOf(audioSource);
-        secuenceManager.CheckSound(soundIndex);
+            int soundIndex = secuenceManager.sounds.IndexOf(audioSource);
+            if (soundIndex != secuenceManager.sequence[secuenceManager.currentSound])
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            secuenceManager.CheckSound(soundIndex);
+            Invoke("ChangeColorWhite",0.5f);
+        } 
+    }
+    private void ChangeColorWhite()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

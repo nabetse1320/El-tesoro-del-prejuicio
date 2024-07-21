@@ -1,17 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SoundGame : MonoBehaviour
 {
     [SerializeField] private int sequenceNumber;
     public List<AudioSource> sounds; // Lista de sonidos
+    [Header("Evento a realizar")]
+    [SerializeField] UnityEvent unityEvent;
     [HideInInspector] public List<int> sequence; // Secuencia de sonidos
     [HideInInspector] public int currentSound = 0; // Índice del sonido actual en la secuencia
     private bool isPlaying = false;
+    private bool puzzleIsFinish;
+
+    #region
+    public bool PuzzleIsFinish { get{ return puzzleIsFinish; } } 
+    #endregion
 
     private void Start()
     {
+        puzzleIsFinish = false;
         GenerateSequence(sequenceNumber);
     }
 
@@ -50,22 +59,26 @@ public class SoundGame : MonoBehaviour
     // Reproduce la secuencia para el jugador
     public IEnumerator PlaySequence()
     {
-        if (isPlaying)
+        if (!puzzleIsFinish)
         {
-            yield break; // Si la secuencia ya está siendo reproducida, termina la corrutina
-        }
+            if (isPlaying)
+            {
+                yield break; // Si la secuencia ya está siendo reproducida, termina la corrutina
+            }
 
-        isPlaying = true; // Indica que la secuencia está siendo reproducida
-        this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            isPlaying = true; // Indica que la secuencia está siendo reproducida
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
 
-        foreach (int soundIndex in sequence)
-        {
-            sounds[soundIndex].Play();
-            yield return new WaitForSeconds(sounds[soundIndex].clip.length);
+            foreach (int soundIndex in sequence)
+            {
+                sounds[soundIndex].Play();
+                yield return new WaitForSeconds(sounds[soundIndex].clip.length);
+            }
+            yield return new WaitForSeconds(1);
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            isPlaying = false; // Indica que la secuencia ha terminado de reproducirse
         }
-        yield return new WaitForSeconds(1);
-        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        isPlaying = false; // Indica que la secuencia ha terminado de reproducirse
+        
     }
 
     // Comprueba si el sonido seleccionado por el jugador es correcto
@@ -76,15 +89,16 @@ public class SoundGame : MonoBehaviour
             currentSound++;
             if (currentSound >= sequence.Count)
             {
-                Debug.Log("Bien hecho");
                 // El jugador ha completado la secuencia correctamente
+                unityEvent.Invoke();
                 currentSound = 0;
+                puzzleIsFinish = true;
             }
         }
         else
         {
             // El jugador ha seleccionado el sonido incorrecto
-            Debug.Log("Fallaste");
+            
             currentSound =0;
         }
     }
