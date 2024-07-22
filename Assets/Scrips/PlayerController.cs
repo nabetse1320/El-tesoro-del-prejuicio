@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
     {
         DebugRaycast();
         isGrounded = CheckGrounded();
+        
 
         bool isAlmostIdle = isGrounded && rb.velocity.magnitude < 0.1f;
 
@@ -281,16 +282,22 @@ public class PlayerController : MonoBehaviour
     {
         if (value.started)
         {
-            interactor.Interact();
+            if (isActive) 
+            {
+                Debug.Log("AA");
+                interactor.Interact();
+            }
+            
         }
     }
     public void OnInteractCanceled(InputAction.CallbackContext value)
     {
         if (value.canceled)
         {
-            
-            interactor.EndInteract();
-            //interactor.Interact();
+            if (isActive) 
+            {
+                interactor.EndInteract();
+            }
         }
     }
 

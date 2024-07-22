@@ -7,10 +7,12 @@ public class ProducirSonido : MonoBehaviour
 {
     [SerializeField] private SoundGame secuenceManager;
     private AudioSource audioSource;
+    private Color colorInicio;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        colorInicio = GetComponent<SpriteRenderer>().color;
     }
 
     public void Sonar()
@@ -34,6 +36,6 @@ public class ProducirSonido : MonoBehaviour
     }
     private void ChangeColorWhite()
     {
-        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        this.gameObject.GetComponent<SpriteRenderer>().color = colorInicio;
     }
 }
