@@ -27,9 +27,10 @@ public class Rope : MonoBehaviour, IInteractable
     }
     private void FixedUpdate()
     {
+        
         MovementEnd = EndPoint.position;
         Player = GameObject.FindGameObjectWithTag("Player");
-        if (rappeling&&Player.layer== 7)
+        if (rappeling&&Player.layer== 7 && !Player.GetComponent<PlayerController>().muerto)
         {
             Debug.Log("Se Ejecutó");
             Transform PlayerTransform = Player.transform;
