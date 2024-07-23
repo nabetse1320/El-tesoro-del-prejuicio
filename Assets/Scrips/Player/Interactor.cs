@@ -19,10 +19,9 @@ public class Interactor : MonoBehaviour
     #region
     public GameObject InteractableGetter {  get{ return Interactable; } }
     #endregion
-
-    void OnTriggerEnter2D(Collider2D other)
+    
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
         if (other.gameObject.TryGetComponent(out IInteractable interactObj))
         {
             Interactable = other.gameObject;
