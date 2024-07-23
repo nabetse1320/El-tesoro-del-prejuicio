@@ -72,7 +72,7 @@ public class Cangrejo : MonoBehaviour
 
                         StartCoroutine(Detect());
                     }
-                    if (detected && !atacando)
+                    if (detected && !atacando && animator.GetBool("Acostado"))
                     {
                         atacando = true;
                         alerted = true;
@@ -90,6 +90,14 @@ public class Cangrejo : MonoBehaviour
                 rb.AddForce(transform.right * atackVelocity, ForceMode2D.Force);
                 timer = AddForceDuring();
                 StartCoroutine(timer);
+            }
+            if (rb.velocityX > atackVelocity)
+            {
+                rb.velocityX = atackVelocity;
+            }
+            if (rb.velocityX < -atackVelocity)
+            {
+                rb.velocityX = -atackVelocity;
             }
             if (!atacando && alerted)
             {

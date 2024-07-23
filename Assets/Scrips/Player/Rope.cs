@@ -30,13 +30,13 @@ public class Rope : MonoBehaviour, IInteractable
         
         MovementEnd = EndPoint.position;
         Player = GameObject.FindGameObjectWithTag("Player");
-        if (rappeling&&Player.layer== 7 && !Player.GetComponent<PlayerController>().muerto)
+        if (rappeling&&Player.layer== 7)
         {
-            Debug.Log("Se Ejecutó");
             Transform PlayerTransform = Player.transform;
             MovementStart = PlayerTransform.position;
             Eventos.eve.CancelSwitches.Invoke();
             Eventos.eve.PausarPlayer.Invoke();
+            Eventos.eve.PausarPlayer2.Invoke();
             Player.GetComponent<Rigidbody2D>().gravityScale = 0;
             Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
@@ -54,9 +54,12 @@ public class Rope : MonoBehaviour, IInteractable
             }
 
         }
-        else
+        if (Player.GetComponent<PlayerController>())
         {
-            EndInteract();
+            if (Player.GetComponent<PlayerController>().muerto)
+            {
+                EndInteract();
+            }
         }
     }
 
@@ -68,7 +71,8 @@ public class Rope : MonoBehaviour, IInteractable
     {
         Eventos.eve.ActivateSwitches.Invoke();
         Eventos.eve.DespausarPlayer.Invoke();
-        currentTime=0;
+        Eventos.eve.DespausarPlayer2.Invoke();
+        currentTime =0;
         t = 0;
         easingValue = 0;
         rappeling = false;

@@ -284,7 +284,6 @@ public class PlayerController : MonoBehaviour
         {
             if (isActive) 
             {
-                Debug.Log("AA");
                 interactor.Interact();
             }
             
