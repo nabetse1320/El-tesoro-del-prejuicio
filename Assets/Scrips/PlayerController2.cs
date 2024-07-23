@@ -34,6 +34,9 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private AudioClip clipAtaque;
     [SerializeField] private AudioClip clipResivirDano;
 
+    [SerializeField] private Interactor interactor;
+
+
     private bool isIdle = true;
     private bool isIdleE;
     public bool IsIdle
@@ -96,8 +99,6 @@ public class PlayerController2 : MonoBehaviour
 
     private void Update()
     {
-        
-        
         //DebugRaycast();
         isGrounded = CheckGrounded();
 
@@ -280,6 +281,29 @@ public class PlayerController2 : MonoBehaviour
     {
         muerto = false;
         DesausarPlayer();
+    }
+
+
+    public void OnInteractPerformed(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            if (isActive)
+            {
+                interactor.Interact();
+            }
+
+        }
+    }
+    public void OnInteractCanceled(InputAction.CallbackContext value)
+    {
+        if (value.canceled)
+        {
+            if (isActive)
+            {
+                interactor.EndInteract();
+            }
+        }
     }
 
 

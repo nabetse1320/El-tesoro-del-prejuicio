@@ -98,7 +98,8 @@ public class GrapplingGun : MonoBehaviour
         //inputs.Player.gancho.performed -= OnEngagePerformed;
         //inputs.Player.gancho.canceled -= OnEngageCanceled;
         //inputs.Player.gancho.started -= OnEngageStarted;
-        audioSource.Stop();
+        if (audioSource!=null) { audioSource.Stop(); }
+        
     }
     
 

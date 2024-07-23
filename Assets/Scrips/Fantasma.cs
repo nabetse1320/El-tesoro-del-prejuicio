@@ -14,12 +14,11 @@ public class Fantasma : MonoBehaviour
     private Vector3 targetPosition;
     [SerializeField] private bool isCharging = false;
     [SerializeField] private bool resibiendoDano;
-    private Collider2D myCollider;
+    [SerializeField] private Collider2D myCollider;
     [SerializeField]private bool isReturning = false;
     private bool detener;
     private Animator animator;
     Vector3 playerPositionAtack;
-    [SerializeField] private GameObject objetoDelCollider;
     private Collider2D collider;
     private bool muerto;
     private bool resibDano;
@@ -36,14 +35,14 @@ public class Fantasma : MonoBehaviour
         muerto = false;
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
-        myCollider = objetoDelCollider.GetComponent<Collider2D>();
         resibiendoDano = false;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
         detener = false;
     }
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         if (!muerto)
         {
             Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
@@ -59,12 +58,13 @@ public class Fantasma : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angulo, Vector3.up);
             if (!resibiendoDano)
             {
-                float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+                float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
                 // Si el jugador está dentro del rango de detección y el enemigo no está cargando ni volviendo
-                if (distanceToPlayer <= detectionRange && !isCharging && !isReturning && myCollider.bounds.Contains(player.position))
+                if (distanceToPlayer <= detectionRange && !isCharging && !isReturning && myCollider.bounds.Contains(player.transform.position))
                 {
+                    
                     // Establece la posición objetivo en la dirección del jugador y marca al enemigo como cargando
-                    targetPosition = player.position + (player.position - transform.position).normalized * chargeDistance;
+                    targetPosition = player.transform.position + (player.transform.position - transform.position).normalized * chargeDistance;
                     isCharging = true;
                     animator.SetBool("Atacando", true);
                     audioSource.clip = clipAtaque;

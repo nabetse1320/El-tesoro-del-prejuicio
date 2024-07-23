@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using UnityEditor.TerrainTools;
 
 public class Cuerda : MonoBehaviour
 {
@@ -9,21 +11,28 @@ public class Cuerda : MonoBehaviour
     [SerializeField] private bool aparecer;
     [SerializeField] private int id;
     [SerializeField] private GameObject child;
-    [Header("Multinterruptores")]
+    
     [SerializeField] private bool multiInterruptor = false;
     [SerializeField] private int numeroInterruptores = 2;
-    [Header("SoundEfects")]
-    [SerializeField] private AudioSource AudioSource;
+    
+    [SerializeField] private AudioSource audioSource;
+
     private int cont;
     private bool act;
     private bool desact;
+
+    #region // getters
+    public bool Aparecer{ get { return aparecer; } }
+    public bool MultiInterruptor {  get { return multiInterruptor; } }
+    #endregion 
+
     private void Start()
     {
         act = true;
         desact = false;
-        if(AudioSource != null)
+        if(audioSource != null)
         {
-            AudioSource = GetComponent<AudioSource>();
+            audioSource = GetComponent<AudioSource>();
         }
         if (aparecer)
         {
@@ -62,9 +71,9 @@ public class Cuerda : MonoBehaviour
     }
     public void Activar()
     {
-        if (AudioSource != null)
+        if (audioSource != null)
         {
-            AudioSource.Play();
+            audioSource.Play();
         }
         act = true;
         desact = false;
@@ -135,5 +144,81 @@ public class Cuerda : MonoBehaviour
     {
         Eventos.eve.activarCuerda.RemoveListener(ActivarPlataforma);
         Eventos.eve.DesactivarCuerda.RemoveListener(DesactivarPlataforma);
+    }
+}
+
+
+
+
+//Editor Options
+
+
+
+[CustomEditor (typeof(Cuerda))]
+public class CuerdaEditor : Editor
+{
+    #region SerializedProperties
+
+    SerializedProperty tiempoEspera;
+    SerializedProperty aparecer;
+    SerializedProperty id;
+    SerializedProperty child;
+    SerializedProperty multiInterruptor;
+    SerializedProperty numeroInterruptores;
+    SerializedProperty audioSource;
+
+    bool aparecerGroup,multiInterruptorGroup = false;
+    #endregion
+
+    private void OnEnable()
+    {
+        tiempoEspera = serializedObject.FindProperty("tiempoEspera");
+        aparecer = serializedObject.FindProperty("aparecer");
+        id = serializedObject.FindProperty("id");
+        child = serializedObject.FindProperty("child");
+        multiInterruptor = serializedObject.FindProperty("multiInterruptor");
+        numeroInterruptores = serializedObject.FindProperty("numeroInterruptores");
+        audioSource = serializedObject.FindProperty("audioSource");
+    }
+    public override void OnInspectorGUI()
+    {
+        Cuerda cuerda = (Cuerda)target;
+
+        //base.OnInspectorGUI();
+        serializedObject.Update();
+        //OPCIONES PRINCIPALES -----------------------------------------------------------------------------
+        EditorGUILayout.PropertyField(child);
+        EditorGUILayout.PropertyField(tiempoEspera);
+        EditorGUILayout.PropertyField (audioSource);
+
+        //GRUPO DE OPCIÓNES DE SI EMPIEZA O NO ACTIVO EL OBJETO -------------------------------------------------------------
+        EditorGUILayout.Space(10);
+        aparecerGroup = EditorGUILayout.BeginFoldoutHeaderGroup(aparecerGroup,"Opciones de si empieza o no activo");
+        if (aparecerGroup)
+        {
+            EditorGUILayout.PropertyField (aparecer);
+            if (cuerda.Aparecer)
+            {
+                EditorGUILayout.LabelField("Id para activarlo:");
+                EditorGUILayout.PropertyField(id);
+                EditorGUILayout.EndFoldoutHeaderGroup();
+
+                //GRUPO DE OPCIÓNES DE SI SERÁ MULTI-INTERRUPTOR -----------------------------------------------------------------
+                EditorGUILayout.Space(10);
+                multiInterruptorGroup = EditorGUILayout.BeginFoldoutHeaderGroup(multiInterruptorGroup, "Opciones multi-interruptor");
+                if (multiInterruptorGroup)
+                {
+                    EditorGUILayout.PropertyField(multiInterruptor);
+                    if (cuerda.MultiInterruptor)
+                    {
+                        EditorGUILayout.LabelField("Numero de interruptores necesarios para activar:");
+                        EditorGUILayout.PropertyField(numeroInterruptores);
+
+                    }
+                }
+            }
+        }
+
+        serializedObject.ApplyModifiedProperties();
     }
 }

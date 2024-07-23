@@ -9,10 +9,14 @@ public class GuiaController : MonoBehaviour
     Vector2 globalScale;
     public TextMeshPro textMeshPro;
     [SerializeField] private GameObject pergamino;
+    private Transform player;
+    private bool enElArea=false;
+    Collider2D col;
     [TextArea]
     public string textoIn;
     void Start()
     {
+        col = GetComponent<Collider2D>();
         globalScale = GetComponentInParent<BoxCollider2D>().transform.lossyScale;
     }
     private void Update()
@@ -21,13 +25,13 @@ public class GuiaController : MonoBehaviour
     }
 
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            pergamino.GetComponent<Animator>().SetBool("abrir",true);
+            pergamino.GetComponent<Animator>().SetBool("abrir", true);
             //GetComponentInParent<BoxCollider2D>().transform.transform.localScale = globalScale;
-            
+
         }
     }
 

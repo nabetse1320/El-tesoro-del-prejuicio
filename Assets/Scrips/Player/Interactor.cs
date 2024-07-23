@@ -16,9 +16,12 @@ public class Interactor : MonoBehaviour
     [SerializeField] private Collider2D InteractRange;
     // Start is called before the first frame update
 
-    void OnTriggerEnter2D(Collider2D other)
+    #region
+    public GameObject InteractableGetter {  get{ return Interactable; } }
+    #endregion
+    
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
         if (other.gameObject.TryGetComponent(out IInteractable interactObj))
         {
             Interactable = other.gameObject;

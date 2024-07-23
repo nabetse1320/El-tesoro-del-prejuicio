@@ -36,13 +36,19 @@ public class Interruptor : MonoBehaviour
                     otherAudioSource.Play();
                 }
                 primerTriggerYaEntró = true;
-                animator.SetBool("activado",true);
+                if (animator!=null)
+                {
+                    animator.SetBool("activado", true);
+                }
                 primerObjeto = collision;
                 tagPO = collision.tag;
                 Eventos.eve.ActivarPlataforma?.Invoke(id);
                 Eventos.eve.activarCuerda?.Invoke(id);
-                audioSource.clip = audioActivar;
-                audioSource.Play();
+                if (audioSource!=null)
+                {
+                    audioSource.clip = audioActivar;
+                    audioSource.Play();
+                }
                 // Aquí va tu código para cuando el primer trigger entra al collider
             }
         }
@@ -58,9 +64,15 @@ public class Interruptor : MonoBehaviour
                 primerTriggerYaEntró = false;
                 Eventos.eve.DesactivarPlataforma.Invoke(id);
                 Eventos.eve.DesactivarCuerda.Invoke(id);
-                audioSource.clip = audioDesactivar;
-                animator.SetBool("activado", false);
-                audioSource.Play();
+                if (animator!=null)
+                {
+                    animator.SetBool("activado", false);
+                }
+                if (audioSource!=null)
+                {
+                    audioSource.clip = audioDesactivar;
+                    audioSource.Play();
+                }
 
             }
             else if (tagPO==("Player") && collision.CompareTag("Player"))
@@ -68,9 +80,15 @@ public class Interruptor : MonoBehaviour
                 primerTriggerYaEntró = false;
                 Eventos.eve.DesactivarPlataforma.Invoke(id);
                 Eventos.eve.DesactivarCuerda.Invoke(id);
-                audioSource.clip = audioDesactivar;
-                animator.SetBool("activado", false);
-                audioSource.Play();
+                if (animator!=null)
+                {
+                    animator.SetBool("activado", false);
+                }
+                if (audioSource!=null)
+                {
+                    audioSource.clip = audioDesactivar;
+                    audioSource.Play();
+                }
             }
         }
         

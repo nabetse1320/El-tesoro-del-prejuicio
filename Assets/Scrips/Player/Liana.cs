@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Schema;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Rope : MonoBehaviour, IInteractable
+public class Liana : MonoBehaviour, IInteractable
 {
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject player;
     private Vector3 MovementStart;
     [SerializeField] private Transform EndPoint;
     [SerializeField] private float threshold;
@@ -21,45 +21,38 @@ public class Rope : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        
+
         rappeling = false;
-        
+
     }
     private void FixedUpdate()
     {
-        
         MovementEnd = EndPoint.position;
-        Player = GameObject.FindGameObjectWithTag("Player");
-        if (rappeling&&Player.layer== 7)
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (rappeling)
         {
-            Transform PlayerTransform = Player.transform;
+            Transform PlayerTransform = player.transform;
             MovementStart = PlayerTransform.position;
             Eventos.eve.CancelSwitches.Invoke();
-            Eventos.eve.PausarPlayer.Invoke();
-            Eventos.eve.PausarPlayer2.Invoke();
-            Player.GetComponent<Rigidbody2D>().gravityScale = 0;
-            Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            player.GetComponent<Rigidbody2D>().gravityScale = 0;
+            player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
             t = Mathf.Clamp01(currentTime / totalDuration);
             easingValue = myEasingCurve.Evaluate(t);
             Vector3 newPosition = Vector3.Lerp(MovementStart, MovementEnd, easingValue);
-            Player.transform.position = newPosition;
+            player.transform.position = newPosition;
 
             currentTime += Time.deltaTime;
 
-
-            if (Math.Abs(Player.transform.position.x - MovementEnd.x) <= threshold)
+            if (player.GetComponent<Interactor>().InteractableGetter!=this.gameObject)
+            {
+                EndInteract();
+            }
+            if (Math.Abs(player.transform.position.y - MovementEnd.y) <= threshold)
             {
                 EndInteract();
             }
 
-        }
-        if (Player.GetComponent<PlayerController>())
-        {
-            if (Player.GetComponent<PlayerController>().muerto)
-            {
-                EndInteract();
-            }
         }
     }
 
@@ -70,12 +63,10 @@ public class Rope : MonoBehaviour, IInteractable
     public void EndInteract()
     {
         Eventos.eve.ActivateSwitches.Invoke();
-        Eventos.eve.DespausarPlayer.Invoke();
-        Eventos.eve.DespausarPlayer2.Invoke();
-        currentTime =0;
+        currentTime = 0;
         t = 0;
         easingValue = 0;
         rappeling = false;
-        Player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        player.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 }
