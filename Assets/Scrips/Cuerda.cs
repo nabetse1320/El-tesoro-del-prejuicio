@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-using UnityEditor.TerrainTools;
+#endif
 
 public class Cuerda : MonoBehaviour
 {
@@ -152,7 +153,8 @@ public class Cuerda : MonoBehaviour
 
 //Editor Options
 
-
+#region
+#if UNITY_EDITOR
 
 [CustomEditor (typeof(Cuerda))]
 public class CuerdaEditor : Editor
@@ -222,3 +224,5 @@ public class CuerdaEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif
+#endregion

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -165,8 +167,8 @@ public class PlataformaDeslizante : MonoBehaviour
 
 //Editor Settings
 
-
-
+#region
+#if UNITY_EDITOR
 [CustomEditor(typeof(PlataformaDeslizante))]
 public class PlataformaDeslizanteEditor : Editor
 {
@@ -246,3 +248,5 @@ public class PlataformaDeslizanteEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif
+#endregion

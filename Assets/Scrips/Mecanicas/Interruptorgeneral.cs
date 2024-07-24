@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -160,8 +162,8 @@ public class Interruptorgeneral : MonoBehaviour
 
 //Editor Options
 
-
-
+#region
+#if UNITY_EDITOR
 [CustomEditor(typeof(Interruptorgeneral))]
 public class InterruptorgeneralEditor : Editor
 {
@@ -223,3 +225,5 @@ public class InterruptorgeneralEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif
+#endregion
