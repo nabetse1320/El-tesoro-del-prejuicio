@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
     private float journeyLength;
     private float startTime;
     private float stunTimer;
+    [SerializeField] private bool atacking = false;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class BossController : MonoBehaviour
     void Update()
     {
         GroundChecker();
-        if(_stats.isIdle) return;
+        if (_stats.isIdle) return;
         if (_stats.isStunned)
         {
             // Si está stunado, contar el tiempo de stun
@@ -49,6 +50,7 @@ public class BossController : MonoBehaviour
             }
             FindPlayer();
         }
+        
     }
 
     private void Move()
@@ -67,19 +69,12 @@ public class BossController : MonoBehaviour
 
     void FindPlayer()
     {
-        // Verificar la distancia al jugador
-        float distanceToPlayer = Vector3.Distance(transform.position, _objetive.transform.position);
-
-        // Si el jugador está dentro del rango de ataque
-        if (distanceToPlayer <= _stats.attackRange)
-        {
-            // Aquí puedes agregar la lógica para atacar al jugador
-            Attack();
-        }
-
+        Vector2 vector2 = transform.position;
         // Verificar si el jugador está encima del enemigo
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, _stats.jumpDetectDistance))
+        RaycastHit2D[] hits = Physics2D.RaycastAll(vector2, Vector3.up, _stats.jumpDetectDistance);
+        Debug.DrawRay(vector2, Vector3.up*_stats.jumpDetectDistance, Color.red);
+        Debug.Log(hits.Length);
+        foreach (var hit in hits) 
         {
             if (hit.collider.CompareTag("Player"))
             {
@@ -92,20 +87,32 @@ public class BossController : MonoBehaviour
     void Attack()
     {
         // Implementa aquí la lógica para atacar al jugador
+        // Verificar la distancia al jugador
+        float distanceToPlayer = Vector3.Distance(transform.position, _objetive.transform.position);
+        // Si el jugador está dentro del rango de ataque
+        if (distanceToPlayer <= _stats.attackRange)
+        {
+            // Aquí puedes agregar la lógica para atacar al jugador
+            Eventos.eve.perderVida.Invoke();
+        }
+        atacking = false;
+        
         Debug.Log("Atacando al jugador!");
         // Usar _stats.Damage para calcular el daño a hacer al jugador
     }
     
     void JumpAndAttack()
     {
+        
         if (!_stats.isJumping)
         {
+            
             // Aplicar una fuerza hacia arriba para simular el salto
-            GetComponent<Rigidbody>().AddForce(Vector3.up * _stats.jumpForce, ForceMode.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(Vector3.up * _stats.jumpForce, ForceMode2D.Impulse);
             _stats.isJumping = true;
-
+            atacking = true;
             // Luego de un tiempo, atacar al jugador (puedes ajustar el tiempo según tus necesidades)
-            Invoke("AttackPlayer", 1.0f);
+            Invoke("Attack", 1.0f);
         }
     }
 
@@ -122,15 +129,11 @@ public class BossController : MonoBehaviour
     private void GroundChecker()
     {
         // Detectar si el enemigo ha tocado el suelo para restablecer isJumping
-        RaycastHit groundHit;
-        if (!_stats.isJumping)
+        RaycastHit2D groundHit = Physics2D.Raycast(transform.position, Vector3.down, 1.0f,6);
+        if (_stats.isJumping && !atacking)
         {
-            // Si no está saltando actualmente, verificar si ha tocado el suelo
-            if (Physics.Raycast(transform.position, Vector3.down, out groundHit, 1.0f)) // Raycast hacia abajo con una distancia corta
-            {
-                // Si el Raycast detecta una superficie, restablecer isJumping a false
-                _stats.isJumping = groundHit.collider != null;
-            }
+            Debug.Log(groundHit.collider.CompareTag("Terreno"));
+            _stats.isJumping = groundHit.collider.CompareTag("Terreno");
         }
     }
 
