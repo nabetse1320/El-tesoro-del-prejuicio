@@ -315,7 +315,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 17472
   detectClip: {fileID: 0}
-  atackVelocity: 3
+  atackVelocity: 7
   atackTime: 1.3
   clipCaminata: {fileID: 8300000, guid: 230b52c243fffcd43b5d8a8c4a7471b4, type: 3}
   clipAtaque: {fileID: 8300000, guid: a3eeda94d7a1df34b803ae111888612d, type: 3}
