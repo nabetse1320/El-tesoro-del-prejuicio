@@ -20094,9 +20094,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1259457517}
     m_Modifications:
+    - target: {fileID: 132949049986303655, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 132949049986303655, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1813096207
+      objectReference: {fileID: 0}
     - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1813096207
       objectReference: {fileID: 0}
     - target: {fileID: 5569277225849754505, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: sequenceNumber
@@ -20194,6 +20214,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1813096207
+      objectReference: {fileID: 0}
     - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -20201,6 +20233,18 @@ PrefabInstance:
     - target: {fileID: 8096393151877444338, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_Name
       value: PuzzleSecuencia
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1813096207
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
