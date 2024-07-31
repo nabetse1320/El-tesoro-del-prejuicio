@@ -21,7 +21,11 @@ public class GuiaController : MonoBehaviour
     }
     private void Update()
     {
-        questions();
+        if (textMeshPro!=null)
+        {
+            questions();
+        }
+        
     }
 
 

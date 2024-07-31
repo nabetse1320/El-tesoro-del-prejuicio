@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 9596074ad5457614d9539770b6365a2d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5352296265791276126
+    second: palmera_0
+  - first:
+      213: -4599675026115200144
+    second: palmera_1
+  - first:
+      213: 5048534773082978260
+    second: palmera_2
+  - first:
+      213: 998317832302933620
+    second: palmera_3
+  - first:
+      213: 3836228158164176320
+    second: palmera_4
+  - first:
+      213: 7330119265370608870
+    second: palmera_5
+  - first:
+      213: 1259805828797241926
+    second: palmera_6
+  - first:
+      213: -5035323723852361772
+    second: palmera_7
+  - first:
+      213: -4827288014377255370
+    second: palmera_8
+  - first:
+      213: -3181797941813852834
+    second: palmera_9
+  - first:
+      213: 8255214110173270541
+    second: palmera_10
+  - first:
+      213: 6218444724967048187
+    second: palmera_11
+  - first:
+      213: 4825128633571189300
+    second: palmera_12
+  - first:
+      213: 7740459954417534706
+    second: palmera_13
+  - first:
+      213: -8157789855768961399
+    second: palmera_14
+  - first:
+      213: -920933979075999911
+    second: palmera_15
+  - first:
+      213: -4608187740426657783
+    second: palmera_16
+  - first:
+      213: 1410054556795570314
+    second: palmera_17
+  - first:
+      213: -8947472779109848516
+    second: palmera_18
+  - first:
+      213: 962739005502850557
+    second: palmera_19
+  - first:
+      213: -8462165688691953984
+    second: palmera_20
+  - first:
+      213: -658058888825104530
+    second: palmera_21
+  - first:
+      213: 5333952815240466218
+    second: palmera_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: palmera_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 4004
+        width: 922
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab7cd867e2d8b5b0800000000000000
+      internalID: -5352296265791276126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4004
+        width: 924
+        height: 983
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bfa221febaa20c0800000000000000
+      internalID: -4599675026115200144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_2
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 4004
+        width: 926
+        height: 975
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d771d9b0afff0640800000000000000
+      internalID: 5048534773082978260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_3
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 4004
+        width: 927
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476ba5777ccbadd00800000000000000
+      internalID: 998317832302933620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_4
+      rect:
+        serializedVersion: 2
+        x: 4019
+        y: 4004
+        width: 927
+        height: 957
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd0ab44f250d3530800000000000000
+      internalID: 3836228158164176320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_5
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3004
+        width: 930
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e499ad92a0d9b560800000000000000
+      internalID: 7330119265370608870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_6
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 3004
+        width: 934
+        height: 940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a1d6ff9babb7110800000000000000
+      internalID: 1259805828797241926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_7
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 3004
+        width: 939
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfceae50cfee1ab0800000000000000
+      internalID: -5035323723852361772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_8
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 3005
+        width: 940
+        height: 927
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63efa828027020db0800000000000000
+      internalID: -4827288014377255370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_9
+      rect:
+        serializedVersion: 2
+        x: 4025
+        y: 3005
+        width: 943
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55cd1b31abf7d3d0800000000000000
+      internalID: -3181797941813852834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_10
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 2005
+        width: 947
+        height: 918
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d029ba5ce79609270800000000000000
+      internalID: 8255214110173270541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_11
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 2005
+        width: 955
+        height: 912
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf30017d78a5c4650800000000000000
+      internalID: 6218444724967048187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_12
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 2005
+        width: 953
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432a3977dec46f240800000000000000
+      internalID: 4825128633571189300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_13
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 2005
+        width: 950
+        height: 914
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6813d5153ab6b60800000000000000
+      internalID: 7740459954417534706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_14
+      rect:
+        serializedVersion: 2
+        x: 4023
+        y: 2005
+        width: 952
+        height: 914
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e1b961955b9ce80800000000000000
+      internalID: -8157789855768961399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_15
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1004
+        width: 948
+        height: 916
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9578693ec6f2833f0800000000000000
+      internalID: -920933979075999911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_16
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 1004
+        width: 945
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9002f815aad6c00c0800000000000000
+      internalID: -4608187740426657783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_17
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 1004
+        width: 941
+        height: 921
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8888bb0625819310800000000000000
+      internalID: 1410054556795570314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_18
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1004
+        width: 935
+        height: 933
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a2ea3c9e034d380800000000000000
+      internalID: -8947472779109848516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_19
+      rect:
+        serializedVersion: 2
+        x: 4020
+        y: 1004
+        width: 930
+        height: 945
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5096256065c5d00800000000000000
+      internalID: 962739005502850557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 4
+        width: 926
+        height: 957
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce640ff329509a80800000000000000
+      internalID: -8462165688691953984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_21
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 4
+        width: 926
+        height: 968
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e679a4a5dea1ed6f0800000000000000
+      internalID: -658058888825104530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palmera_22
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 4
+        width: 924
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f4a1133d1060a40800000000000000
+      internalID: 5333952815240466218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 5869d90323bbb4d42806cf64f816e22e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6634643137548265020
+    second: hojitas_0
+  - first:
+      213: -4828666136823193938
+    second: hojitas_1
+  - first:
+      213: 1687458291519436258
+    second: hojitas_2
+  - first:
+      213: -6888798517344806223
+    second: hojitas_3
+  - first:
+      213: -1699968913217456420
+    second: hojitas_4
+  - first:
+      213: -4862421526682838233
+    second: hojitas_5
+  - first:
+      213: 6704915589091731153
+    second: hojitas_6
+  - first:
+      213: -8488585155709458791
+    second: hojitas_7
+  - first:
+      213: -238486901623280836
+    second: hojitas_8
+  - first:
+      213: -4761236776635320642
+    second: hojitas_9
+  - first:
+      213: 5525190263369677384
+    second: hojitas_10
+  - first:
+      213: 6601546247079527721
+    second: hojitas_11
+  - first:
+      213: -6626429672605526534
+    second: hojitas_12
+  - first:
+      213: -7385394261706145988
+    second: hojitas_13
+  - first:
+      213: -2843330277142853222
+    second: hojitas_14
+  - first:
+      213: 8070697120379156442
+    second: hojitas_15
+  - first:
+      213: -5620102968066434357
+    second: hojitas_16
+  - first:
+      213: -330257824483407271
+    second: hojitas_17
+  - first:
+      213: 125555117753901575
+    second: hojitas_18
+  - first:
+      213: 8178240932434424441
+    second: hojitas_19
+  - first:
+      213: 3142364931929023540
+    second: hojitas_20
+  - first:
+      213: -1008250033466168608
+    second: hojitas_21
+  - first:
+      213: -3241004730400773620
+    second: hojitas_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hojitas_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1678
+        width: 163
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c362c0128ccf21c50800000000000000
+      internalID: 6634643137548265020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_1
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1678
+        width: 161
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae12bf5bb12dfcb0800000000000000
+      internalID: -4828666136823193938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_2
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1678
+        width: 159
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5bd47206e0b6710800000000000000
+      internalID: 1687458291519436258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_3
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1678
+        width: 157
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1badc643f321660a0800000000000000
+      internalID: -6888798517344806223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_4
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1679
+        width: 157
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6777eb74f7868e0800000000000000
+      internalID: -1699968913217456420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1279
+        width: 162
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b5bd93265358cb0800000000000000
+      internalID: -4862421526682838233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_6
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1279
+        width: 167
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6aac04435ac0d50800000000000000
+      internalID: 6704915589091731153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_7
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1279
+        width: 172
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996a84c76cc723a80800000000000000
+      internalID: -8488585155709458791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_8
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1279
+        width: 178
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b29213d69b0bcf0800000000000000
+      internalID: -238486901623280836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_9
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1279
+        width: 182
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb63025b060bcedb0800000000000000
+      internalID: -4761236776635320642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_10
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 879
+        width: 188
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ab894554b6dac40800000000000000
+      internalID: 5525190263369677384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_11
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 879
+        width: 191
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9250d71d5576d9b50800000000000000
+      internalID: 6601546247079527721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_12
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 879
+        width: 197
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af55d3332513a04a0800000000000000
+      internalID: -6626429672605526534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_13
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 879
+        width: 200
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ffbc86c0fc18990800000000000000
+      internalID: -7385394261706145988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_14
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 879
+        width: 203
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9989c37d267a88d0800000000000000
+      internalID: -2843330277142853222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_15
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 479
+        width: 197
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7b7f54540e00070800000000000000
+      internalID: 8070697120379156442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_16
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 479
+        width: 191
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca184b80226102b0800000000000000
+      internalID: -5620102968066434357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_17
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 479
+        width: 188
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a8f572240ba6bf0800000000000000
+      internalID: -330257824483407271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_18
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 479
+        width: 185
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7022471e6bf0eb100800000000000000
+      internalID: 125555117753901575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_19
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 479
+        width: 181
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97230514cc2fe7170800000000000000
+      internalID: 8178240932434424441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_20
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 79
+        width: 177
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4342642b14ceb9b20800000000000000
+      internalID: 3142364931929023540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_21
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 79
+        width: 172
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea297ebfe9f102f0800000000000000
+      internalID: -1008250033466168608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hojitas_22
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 78
+        width: 168
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ae9198e53a503d0800000000000000
+      internalID: -3241004730400773620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

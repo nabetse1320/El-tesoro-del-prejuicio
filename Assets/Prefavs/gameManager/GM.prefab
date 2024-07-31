@@ -105,7 +105,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: f074597eeb5a42f4eb366365957096bb, type: 3}
+  - {fileID: 8300000, guid: 4fd7882ba468f03438be6973ce8fd3b3, type: 3}
+  - {fileID: 8300000, guid: 68628ad772e5ff4488df77ddf300065a, type: 3}
+  - {fileID: 8300000, guid: ec55a67c28d2ffe4da64bb55fde6e8a8, type: 3}
+  - {fileID: 8300000, guid: 82f87eed4b3bfcf41970e603fb18613e, type: 3}
+  - {fileID: 8300000, guid: 2c7b504affd93a54697e11a60c15981c, type: 3}
+  - {fileID: 8300000, guid: 7cddb6305cb5e14468d061831fd48ecc, type: 3}
+  - {fileID: 8300000, guid: 845c69bc8e89eaf4a8c6c05a5b703538, type: 3}
+  - {fileID: 8300000, guid: d24137d59959fef4599445741427b3c9, type: 3}
+  - {fileID: 8300000, guid: 75004feb76ac3494bbe54d5cf9f9b4fa, type: 3}
+  - {fileID: 8300000, guid: 7fd14e7b1146bf74083033c7d3bd4177, type: 3}
+  - {fileID: 8300000, guid: 49e05feb4714f914a9e58ea0fee3a672, type: 3}
+  - {fileID: 8300000, guid: 6ee548599ecbdcc42b8cd19ec0722cb6, type: 3}
+  - {fileID: 8300000, guid: 5734f56cd5284be42b359c7c0f2e9954, type: 3}
+  - {fileID: 8300000, guid: a6b3063844cb50b4ba131ca5e9caf994, type: 3}
+  - {fileID: 8300000, guid: 230b52c243fffcd43b5d8a8c4a7471b4, type: 3}
+  - {fileID: 8300000, guid: fcb20394e13fbc449883bc433b4fb505, type: 3}
+  - {fileID: 8300000, guid: a3eeda94d7a1df34b803ae111888612d, type: 3}
 --- !u!1 &3737657170767615822
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,9 +206,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   audioClips:
-  - {fileID: 8300000, guid: 3a950d337afc2874e912dd0bd7d80989, type: 3}
-  - {fileID: 8300000, guid: b3aa0be59441a674cb93fe192e7c22bc, type: 3}
-  - {fileID: 8300000, guid: aa2901de0760eff4aa2ce4cb93a6a405, type: 3}
+  - {fileID: 8300000, guid: 74f6bff7e9bcaa04385c3a683cb2e41b, type: 3}
+  - {fileID: 8300000, guid: b05b4ba5713e5284184d7e62e0344cba, type: 3}
+  - {fileID: 8300000, guid: de216e02f28cb654ca975d7911c1c617, type: 3}
+  - {fileID: 8300000, guid: 7f36d38719600f941815ee889a430635, type: 3}
+  - {fileID: 8300000, guid: 162c5c138c4c26c40b8c728838c9522f, type: 3}
+  - {fileID: 8300000, guid: 925bd8d00459ac544950973af79065f5, type: 3}
 --- !u!1 &5319207157088298341
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +322,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   disparoEnemigo:
+    m_PersistentCalls:
+      m_Calls: []
+  CancelSwitches:
+    m_PersistentCalls:
+      m_Calls: []
+  ActivateSwitches:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &3156009908878434364
@@ -415,7 +442,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: ad24a55503471264fbfb0a7238c378eb, type: 3}
+  - {fileID: 8300000, guid: c9408832973d7d948861735b26f8f48e, type: 3}
+  - {fileID: 8300000, guid: c43e9d24ad058604e904a1f5a98203c5, type: 3}
+  - {fileID: 8300000, guid: ae3ca4f4e54a2ec4bb59ba013a544cf0, type: 3}
+  - {fileID: 8300000, guid: cebb306795290f1488b7df5b25a6ebc9, type: 3}
+  - {fileID: 8300000, guid: 6a48f331fc75e834ca98efecf52f9059, type: 3}
+  - {fileID: 8300000, guid: a1704c62b52b7304da043fe24197b975, type: 3}
+  - {fileID: 8300000, guid: efbee99d21a7e1d49ba4d1fad5d959fa, type: 3}
+  - {fileID: 8300000, guid: ed30669f253d1b34fa061e5bd7c7ae8b, type: 3}
+  - {fileID: 8300000, guid: 091a0cc1df983064d99cd0e4d876aebc, type: 3}
+  - {fileID: 8300000, guid: 3eeb9106f92fc0543a53b46447f1aa40, type: 3}
+  - {fileID: 8300000, guid: e2f265c164cc69048b61e6735f3ed9f8, type: 3}
+  - {fileID: 8300000, guid: 770bd64b0ae27424fa686974d1bf125e, type: 3}
 --- !u!1 &8756403148407253028
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,3 +504,4 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 65f55987fe8284d4f8761e9dfaf5d091, type: 3}
   - {fileID: 8300000, guid: 14af1177d1102164787ced1bb59d5d75, type: 3}
+  - {fileID: 8300000, guid: 822f740a501b9fc488ad80ce26885c08, type: 3}

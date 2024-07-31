@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 4ae93190e638d3140b76c0c0c3e34cce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 546071527713898351
+    second: arbustoR_0
+  - first:
+      213: -2441835533109032701
+    second: arbustoR_1
+  - first:
+      213: 7131611387785447961
+    second: arbustoR_2
+  - first:
+      213: -2046835942727769446
+    second: arbustoR_3
+  - first:
+      213: 8830180744886645593
+    second: arbustoR_4
+  - first:
+      213: 3891783438742158317
+    second: arbustoR_5
+  - first:
+      213: -9092301684732071098
+    second: arbustoR_6
+  - first:
+      213: -7224535906472713850
+    second: arbustoR_7
+  - first:
+      213: -3758427510567478867
+    second: arbustoR_8
+  - first:
+      213: 5343625749499011531
+    second: arbustoR_9
+  - first:
+      213: -6467467059983846722
+    second: arbustoR_10
+  - first:
+      213: 4977781335457506138
+    second: arbustoR_11
+  - first:
+      213: 8652491743660206641
+    second: arbustoR_12
+  - first:
+      213: -5506535281062234768
+    second: arbustoR_13
+  - first:
+      213: 6392589084982383143
+    second: arbustoR_14
+  - first:
+      213: -5501727707165670207
+    second: arbustoR_15
+  - first:
+      213: 6452657609961502094
+    second: arbustoR_16
+  - first:
+      213: 8894324747570953431
+    second: arbustoR_17
+  - first:
+      213: -4977679112328080509
+    second: arbustoR_18
+  - first:
+      213: -9176098796501128618
+    second: arbustoR_19
+  - first:
+      213: 80271728334089361
+    second: arbustoR_20
+  - first:
+      213: 8314716703913909044
+    second: arbustoR_21
+  - first:
+      213: 7305708277341832916
+    second: arbustoR_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arbustoR_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 2060
+        width: 532
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6f77574929049700800000000000000
+      internalID: 546071527713898351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_1
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 2059
+        width: 534
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3090c11258bdc1ed0800000000000000
+      internalID: -2441835533109032701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_2
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 2060
+        width: 534
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a0515b5c298f260800000000000000
+      internalID: 7131611387785447961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_3
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 2060
+        width: 534
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92a5300e8d2893e0800000000000000
+      internalID: -2046835942727769446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_4
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 2060
+        width: 536
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95376796a9a1b8a70800000000000000
+      internalID: 8830180744886645593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1560
+        width: 536
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb79f00b64620630800000000000000
+      internalID: 3891783438742158317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_6
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1560
+        width: 536
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643fbd27ac7a1d180800000000000000
+      internalID: -9092301684732071098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_7
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1560
+        width: 538
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681a3abceda4dbb90800000000000000
+      internalID: -7224535906472713850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_8
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1560
+        width: 538
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9d196971267dbc0800000000000000
+      internalID: -3758427510567478867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_9
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 1560
+        width: 538
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1e483be4f582a40800000000000000
+      internalID: 5343625749499011531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1060
+        width: 539
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb27f1d99f0fe36a0800000000000000
+      internalID: -6467467059983846722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_11
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1060
+        width: 540
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53a38d40c1a41540800000000000000
+      internalID: 4977781335457506138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_12
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1060
+        width: 539
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13aedd2e563d31870800000000000000
+      internalID: 8652491743660206641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_13
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1060
+        width: 538
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0753125365bd493b0800000000000000
+      internalID: -5506535281062234768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_14
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 1060
+        width: 538
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7221a6547e907b850800000000000000
+      internalID: 6392589084982383143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_15
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 560
+        width: 538
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4477bbccfe5a3b0800000000000000
+      internalID: -5501727707165670207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_16
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 560
+        width: 536
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85f9fa98e17c8950800000000000000
+      internalID: 6452657609961502094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_17
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 560
+        width: 536
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dcbee7db3dfe6b70800000000000000
+      internalID: 8894324747570953431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_18
+      rect:
+        serializedVersion: 2
+        x: 2246
+        y: 560
+        width: 536
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3839dcf583bbbeab0800000000000000
+      internalID: -4977679112328080509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_19
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 560
+        width: 536
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a29aaf2c2f7a080800000000000000
+      internalID: -9176098796501128618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_20
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 60
+        width: 534
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c2cdc26be2d1100800000000000000
+      internalID: 80271728334089361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_21
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 59
+        width: 534
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b9bc8f9cec36370800000000000000
+      internalID: 8314716703913909044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbustoR_22
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 60
+        width: 534
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6479f88f6136560800000000000000
+      internalID: 7305708277341832916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

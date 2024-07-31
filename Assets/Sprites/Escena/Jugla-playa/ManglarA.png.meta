@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 87b4a5adca052b5429437df89a0971a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1918812253701858364
+    second: ManglarA_0
+  - first:
+      213: -8132776266913589145
+    second: ManglarA_1
+  - first:
+      213: 5082358198801008818
+    second: ManglarA_2
+  - first:
+      213: 8977906547435877406
+    second: ManglarA_3
+  - first:
+      213: 6882538369346762927
+    second: ManglarA_4
+  - first:
+      213: 3047235833487582020
+    second: ManglarA_5
+  - first:
+      213: 638226946823266472
+    second: ManglarA_6
+  - first:
+      213: -3329687778253718005
+    second: ManglarA_7
+  - first:
+      213: -703214351264324652
+    second: ManglarA_8
+  - first:
+      213: -3566007547233695844
+    second: ManglarA_9
+  - first:
+      213: 308719912491119849
+    second: ManglarA_10
+  - first:
+      213: 503451706779243477
+    second: ManglarA_11
+  - first:
+      213: 327193762059568580
+    second: ManglarA_12
+  - first:
+      213: 1252340079288287406
+    second: ManglarA_13
+  - first:
+      213: 4571797694661690155
+    second: ManglarA_14
+  - first:
+      213: 8513566017758435259
+    second: ManglarA_15
+  - first:
+      213: -8426562099201808614
+    second: ManglarA_16
+  - first:
+      213: 6448192491313646769
+    second: ManglarA_17
+  - first:
+      213: 1954531572931151546
+    second: ManglarA_18
+  - first:
+      213: -8135539584048166912
+    second: ManglarA_19
+  - first:
+      213: -7139430067139075932
+    second: ManglarA_20
+  - first:
+      213: -677661931637751289
+    second: ManglarA_21
+  - first:
+      213: -9163070793593941940
+    second: ManglarA_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManglarA_0
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 4019
+        width: 1275
+        height: 968
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34e094149df0aa10800000000000000
+      internalID: 1918812253701858364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_1
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 4018
+        width: 1279
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76853e41313922f80800000000000000
+      internalID: -8132776266913589145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_2
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 4019
+        width: 1282
+        height: 963
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b804d4bad9288640800000000000000
+      internalID: 5082358198801008818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_3
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 4018
+        width: 1284
+        height: 962
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14b19a107ee79c70800000000000000
+      internalID: 8977906547435877406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_4
+      rect:
+        serializedVersion: 2
+        x: 6172
+        y: 4019
+        width: 1287
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8f8e18e20b38f50800000000000000
+      internalID: 6882538369346762927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 3018
+        width: 1291
+        height: 957
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4436ed978d4f94a20800000000000000
+      internalID: 3047235833487582020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_6
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 3019
+        width: 1293
+        height: 954
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0ab73d6007bd800800000000000000
+      internalID: 638226946823266472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_7
+      rect:
+        serializedVersion: 2
+        x: 3167
+        y: 3018
+        width: 1296
+        height: 952
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e3a3c6b929ac1d0800000000000000
+      internalID: -3329687778253718005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_8
+      rect:
+        serializedVersion: 2
+        x: 4666
+        y: 3018
+        width: 1299
+        height: 950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3eee7f54ead36f0800000000000000
+      internalID: -703214351264324652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_9
+      rect:
+        serializedVersion: 2
+        x: 6164
+        y: 3018
+        width: 1302
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9706c0870ff28ec0800000000000000
+      internalID: -3566007547233695844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2018
+        width: 1304
+        height: 945
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e47f1fef1bc84400800000000000000
+      internalID: 308719912491119849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_11
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2018
+        width: 1305
+        height: 943
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d31420f8ae9cf600800000000000000
+      internalID: 503451706779243477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_12
+      rect:
+        serializedVersion: 2
+        x: 3159
+        y: 2018
+        width: 1306
+        height: 940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5c8483efc6a8400800000000000000
+      internalID: 327193762059568580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_13
+      rect:
+        serializedVersion: 2
+        x: 4658
+        y: 2018
+        width: 1306
+        height: 943
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea086fbbaa4316110800000000000000
+      internalID: 1252340079288287406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_14
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 2018
+        width: 1303
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b238247e7c9427f30800000000000000
+      internalID: 4571797694661690155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_15
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1018
+        width: 1300
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb71454bf23462670800000000000000
+      internalID: 8513566017758435259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_16
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1018
+        width: 1297
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a176e47aa66de0b80800000000000000
+      internalID: -8426562099201808614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_17
+      rect:
+        serializedVersion: 2
+        x: 3166
+        y: 1018
+        width: 1294
+        height: 953
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc471828e49c7950800000000000000
+      internalID: 6448192491313646769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_18
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 1019
+        width: 1291
+        height: 955
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6c8da2c14ef1b10800000000000000
+      internalID: 1954531572931151546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_19
+      rect:
+        serializedVersion: 2
+        x: 6170
+        y: 1019
+        width: 1288
+        height: 957
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0080eac2ad1c81f80800000000000000
+      internalID: -8135539584048166912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_20
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 19
+        width: 1285
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0ae652e26abec90800000000000000
+      internalID: -7139430067139075932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_21
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 19
+        width: 1282
+        height: 963
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7024de640167896f0800000000000000
+      internalID: -677661931637751289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManglarA_22
+      rect:
+        serializedVersion: 2
+        x: 3176
+        y: 19
+        width: 1279
+        height: 965
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40931849ab36d080800000000000000
+      internalID: -9163070793593941940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

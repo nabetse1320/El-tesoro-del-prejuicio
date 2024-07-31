@@ -1,0 +1,664 @@
+fileFormatVersion: 2
+guid: 5f5c1a7b5af6c2d47b43183566a2f173
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -328754936734548232
+    second: arbolito_0
+  - first:
+      213: -1163894131171117332
+    second: arbolito_1
+  - first:
+      213: -5427439938645594926
+    second: arbolito_2
+  - first:
+      213: -2866473857840887144
+    second: arbolito_3
+  - first:
+      213: -4410881078578443723
+    second: arbolito_4
+  - first:
+      213: -5975740901029658927
+    second: arbolito_5
+  - first:
+      213: -8296202977285738292
+    second: arbolito_6
+  - first:
+      213: -4565533122291862116
+    second: arbolito_7
+  - first:
+      213: -820444429833927159
+    second: arbolito_8
+  - first:
+      213: -3494392061406810485
+    second: arbolito_9
+  - first:
+      213: 339887129101764777
+    second: arbolito_10
+  - first:
+      213: -7561346538574824535
+    second: arbolito_11
+  - first:
+      213: -4524999389494630461
+    second: arbolito_12
+  - first:
+      213: 114231323539076696
+    second: arbolito_13
+  - first:
+      213: 939884451141021027
+    second: arbolito_14
+  - first:
+      213: 2216310666664323770
+    second: arbolito_15
+  - first:
+      213: 3641466196303913469
+    second: arbolito_16
+  - first:
+      213: 7358155950968024509
+    second: arbolito_17
+  - first:
+      213: -6736735576609787970
+    second: arbolito_18
+  - first:
+      213: -5556582168725987746
+    second: arbolito_19
+  - first:
+      213: 8752250041851179980
+    second: arbolito_20
+  - first:
+      213: -3410051966960324654
+    second: arbolito_21
+  - first:
+      213: 109891597600793492
+    second: arbolito_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: arbolito_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 7333
+        width: 1005
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fef7c97027007bf0800000000000000
+      internalID: -328754936734548232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_1
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 7332
+        width: 1004
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6326b447409dfe0800000000000000
+      internalID: -1163894131171117332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_2
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 7333
+        width: 1001
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dce241b12cdda4b0800000000000000
+      internalID: -5427439938645594926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_3
+      rect:
+        serializedVersion: 2
+        x: 3932
+        y: 7332
+        width: 999
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a4379a63d3838d0800000000000000
+      internalID: -2866473857840887144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_4
+      rect:
+        serializedVersion: 2
+        x: 5210
+        y: 7332
+        width: 998
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a07d4670769c2c0800000000000000
+      internalID: -4410881078578443723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_5
+      rect:
+        serializedVersion: 2
+        x: 6489
+        y: 7332
+        width: 995
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1deba54bf47e11da0800000000000000
+      internalID: -5975740901029658927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 6052
+        width: 993
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0785ae857fddc80800000000000000
+      internalID: -8296202977285738292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_7
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 6052
+        width: 991
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95738380d7f3a0c0800000000000000
+      internalID: -4565533122291862116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_8
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 6052
+        width: 983
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9060dc153223d94f0800000000000000
+      internalID: -820444429833927159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_9
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 6052
+        width: 979
+        height: 647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ee6e92fec618fc0800000000000000
+      internalID: -3494392061406810485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_10
+      rect:
+        serializedVersion: 2
+        x: 5221
+        y: 6052
+        width: 975
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a886d90b8587b400800000000000000
+      internalID: 339887129101764777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_11
+      rect:
+        serializedVersion: 2
+        x: 6506
+        y: 6052
+        width: 971
+        height: 655
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab3e988263b01790800000000000000
+      internalID: -7561346538574824535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_12
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 4772
+        width: 974
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7205c9709f331c0800000000000000
+      internalID: -4524999389494630461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_13
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 4772
+        width: 976
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856f4c598c4d59100800000000000000
+      internalID: 114231323539076696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_14
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 4772
+        width: 979
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d6c28bde32b0d00800000000000000
+      internalID: 939884451141021027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_15
+      rect:
+        serializedVersion: 2
+        x: 3951
+        y: 4772
+        width: 982
+        height: 658
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaaf6e0fcae1ce10800000000000000
+      internalID: 2216310666664323770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_16
+      rect:
+        serializedVersion: 2
+        x: 5233
+        y: 4772
+        width: 983
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1a9445636198230800000000000000
+      internalID: 3641466196303913469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_17
+      rect:
+        serializedVersion: 2
+        x: 6511
+        y: 4772
+        width: 989
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd206b2adb6d1660800000000000000
+      internalID: 7358155950968024509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_18
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 3492
+        width: 992
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebfef629fae4282a0800000000000000
+      internalID: -6736735576609787970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_19
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 3492
+        width: 995
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e51d325fd03e2b0800000000000000
+      internalID: -5556582168725987746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_20
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 3492
+        width: 998
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3ffe9aa0d367970800000000000000
+      internalID: 8752250041851179980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_21
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 3493
+        width: 1000
+        height: 645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df25b3adcf0da0d0800000000000000
+      internalID: -3410051966960324654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arbolito_22
+      rect:
+        serializedVersion: 2
+        x: 5218
+        y: 3493
+        width: 1003
+        height: 643
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493abc663d9668100800000000000000
+      internalID: 109891597600793492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

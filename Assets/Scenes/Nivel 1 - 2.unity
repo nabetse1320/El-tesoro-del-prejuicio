@@ -742,63 +742,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &44283126
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1138478939}
-    m_Modifications:
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542981605786383801, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-      propertyPath: m_Name
-      value: moneda (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
 --- !u!1001 &50803003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -936,6 +879,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuiaTutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: actions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: 'actions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2135091967827921746, guid: a686984651222fd48a23e3b4539c3fff, type: 3}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: textoEntreActions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: 'textoEntreActions.Array.data[0]'
+      value: Dispara el gancho de Lizzy con
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: 'textoEntreActions.Array.data[1]'
+      value: para arrastrar objetos
+      objectReference: {fileID: 0}
     - target: {fileID: 1320631557928238049, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -986,7 +949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982935291179099163, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
       propertyPath: textoIn
-      value: Dispara el gancho a las cajas para halarlas
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1167,6 +1130,10 @@ PrefabInstance:
     - target: {fileID: 4542981605786383801, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: m_Name
       value: moneda (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
+      propertyPath: logro
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4959,11 +4926,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f8b783149c2e6941ad2358a30c347f8, type: 3}
---- !u!4 &750117995 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4105116374506122247, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-  m_PrefabInstance: {fileID: 44283126}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766965561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7228293286089299942, guid: 7cbecb8882dfcea4e9cf5b559b9c5204, type: 3}
@@ -6097,7 +6059,7 @@ Transform:
   m_GameObject: {fileID: 860554419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2764673, y: 13.656489, z: -10}
+  m_LocalPosition: {x: 7.278588, y: 13.656489, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6186,7 +6148,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aa2901de0760eff4aa2ce4cb93a6a405, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b05b4ba5713e5284184d7e62e0344cba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9518,7 +9480,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1688598719}
-  - {fileID: 750117995}
   - {fileID: 320350534}
   m_Father: {fileID: 1523831715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9843,11 +9804,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2000734654246302664, guid: c1afb4bb169c3b149af6aa42169721e2, type: 3}
   m_PrefabInstance: {fileID: 1232918085}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1239603762 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3062199923527560503, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
-  m_PrefabInstance: {fileID: 44283126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1251592791
 PrefabInstance:
@@ -10735,7 +10691,8 @@ PrefabInstance:
       propertyPath: pergamino
       value: 
       objectReference: {fileID: 1028436251}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -11163,7 +11120,7 @@ PrefabInstance:
     - target: {fileID: 6981633423215709387, guid: 7715642b1e9cdc341b5f37c229b288d5, type: 3}
       propertyPath: 'audioSources.Array.data[16]'
       value: 
-      objectReference: {fileID: 1239603762}
+      objectReference: {fileID: 0}
     - target: {fileID: 6981633423215709387, guid: 7715642b1e9cdc341b5f37c229b288d5, type: 3}
       propertyPath: 'audioSources.Array.data[17]'
       value: 
@@ -14968,7 +14925,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8245923128905133206, guid: 27697a5c17f27c04785b4d32f6a56338, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27697a5c17f27c04785b4d32f6a56338, type: 3}
@@ -16880,6 +16838,10 @@ PrefabInstance:
     - target: {fileID: 4542981605786383801, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: m_Name
       value: moneda
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
+      propertyPath: logro
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

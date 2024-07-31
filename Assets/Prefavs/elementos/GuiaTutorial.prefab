@@ -193,7 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1482047200629019001, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
       propertyPath: textoIn
-      value: Cambio de personaje "Shift"
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482047200629019001, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
+      propertyPath: textMeshPro
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6055713989208973421, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
       propertyPath: m_fontSize
@@ -213,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7677066257561543293, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
       propertyPath: m_Name
-      value: GuiaContenedor Variant
+      value: GuiaTutorial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -221,10 +225,44 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5765446010261398942, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
       insertIndex: 0
       addedObject: {fileID: 5579896486879196905}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6202510357114000257, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 280206349896297908}
   m_SourcePrefab: {fileID: 100100000, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
 --- !u!4 &4051687736711893244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5765446010261398942, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
   m_PrefabInstance: {fileID: 7509899842497688930}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4337724932365227279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6055713989208973421, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
+  m_PrefabInstance: {fileID: 7509899842497688930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4479736173511583459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6202510357114000257, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
+  m_PrefabInstance: {fileID: 7509899842497688930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &280206349896297908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4479736173511583459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142217414133e3244a61e11a655e8933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texto: {fileID: 4337724932365227279}
+  actions: []
+  textoEntreActions: []
