@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lanza decorativa_0: -1710651495784001789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

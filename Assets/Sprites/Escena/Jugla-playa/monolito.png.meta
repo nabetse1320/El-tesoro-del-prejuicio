@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monolito_0: 6296364101691679519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

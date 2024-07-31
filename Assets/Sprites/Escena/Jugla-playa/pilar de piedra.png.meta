@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pilar de piedra_0: 2663427067400712698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

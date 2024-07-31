@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      manglar 3_0: 3654272269196584081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -656,7 +656,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      arbustoA_0: 1307466697918517448
+      arbustoA_1: -2152924021404391663
+      arbustoA_10: 8112988757657467049
+      arbustoA_11: -1286839105610210717
+      arbustoA_12: 369076100730010466
+      arbustoA_13: 2784427566577101282
+      arbustoA_14: 8420667473910399137
+      arbustoA_15: -5679602623971255931
+      arbustoA_16: 8438713103519799794
+      arbustoA_17: 5590830511939917420
+      arbustoA_18: -2831190685900760196
+      arbustoA_19: -5494706645096498037
+      arbustoA_2: -6285167119942567726
+      arbustoA_20: 2329477022924239372
+      arbustoA_21: -6051681802336093039
+      arbustoA_22: -6955724520959132529
+      arbustoA_3: -2218662041752016839
+      arbustoA_4: -5151002322036991059
+      arbustoA_5: 5700743920232148405
+      arbustoA_6: 1087726729266362616
+      arbustoA_7: 4990790335794307902
+      arbustoA_8: -1215477172012698323
+      arbustoA_9: 5687931198647769270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

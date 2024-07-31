@@ -656,7 +656,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ManglarB_0: 4053924313318896096
+      ManglarB_1: 8254597495584982974
+      ManglarB_10: -7551262751711191388
+      ManglarB_11: -127473013319045897
+      ManglarB_12: 2199206527479896598
+      ManglarB_13: -3423987536789315570
+      ManglarB_14: 3947912839546599367
+      ManglarB_15: 5393705814961502710
+      ManglarB_16: 4743442656566057211
+      ManglarB_17: -8468794832528243158
+      ManglarB_18: 769128745176697650
+      ManglarB_19: 7630330892801110824
+      ManglarB_2: -5762839007731174519
+      ManglarB_20: -5771399990893809140
+      ManglarB_21: 4904924752880381501
+      ManglarB_22: 6857964858229340042
+      ManglarB_3: 7027729106122574581
+      ManglarB_4: -659636091809377650
+      ManglarB_5: 6720646177355275804
+      ManglarB_6: -5648080062820140164
+      ManglarB_7: -2727859243079401770
+      ManglarB_8: -292407616115401990
+      ManglarB_9: 4347921487030763632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

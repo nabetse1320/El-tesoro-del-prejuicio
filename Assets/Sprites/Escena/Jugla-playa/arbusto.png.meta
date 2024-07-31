@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      arbusto_0: -4491312292937690789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

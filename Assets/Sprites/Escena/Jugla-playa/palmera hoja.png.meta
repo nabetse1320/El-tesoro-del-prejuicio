@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palmera hoja_0: -5094863150770290426
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

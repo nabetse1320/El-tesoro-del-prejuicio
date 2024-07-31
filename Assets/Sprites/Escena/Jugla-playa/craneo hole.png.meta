@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      craneo hole_0: 8873872485104476480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

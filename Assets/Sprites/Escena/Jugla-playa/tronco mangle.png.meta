@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tronco mangle_0: -2875972983053065631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

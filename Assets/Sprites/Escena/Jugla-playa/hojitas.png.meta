@@ -656,7 +656,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hojitas_0: 6634643137548265020
+      hojitas_1: -4828666136823193938
+      hojitas_10: 5525190263369677384
+      hojitas_11: 6601546247079527721
+      hojitas_12: -6626429672605526534
+      hojitas_13: -7385394261706145988
+      hojitas_14: -2843330277142853222
+      hojitas_15: 8070697120379156442
+      hojitas_16: -5620102968066434357
+      hojitas_17: -330257824483407271
+      hojitas_18: 125555117753901575
+      hojitas_19: 8178240932434424441
+      hojitas_2: 1687458291519436258
+      hojitas_20: 3142364931929023540
+      hojitas_21: -1008250033466168608
+      hojitas_22: -3241004730400773620
+      hojitas_3: -6888798517344806223
+      hojitas_4: -1699968913217456420
+      hojitas_5: -4862421526682838233
+      hojitas_6: 6704915589091731153
+      hojitas_7: -8488585155709458791
+      hojitas_8: -238486901623280836
+      hojitas_9: -4761236776635320642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

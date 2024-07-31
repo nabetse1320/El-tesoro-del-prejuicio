@@ -296,7 +296,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      olas tronco_0: -8292261800851562743
+      olas tronco_1: -1868737886140745703
+      olas tronco_2: 6527037468641062835
+      olas tronco_3: -2692388622356599132
+      olas tronco_4: -2535039549158067929
+      olas tronco_5: -864039186720090488
+      olas tronco_6: 3761902677073675580
+      olas tronco_7: -4434658681349075367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

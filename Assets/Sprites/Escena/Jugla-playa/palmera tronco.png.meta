@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palmera tronco_0: 5431210175597563170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

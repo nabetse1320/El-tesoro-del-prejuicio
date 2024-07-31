@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hoja mangle_0: 8787606192434362205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

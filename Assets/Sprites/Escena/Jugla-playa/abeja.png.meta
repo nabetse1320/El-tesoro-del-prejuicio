@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      abeja_0: 5680367608465863031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

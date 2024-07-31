@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      craneodaga_0: 9098867390429491312
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -656,7 +656,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palmera_0: -5352296265791276126
+      palmera_1: -4599675026115200144
+      palmera_10: 8255214110173270541
+      palmera_11: 6218444724967048187
+      palmera_12: 4825128633571189300
+      palmera_13: 7740459954417534706
+      palmera_14: -8157789855768961399
+      palmera_15: -920933979075999911
+      palmera_16: -4608187740426657783
+      palmera_17: 1410054556795570314
+      palmera_18: -8947472779109848516
+      palmera_19: 962739005502850557
+      palmera_2: 5048534773082978260
+      palmera_20: -8462165688691953984
+      palmera_21: -658058888825104530
+      palmera_22: 5333952815240466218
+      palmera_3: 998317832302933620
+      palmera_4: 3836228158164176320
+      palmera_5: 7330119265370608870
+      palmera_6: 1259805828797241926
+      palmera_7: -5035323723852361772
+      palmera_8: -4827288014377255370
+      palmera_9: -3181797941813852834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

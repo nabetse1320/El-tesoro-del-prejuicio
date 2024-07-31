@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Entrada a la cueva fondo_0: 4379889429346450066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

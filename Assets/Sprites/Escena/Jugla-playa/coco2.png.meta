@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      coco2_0: 886539586961060063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

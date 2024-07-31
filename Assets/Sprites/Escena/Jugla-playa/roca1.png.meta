@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      roca1_0: -3307304441730116051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

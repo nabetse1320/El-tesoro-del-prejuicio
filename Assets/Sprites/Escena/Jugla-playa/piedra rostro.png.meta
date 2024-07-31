@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      piedra rostro_0: -8607210036824843875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

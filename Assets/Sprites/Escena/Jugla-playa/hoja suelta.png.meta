@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hoja suelta_0: -1757428144425409972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

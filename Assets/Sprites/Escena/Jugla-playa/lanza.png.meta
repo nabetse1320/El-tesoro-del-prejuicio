@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lanza_0: -2685228523555409179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

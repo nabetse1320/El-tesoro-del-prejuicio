@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plataforma detras_0: 4774612229634097362
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
