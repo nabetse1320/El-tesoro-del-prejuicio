@@ -311,6 +311,34 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Menu"",
+            ""id"": ""41eac6d0-f9c1-4e7a-86a9-96915db754f3"",
+            ""actions"": [
+                {
+                    ""name"": ""Vocabulario"",
+                    ""type"": ""Button"",
+                    ""id"": ""1baec728-0050-4ce4-b846-8560611d9883"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""97471256-92f6-483e-9975-95be47c3a3e0"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Vocabulario"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -386,6 +414,9 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
         m_Player_Saltar = m_Player.FindAction("Saltar", throwIfNotFound: true);
         m_Player_PasarDialogos = m_Player.FindAction("PasarDialogos", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        // Menu
+        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
+        m_Menu_Vocabulario = m_Menu.FindAction("Vocabulario", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -545,6 +576,52 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Menu
+    private readonly InputActionMap m_Menu;
+    private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
+    private readonly InputAction m_Menu_Vocabulario;
+    public struct MenuActions
+    {
+        private @ActionsController m_Wrapper;
+        public MenuActions(@ActionsController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Vocabulario => m_Wrapper.m_Menu_Vocabulario;
+        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+        public void AddCallbacks(IMenuActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MenuActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MenuActionsCallbackInterfaces.Add(instance);
+            @Vocabulario.started += instance.OnVocabulario;
+            @Vocabulario.performed += instance.OnVocabulario;
+            @Vocabulario.canceled += instance.OnVocabulario;
+        }
+
+        private void UnregisterCallbacks(IMenuActions instance)
+        {
+            @Vocabulario.started -= instance.OnVocabulario;
+            @Vocabulario.performed -= instance.OnVocabulario;
+            @Vocabulario.canceled -= instance.OnVocabulario;
+        }
+
+        public void RemoveCallbacks(IMenuActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMenuActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MenuActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MenuActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MenuActions @Menu => new MenuActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -600,5 +677,9 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
         void OnSaltar(InputAction.CallbackContext context);
         void OnPasarDialogos(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IMenuActions
+    {
+        void OnVocabulario(InputAction.CallbackContext context);
     }
 }

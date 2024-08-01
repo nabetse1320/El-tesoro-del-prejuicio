@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class SoundGame : MonoBehaviour
 {
     [SerializeField] private int sequenceNumber;
-    public List<AudioSource> sounds; // Lista de sonidos
+    public List<AudioSource> sounds;
+    public Sprite[] sprites;// Lista de sonidos
     [Header("Evento a realizar")]
     [SerializeField] UnityEvent unityEvent;
     [HideInInspector] public List<int> sequence; // Secuencia de sonidos
@@ -40,7 +41,8 @@ public class SoundGame : MonoBehaviour
         // agrega sonidos adicionales al azar
         while (soundIndices.Count < length)
         {
-            soundIndices.Add(Random.Range(0, sounds.Count));
+            int indiceSonido = Random.Range(0, sounds.Count);
+            soundIndices.Add(indiceSonido);
         }
 
         // Mezcla la lista de índices de sonidos

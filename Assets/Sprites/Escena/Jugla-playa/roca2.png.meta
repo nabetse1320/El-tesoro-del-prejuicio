@@ -101,12 +101,12 @@ TextureImporter:
       name: roca2_0
       rect:
         serializedVersion: 2
-        x: 43
+        x: 0
         y: 47
-        width: 643
+        width: 776
         height: 331
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3d65ce5bf332e7747bc9a1897fbac340
     internalID: 0
     vertices: []
     indices: 

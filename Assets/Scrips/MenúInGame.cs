@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class MenúInGame : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MenúInGame : MonoBehaviour
     public GameObject[] elementosInGame;
     public GameObject[] elementosInMenu;
     public GameObject[] elementosMenu;
+    [SerializeField] private RebindSaveLoad rebindLoad;
 
     private void Update()
     {
@@ -17,16 +19,21 @@ public class MenúInGame : MonoBehaviour
         {
             if (!MenuPausa.activeSelf)
             {
+                rebindLoad.ChargeRebinds();
                 menuPausa();
             }
             else
             {
+                rebindLoad.ChargeRebinds();
                 Return();
             }
         }
-        if (Input.GetKeyDown(KeyCode.J))
+    }
+    public void OnVocabularioStarted (InputAction.CallbackContext value)
+    {
+        if (value.started)
         {
-            if(!LogrosMenu.activeSelf)
+            if (!LogrosMenu.activeSelf)
             {
                 AbrirLogros();
             }

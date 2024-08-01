@@ -3833,6 +3833,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5583003725708834444, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 6820501579006997991, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: 'audioSources.Array.data[0]'
       value: 
@@ -3855,6 +3859,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7400211238240125645, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8083875289965859782, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
@@ -3885,6 +3905,18 @@ PrefabInstance:
       propertyPath: 'elementosInGame.Array.data[0]'
       value: 
       objectReference: {fileID: 1325307435}
+    - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -7,23 +7,27 @@ public class RebindMenuManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public InputActionReference[] inputActions;
+    [SerializeField] private RebindSaveLoad rebindSaveLoad;
+
+
     void Start()
     {
-        
+        rebindSaveLoad.ChargeRebinds();
     }
     private void OnEnable()
     {
-        if(inputActions != null)
-        {
-            foreach(var action in inputActions)
-            {
-                action.action.Disable();
-            }
-        }
-
         
+        DesactivarInputs();
+        
+
+
     }
     private void OnDisable()
+    {
+        ActivarInputs();
+    }
+
+    public void ActivarInputs()
     {
         if (inputActions != null)
         {
@@ -33,9 +37,14 @@ public class RebindMenuManager : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void DesactivarInputs()
     {
+        if (inputActions != null)
+        {
+            foreach (var action in inputActions)
+            {
+                action.action.Disable();
+            }
+        }
     }
 }

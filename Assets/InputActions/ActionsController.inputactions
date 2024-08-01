@@ -289,6 +289,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Menu",
+            "id": "41eac6d0-f9c1-4e7a-86a9-96915db754f3",
+            "actions": [
+                {
+                    "name": "Vocabulario",
+                    "type": "Button",
+                    "id": "1baec728-0050-4ce4-b846-8560611d9883",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "97471256-92f6-483e-9975-95be47c3a3e0",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vocabulario",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

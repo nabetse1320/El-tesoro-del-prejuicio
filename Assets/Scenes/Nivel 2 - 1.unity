@@ -141,6 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9763672}
   - component: {fileID: 9763673}
+  - component: {fileID: 9763674}
   m_Layer: 0
   m_Name: arbusto2_5
   m_TagString: Untagged
@@ -215,6 +216,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &9763674
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9763671}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &11787179
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11787180}
   - component: {fileID: 11787181}
+  - component: {fileID: 11787182}
   m_Layer: 0
   m_Name: junco_1
   m_TagString: Untagged
@@ -299,6 +323,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &11787182
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11787179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &12821174
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12821175}
   - component: {fileID: 12821176}
+  - component: {fileID: 12821177}
   m_Layer: 0
   m_Name: arbusto_2
   m_TagString: Untagged
@@ -383,6 +430,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &12821177
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12821174}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &15329712
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &15329713
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -477,6 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18862073}
   - component: {fileID: 18862074}
+  - component: {fileID: 18862075}
   m_Layer: 0
   m_Name: junco_4
   m_TagString: Untagged
@@ -551,11 +621,164 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &18862075
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18862072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &22025504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 526494119840241550, guid: b8ce06aa2368ca740b2d8965d76f54c2, type: 3}
   m_PrefabInstance: {fileID: 2120136920}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &26509724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26509725}
+  - component: {fileID: 26509727}
+  - component: {fileID: 26509726}
+  m_Layer: 0
+  m_Name: monolito1_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26509725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26509724}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.26246, y: -0.59, z: 0}
+  m_LocalScale: {x: 0.6066, y: 0.48463064, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1496632412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &26509726
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26509724}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.61682534, y: 0.34505463}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.23, y: 13.11}
+    newSize: {x: 7.64, y: 5.74}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.996349, y: 12.419889}
+  m_EdgeRadius: 0
+--- !u!212 &26509727
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26509724}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1813096207
+  m_SortingLayer: 3
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 2663427067400712698, guid: 74d60db195c0dab42a2d862542adf1c8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 7.64, y: 5.74}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &29984966
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29984967}
   - component: {fileID: 29984968}
+  - component: {fileID: 29984969}
   m_Layer: 0
   m_Name: arbusto2_11
   m_TagString: Untagged
@@ -640,6 +864,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &29984969
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29984966}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &38629355
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38629356}
   - component: {fileID: 38629357}
+  - component: {fileID: 38629358}
   m_Layer: 0
   m_Name: arbusto1_5
   m_TagString: Untagged
@@ -724,6 +971,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &38629358
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38629355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &43203542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,6 +1082,7 @@ Transform:
   - {fileID: 62488649}
   - {fileID: 1148160477}
   - {fileID: 1543818552}
+  - {fileID: 1526364578}
   - {fileID: 816175040}
   - {fileID: 155717662}
   - {fileID: 767661268}
@@ -969,6 +1239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65757822}
   - component: {fileID: 65757823}
+  - component: {fileID: 65757824}
   m_Layer: 0
   m_Name: arbusto1_4
   m_TagString: Untagged
@@ -1043,6 +1314,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &65757824
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65757821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &66146315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2390921972644911891, guid: 7d30dad8f02df744bb89edeab9a343ed, type: 3}
@@ -1107,6 +1400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 119447267}
   - component: {fileID: 119447268}
+  - component: {fileID: 119447269}
   m_Layer: 0
   m_Name: arbusto1_3
   m_TagString: Untagged
@@ -1181,6 +1475,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &119447269
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119447266}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &145763939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 145763940}
   - component: {fileID: 145763942}
+  - component: {fileID: 145763943}
   m_Layer: 0
   m_Name: arbusto2_5
   m_TagString: Untagged
@@ -1265,6 +1582,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &145763943
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145763939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &154213744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441945707853076602, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
@@ -1385,7 +1724,7 @@ Transform:
   m_GameObject: {fileID: 167267034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.56, y: -2.05, z: 0}
+  m_LocalPosition: {x: -20.56, y: -4.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1464,6 +1803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187824214}
   - component: {fileID: 187824215}
+  - component: {fileID: 187824216}
   m_Layer: 0
   m_Name: junco_9
   m_TagString: Untagged
@@ -1538,6 +1878,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &187824216
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187824213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &188510967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188510968}
   - component: {fileID: 188510969}
+  - component: {fileID: 188510970}
   m_Layer: 0
   m_Name: arbusto1_2
   m_TagString: Untagged
@@ -1622,6 +1985,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &188510970
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188510967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &190066970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,7 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3855584768543585072, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: SceneSig
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7043945285255105041, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: m_IsActive
@@ -2077,6 +2462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210847688}
   - component: {fileID: 210847689}
+  - component: {fileID: 210847690}
   m_Layer: 0
   m_Name: arbusto1_3
   m_TagString: Untagged
@@ -2151,6 +2537,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &210847690
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210847687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &218714803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2606,6 +3014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299186853}
   - component: {fileID: 299186854}
+  - component: {fileID: 299186855}
   m_Layer: 0
   m_Name: arbusto1_2
   m_TagString: Untagged
@@ -2680,6 +3089,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &299186855
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299186852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &307318260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,7 +3571,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2727330878023144695, guid: 1b605b4daa4d21a428af447a8c517066, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3244,6 +3675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 351925052}
   - component: {fileID: 351925053}
+  - component: {fileID: 351925054}
   m_Layer: 0
   m_Name: arbusto1_9
   m_TagString: Untagged
@@ -3318,6 +3750,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &351925054
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351925051}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &367506347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367506348}
   - component: {fileID: 367506349}
+  - component: {fileID: 367506350}
   m_Layer: 0
   m_Name: junco_6
   m_TagString: Untagged
@@ -3402,6 +3857,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &367506350
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367506347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &369243352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,6 +3973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379252171}
   - component: {fileID: 379252172}
+  - component: {fileID: 379252173}
   m_Layer: 0
   m_Name: arbusto2_3
   m_TagString: Untagged
@@ -3570,6 +4048,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &379252173
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379252170}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &380415719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3664,6 +4164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389633208}
   - component: {fileID: 389633209}
+  - component: {fileID: 389633210}
   m_Layer: 0
   m_Name: arbusto1_5
   m_TagString: Untagged
@@ -3738,6 +4239,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &389633210
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389633207}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &396754335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441945707853076602, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
@@ -3753,6 +4276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400738090}
   - component: {fileID: 400738091}
+  - component: {fileID: 400738092}
   m_Layer: 0
   m_Name: arbusto2_2
   m_TagString: Untagged
@@ -3827,6 +4351,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &400738092
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400738089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &413805418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3921,6 +4467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424389911}
   - component: {fileID: 424389912}
+  - component: {fileID: 424389913}
   m_Layer: 0
   m_Name: junco_5
   m_TagString: Untagged
@@ -3995,6 +4542,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &424389913
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424389910}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &429562882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,6 +4574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429562883}
   - component: {fileID: 429562884}
+  - component: {fileID: 429562885}
   m_Layer: 0
   m_Name: arbusto_11
   m_TagString: Untagged
@@ -4079,6 +4649,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &429562885
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429562882}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &433703884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,6 +5015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 457534675}
   - component: {fileID: 457534676}
+  - component: {fileID: 457534677}
   m_Layer: 0
   m_Name: arbusto2_7
   m_TagString: Untagged
@@ -4497,6 +5090,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &457534677
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457534674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &468267723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4585,6 +5200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489812805}
   - component: {fileID: 489812807}
+  - component: {fileID: 489812808}
   m_Layer: 0
   m_Name: arbusto2_4
   m_TagString: Untagged
@@ -4659,6 +5275,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &489812808
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489812804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &492862234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4669,6 +5307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492862235}
   - component: {fileID: 492862237}
+  - component: {fileID: 492862238}
   m_Layer: 0
   m_Name: arbusto1_4
   m_TagString: Untagged
@@ -4743,6 +5382,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &492862238
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492862234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,7 +5483,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.358595, y: 5.29566, z: -10}
+  m_LocalPosition: {x: -4.364938, y: 5.29563, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4882,6 +5543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528487849}
   - component: {fileID: 528487850}
+  - component: {fileID: 528487851}
   m_Layer: 0
   m_Name: arbusto1_1
   m_TagString: Untagged
@@ -4956,6 +5618,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &528487851
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528487848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &531183040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,6 +5769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533393183}
   - component: {fileID: 533393184}
+  - component: {fileID: 533393185}
   m_Layer: 0
   m_Name: arbusto2_1
   m_TagString: Untagged
@@ -5159,6 +5844,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &533393185
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533393182}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &540503233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5169,6 +5876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 540503234}
   - component: {fileID: 540503235}
+  - component: {fileID: 540503236}
   m_Layer: 0
   m_Name: arbusto2_3
   m_TagString: Untagged
@@ -5243,6 +5951,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &540503236
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540503233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &544323206
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,6 +6016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 549846729}
   - component: {fileID: 549846730}
+  - component: {fileID: 549846731}
   m_Layer: 0
   m_Name: arbusto2_9
   m_TagString: Untagged
@@ -5360,6 +6091,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &549846731
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549846728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &552897921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5370,6 +6123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552897922}
   - component: {fileID: 552897923}
+  - component: {fileID: 552897924}
   m_Layer: 0
   m_Name: arbusto2_0
   m_TagString: Untagged
@@ -5444,6 +6198,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &552897924
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552897921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &577208420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6028,6 +6804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631904103}
   - component: {fileID: 631904104}
+  - component: {fileID: 631904105}
   m_Layer: 0
   m_Name: arbusto1_1
   m_TagString: Untagged
@@ -6102,6 +6879,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &631904105
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631904102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &633260807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6253,6 +7052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652040675}
   - component: {fileID: 652040676}
+  - component: {fileID: 652040677}
   m_Layer: 0
   m_Name: arbusto1_1
   m_TagString: Untagged
@@ -6327,6 +7127,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &652040677
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652040674}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &670401959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8092135131329957742, guid: c1afb4bb169c3b149af6aa42169721e2, type: 3}
@@ -6518,6 +7340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711253163}
   - component: {fileID: 711253164}
+  - component: {fileID: 711253165}
   m_Layer: 0
   m_Name: arbusto2_8
   m_TagString: Untagged
@@ -6592,6 +7415,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &711253165
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711253162}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &719268468
 GameObject:
   m_ObjectHideFlags: 0
@@ -6602,6 +7447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719268469}
   - component: {fileID: 719268470}
+  - component: {fileID: 719268471}
   m_Layer: 0
   m_Name: manglar 3_0
   m_TagString: Untagged
@@ -6666,7 +7512,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 3654272269196584081, guid: 7d6995c447f20fc49a40369d4fe9880b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6676,6 +7522,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &719268471
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719268468}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d50658fae4c87bd4f8e899add4b15727, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &731940392
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,6 +7757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773558103}
   - component: {fileID: 773558104}
+  - component: {fileID: 773558105}
   m_Layer: 0
   m_Name: arbusto2_5
   m_TagString: Untagged
@@ -6963,6 +7832,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &773558105
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773558102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &779242016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5753823991781638574, guid: b8ce06aa2368ca740b2d8965d76f54c2, type: 3}
@@ -7073,6 +7964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795008882}
   - component: {fileID: 795008883}
+  - component: {fileID: 795008884}
   m_Layer: 0
   m_Name: arbusto_1
   m_TagString: Untagged
@@ -7147,6 +8039,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &795008884
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795008881}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &800849223 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3576853665929503145, guid: 8d91f7b6367731c47bb9ee8b87cf0c4f, type: 3}
@@ -7167,6 +8081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802763722}
   - component: {fileID: 802763723}
+  - component: {fileID: 802763724}
   m_Layer: 0
   m_Name: arbusto2_5
   m_TagString: Untagged
@@ -7241,6 +8156,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &802763724
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802763721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &804007748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6174339948136360383, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
@@ -7256,6 +8193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815734607}
   - component: {fileID: 815734608}
+  - component: {fileID: 815734609}
   m_Layer: 0
   m_Name: manglar 3_1
   m_TagString: Untagged
@@ -7330,6 +8268,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &815734609
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815734606}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d50658fae4c87bd4f8e899add4b15727, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &816175040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441945707853076602, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
@@ -7493,6 +8453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839142670}
   - component: {fileID: 839142671}
+  - component: {fileID: 839142672}
   m_Layer: 0
   m_Name: arbusto2_4
   m_TagString: Untagged
@@ -7567,6 +8528,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &839142672
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839142669}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &843512124
 GameObject:
   m_ObjectHideFlags: 0
@@ -7577,6 +8560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843512125}
   - component: {fileID: 843512126}
+  - component: {fileID: 843512127}
   m_Layer: 0
   m_Name: arbusto2_0
   m_TagString: Untagged
@@ -7651,6 +8635,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &843512127
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843512124}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &852709376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7661,6 +8667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852709377}
   - component: {fileID: 852709378}
+  - component: {fileID: 852709379}
   m_Layer: 0
   m_Name: arbusto1_0
   m_TagString: Untagged
@@ -7735,6 +8742,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &852709379
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852709376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &854787786 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4743564603419638393, guid: 8d91f7b6367731c47bb9ee8b87cf0c4f, type: 3}
@@ -7750,6 +8779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856916925}
   - component: {fileID: 856916926}
+  - component: {fileID: 856916927}
   m_Layer: 0
   m_Name: arbusto_5
   m_TagString: Untagged
@@ -7824,6 +8854,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &856916927
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856916924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &857286349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8060,6 +9112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909483810}
   - component: {fileID: 909483811}
+  - component: {fileID: 909483812}
   m_Layer: 0
   m_Name: arbusto1_1
   m_TagString: Untagged
@@ -8134,6 +9187,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &909483812
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909483809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &912300557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441945707853076602, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
@@ -8149,6 +9224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913212568}
   - component: {fileID: 913212569}
+  - component: {fileID: 913212570}
   m_Layer: 0
   m_Name: arbusto1_5
   m_TagString: Untagged
@@ -8223,6 +9299,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &913212570
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913212567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &932157513
 GameObject:
   m_ObjectHideFlags: 0
@@ -8322,6 +9420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 947927320}
   - component: {fileID: 947927321}
+  - component: {fileID: 947927322}
   m_Layer: 0
   m_Name: arbusto_8
   m_TagString: Untagged
@@ -8396,6 +9495,106 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &947927322
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947927319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &949823853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949823854}
+  - component: {fileID: 949823855}
+  m_Layer: 2
+  m_Name: CheckPoint
+  m_TagString: Respawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &949823854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949823853}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.81, y: -6.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1259457517}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &949823855
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949823853}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 2.5525165}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 7.5412445}
+  m_EdgeRadius: 0
 --- !u!1 &954000267
 GameObject:
   m_ObjectHideFlags: 0
@@ -8490,6 +9689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958682493}
   - component: {fileID: 958682494}
+  - component: {fileID: 958682495}
   m_Layer: 0
   m_Name: arbusto2_2
   m_TagString: Untagged
@@ -8564,6 +9764,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &958682495
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958682492}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &966446718
 GameObject:
   m_ObjectHideFlags: 0
@@ -8800,6 +10022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986139215}
   - component: {fileID: 986139216}
+  - component: {fileID: 986139217}
   m_Layer: 0
   m_Name: arbusto2_2
   m_TagString: Untagged
@@ -8874,6 +10097,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &986139217
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986139214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &987209309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3907588349405608999, guid: 3f8b783149c2e6941ad2358a30c347f8, type: 3}
@@ -9141,6 +10386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 7146395362588549045, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9173,8 +10422,8 @@ Transform:
   m_GameObject: {fileID: 1033808114}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 77.26246, y: -3.2407973, z: 0}
-  m_LocalScale: {x: 0.6066, y: 0.8631, z: 1}
+  m_LocalPosition: {x: 77.26246, y: -5.7219, z: 0}
+  m_LocalScale: {x: 0.6066, y: 0.48463064, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1496632412}
@@ -9213,7 +10462,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.61682534, y: 3.2461185}
+  m_Offset: {x: 0.61682534, y: 0.34505463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9223,7 +10472,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6.996349, y: 6.6177616}
+  m_Size: {x: 6.996349, y: 12.419889}
   m_EdgeRadius: 0
 --- !u!212 &1033808117
 SpriteRenderer:
@@ -9265,7 +10514,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1813096207
   m_SortingLayer: 3
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 2663427067400712698, guid: 74d60db195c0dab42a2d862542adf1c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9418,6 +10667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036595653}
   - component: {fileID: 1036595654}
+  - component: {fileID: 1036595655}
   m_Layer: 0
   m_Name: arbusto1_3
   m_TagString: Untagged
@@ -9492,6 +10742,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1036595655
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036595652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1037478939
 GameObject:
   m_ObjectHideFlags: 0
@@ -9502,6 +10774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037478940}
   - component: {fileID: 1037478941}
+  - component: {fileID: 1037478942}
   m_Layer: 0
   m_Name: manglar 3_2
   m_TagString: Untagged
@@ -9576,6 +10849,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1037478942
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037478939}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d50658fae4c87bd4f8e899add4b15727, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1037671029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9655,6 +10950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040521348}
   - component: {fileID: 1040521349}
+  - component: {fileID: 1040521350}
   m_Layer: 0
   m_Name: arbusto_4
   m_TagString: Untagged
@@ -9729,6 +11025,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1040521350
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040521347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1046660665
 GameObject:
   m_ObjectHideFlags: 0
@@ -9739,6 +11057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046660666}
   - component: {fileID: 1046660667}
+  - component: {fileID: 1046660668}
   m_Layer: 0
   m_Name: junco_11
   m_TagString: Untagged
@@ -9813,6 +11132,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1046660668
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046660665}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1048665635
 GameObject:
   m_ObjectHideFlags: 0
@@ -9924,6 +11265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1058594859}
   - component: {fileID: 1058594860}
+  - component: {fileID: 1058594861}
   m_Layer: 0
   m_Name: arbusto1_3
   m_TagString: Untagged
@@ -9998,6 +11340,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1058594861
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058594858}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1066842814
 GameObject:
   m_ObjectHideFlags: 0
@@ -10234,6 +11598,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1107767044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107767046}
+  - component: {fileID: 1107767045}
+  m_Layer: 0
+  m_Name: puerta1_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1107767045
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107767044}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1813096207
+  m_SortingLayer: 3
+  m_SortingOrder: 6
+  m_Sprite: {fileID: -4670171049397540627, guid: 1e75db2e5972b8745a50ab1258778e7b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.18, y: 10.57}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1107767046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107767044}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 74.79246, y: -5.370797, z: 0}
+  m_LocalScale: {x: 0.4818, y: 0.4818, z: 0.4818}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1177175117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1109966146
 GameObject:
   m_ObjectHideFlags: 0
@@ -10244,6 +11692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109966147}
   - component: {fileID: 1109966148}
+  - component: {fileID: 1109966149}
   m_Layer: 0
   m_Name: junco_3
   m_TagString: Untagged
@@ -10318,6 +11767,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1109966149
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109966146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1116131122
 GameObject:
   m_ObjectHideFlags: 0
@@ -10421,6 +11892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131011676}
   - component: {fileID: 1131011677}
+  - component: {fileID: 1131011678}
   m_Layer: 0
   m_Name: arbusto1_0
   m_TagString: Untagged
@@ -10495,6 +11967,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1131011678
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131011675}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1133246160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3718023836675227277, guid: c1afb4bb169c3b149af6aa42169721e2, type: 3}
@@ -10515,6 +12009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137009199}
   - component: {fileID: 1137009200}
+  - component: {fileID: 1137009201}
   m_Layer: 0
   m_Name: arbusto1_2
   m_TagString: Untagged
@@ -10589,6 +12084,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1137009201
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137009198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1140848444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10898,6 +12415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156689041}
   - component: {fileID: 1156689042}
+  - component: {fileID: 1156689043}
   m_Layer: 0
   m_Name: arbusto1_7
   m_TagString: Untagged
@@ -10972,6 +12490,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1156689043
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156689040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1169834077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11162,6 +12702,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2004759717}
+  - {fileID: 1107767046}
   - {fileID: 1302431057}
   - {fileID: 15329714}
   - {fileID: 2144042203}
@@ -11393,6 +12935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216129210}
   - component: {fileID: 1216129211}
+  - component: {fileID: 1216129212}
   m_Layer: 0
   m_Name: arbusto1_8
   m_TagString: Untagged
@@ -11467,6 +13010,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1216129212
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216129209}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1221489334
 GameObject:
   m_ObjectHideFlags: 0
@@ -11477,6 +13042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221489335}
   - component: {fileID: 1221489336}
+  - component: {fileID: 1221489337}
   m_Layer: 0
   m_Name: junco_12
   m_TagString: Untagged
@@ -11551,6 +13117,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1221489337
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221489334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1232425341
 GameObject:
   m_ObjectHideFlags: 0
@@ -11561,6 +13149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232425342}
   - component: {fileID: 1232425343}
+  - component: {fileID: 1232425344}
   m_Layer: 0
   m_Name: arbusto2_2
   m_TagString: Untagged
@@ -11635,6 +13224,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1232425344
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232425341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1232961926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5753823991781638574, guid: b8ce06aa2368ca740b2d8965d76f54c2, type: 3}
@@ -11650,6 +13261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1259456031}
   - component: {fileID: 1259456032}
+  - component: {fileID: 1259456033}
   m_Layer: 0
   m_Name: arbusto2_4
   m_TagString: Untagged
@@ -11724,6 +13336,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1259456033
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259456030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1259457516
 GameObject:
   m_ObjectHideFlags: 0
@@ -11763,6 +13397,7 @@ Transform:
   - {fileID: 229088075}
   - {fileID: 1900714658}
   - {fileID: 1177175117}
+  - {fileID: 949823854}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1271211607
@@ -11775,6 +13410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271211608}
   - component: {fileID: 1271211609}
+  - component: {fileID: 1271211610}
   m_Layer: 0
   m_Name: arbusto_3
   m_TagString: Untagged
@@ -11849,6 +13485,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1271211610
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271211607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1272739005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12069,6 +13727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1292519900}
   - component: {fileID: 1292519901}
+  - component: {fileID: 1292519902}
   m_Layer: 0
   m_Name: junco_0
   m_TagString: Untagged
@@ -12143,6 +13802,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1292519902
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292519899}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1294116924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441945707853076602, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
@@ -12158,6 +13839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300256630}
   - component: {fileID: 1300256631}
+  - component: {fileID: 1300256632}
   m_Layer: 0
   m_Name: arbusto_9
   m_TagString: Untagged
@@ -12232,6 +13914,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1300256632
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300256629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1302431055
 GameObject:
   m_ObjectHideFlags: 0
@@ -12326,6 +14030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305220337}
   - component: {fileID: 1305220338}
+  - component: {fileID: 1305220339}
   m_Layer: 0
   m_Name: arbusto1_3
   m_TagString: Untagged
@@ -12400,6 +14105,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1305220339
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305220336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1312805484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 13871411434346170, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
@@ -12426,6 +14153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354142740}
   - component: {fileID: 1354142741}
+  - component: {fileID: 1354142742}
   m_Layer: 0
   m_Name: arbusto2_1
   m_TagString: Untagged
@@ -12500,6 +14228,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1354142742
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354142739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1361507617
 GameObject:
   m_ObjectHideFlags: 0
@@ -12678,6 +14428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386494205}
   - component: {fileID: 1386494206}
+  - component: {fileID: 1386494207}
   m_Layer: 0
   m_Name: arbusto1_4
   m_TagString: Untagged
@@ -12752,6 +14503,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1386494207
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386494204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1393605560
 GameObject:
   m_ObjectHideFlags: 0
@@ -12846,6 +14619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399695829}
   - component: {fileID: 1399695830}
+  - component: {fileID: 1399695831}
   m_Layer: 0
   m_Name: arbusto1_11
   m_TagString: Untagged
@@ -12920,6 +14694,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1399695831
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399695828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1399955066
 GameObject:
   m_ObjectHideFlags: 0
@@ -12930,6 +14726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399955067}
   - component: {fileID: 1399955068}
+  - component: {fileID: 1399955069}
   m_Layer: 0
   m_Name: junco_7
   m_TagString: Untagged
@@ -13004,6 +14801,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1399955069
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399955066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1403153944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13213,6 +15032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479040647}
   - component: {fileID: 1479040648}
+  - component: {fileID: 1479040649}
   m_Layer: 0
   m_Name: arbusto1_4
   m_TagString: Untagged
@@ -13287,6 +15107,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1479040649
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479040646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1488119211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13424,6 +15266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1493421031}
   - component: {fileID: 1493421032}
+  - component: {fileID: 1493421033}
   m_Layer: 0
   m_Name: arbusto2_2
   m_TagString: Untagged
@@ -13498,6 +15341,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1493421033
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493421030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1496632411
 GameObject:
   m_ObjectHideFlags: 0
@@ -13528,6 +15393,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1033808115}
+  - {fileID: 26509725}
   - {fileID: 246524732}
   - {fileID: 1034851355}
   m_Father: {fileID: 52668258}
@@ -13710,6 +15576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505488942}
   - component: {fileID: 1505488943}
+  - component: {fileID: 1505488944}
   m_Layer: 0
   m_Name: arbusto2_4
   m_TagString: Untagged
@@ -13784,6 +15651,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1505488944
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505488941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1513777818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5753823991781638574, guid: b8ce06aa2368ca740b2d8965d76f54c2, type: 3}
@@ -13940,6 +15829,137 @@ MonoBehaviour:
   multiInterruptor: 0
   numeroInterruptores: 2
   audioSource: {fileID: 0}
+--- !u!1 &1526364577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526364578}
+  - component: {fileID: 1526364580}
+  - component: {fileID: 1526364579}
+  m_Layer: 0
+  m_Name: troncos (1)_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526364578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526364577}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 72.27796, y: -3.1524973, z: 0}
+  m_LocalScale: {x: 0.34579998, y: 0.6865749, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52668258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!61 &1526364579
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526364577}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 8.56}
+    newSize: {x: 1.5, y: 8.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.5, y: 8.56}
+  m_EdgeRadius: 0
+--- !u!212 &1526364580
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526364577}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1813096207
+  m_SortingLayer: 3
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -530762622297590820, guid: 990ee60594f8ace43885a8b147a8c952, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 8.56}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1528849905
 GameObject:
   m_ObjectHideFlags: 0
@@ -13950,6 +15970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1528849906}
   - component: {fileID: 1528849907}
+  - component: {fileID: 1528849908}
   m_Layer: 0
   m_Name: arbusto_0
   m_TagString: Untagged
@@ -14024,6 +16045,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1528849908
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528849905}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1537781545
 GameObject:
   m_ObjectHideFlags: 0
@@ -14490,6 +16533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588942602}
   - component: {fileID: 1588942603}
+  - component: {fileID: 1588942604}
   m_Layer: 0
   m_Name: arbusto1_2
   m_TagString: Untagged
@@ -14564,6 +16608,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1588942604
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588942601}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1595962442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14631,6 +16697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622180825}
   - component: {fileID: 1622180826}
+  - component: {fileID: 1622180827}
   m_Layer: 0
   m_Name: arbusto2_4
   m_TagString: Untagged
@@ -14705,6 +16772,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1622180827
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622180824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1630200486
 GameObject:
   m_ObjectHideFlags: 0
@@ -14830,6 +16919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644916997}
   - component: {fileID: 1644916998}
+  - component: {fileID: 1644916999}
   m_Layer: 0
   m_Name: junco_8
   m_TagString: Untagged
@@ -14904,6 +16994,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1644916999
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644916996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1658424362
 GameObject:
   m_ObjectHideFlags: 0
@@ -14914,6 +17026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1658424363}
   - component: {fileID: 1658424364}
+  - component: {fileID: 1658424365}
   m_Layer: 0
   m_Name: arbusto2_3
   m_TagString: Untagged
@@ -14988,6 +17101,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1658424365
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658424362}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1658687470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15071,6 +17206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661501646}
   - component: {fileID: 1661501647}
+  - component: {fileID: 1661501648}
   m_Layer: 0
   m_Name: arbusto1_5
   m_TagString: Untagged
@@ -15145,6 +17281,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1661501648
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661501645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1661851251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15340,6 +17498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693613810}
   - component: {fileID: 1693613811}
+  - component: {fileID: 1693613812}
   m_Layer: 0
   m_Name: arbusto1_2
   m_TagString: Untagged
@@ -15414,6 +17573,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1693613812
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693613809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1699372722
 GameObject:
   m_ObjectHideFlags: 0
@@ -15424,6 +17605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699372723}
   - component: {fileID: 1699372724}
+  - component: {fileID: 1699372725}
   m_Layer: 0
   m_Name: arbusto2_3
   m_TagString: Untagged
@@ -15498,6 +17680,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1699372725
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699372722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1699909821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15584,6 +17788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709459485}
   - component: {fileID: 1709459486}
+  - component: {fileID: 1709459487}
   m_Layer: 0
   m_Name: arbusto2_10
   m_TagString: Untagged
@@ -15658,6 +17863,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1709459487
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709459484}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1718271650
 GameObject:
   m_ObjectHideFlags: 0
@@ -15849,6 +18076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742401658}
   - component: {fileID: 1742401659}
+  - component: {fileID: 1742401660}
   m_Layer: 0
   m_Name: junco_2
   m_TagString: Untagged
@@ -15923,6 +18151,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1742401660
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742401657}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1744221319 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7080452271731377214, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
@@ -16602,6 +18852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799041590}
   - component: {fileID: 1799041591}
+  - component: {fileID: 1799041592}
   m_Layer: 0
   m_Name: arbusto1_4
   m_TagString: Untagged
@@ -16676,6 +18927,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1799041592
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799041589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1804531962
 GameObject:
   m_ObjectHideFlags: 0
@@ -16854,6 +19127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837620655}
   - component: {fileID: 1837620656}
+  - component: {fileID: 1837620657}
   m_Layer: 0
   m_Name: arbusto1_10
   m_TagString: Untagged
@@ -16928,6 +19202,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1837620657
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837620654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1843207876
 GameObject:
   m_ObjectHideFlags: 0
@@ -18057,6 +20353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975530026}
   - component: {fileID: 1975530027}
+  - component: {fileID: 1975530028}
   m_Layer: 0
   m_Name: junco_10
   m_TagString: Untagged
@@ -18131,6 +20428,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1975530028
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975530025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f56c3a6209747ec499a4f57f60956455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1975554229
 GameObject:
   m_ObjectHideFlags: 0
@@ -18318,6 +20637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004150926}
   - component: {fileID: 2004150927}
+  - component: {fileID: 2004150928}
   m_Layer: 0
   m_Name: arbusto_7
   m_TagString: Untagged
@@ -18335,7 +20655,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 45.73, y: 15.65, z: 0}
-  m_LocalScale: {x: 1.2578934, y: 1.3332577, z: 0.4906249}
+  m_LocalScale: {x: 1.2578934, y: 1.333258, z: 0.4906249}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1181461042}
@@ -18392,6 +20712,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2004150928
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004150925}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2004759715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004759717}
+  - component: {fileID: 2004759716}
+  m_Layer: 0
+  m_Name: puerta2_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2004759716
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004759715}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1813096207
+  m_SortingLayer: 3
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 1470709068891670788, guid: 340d6b4bb5e74bc489ed783b2576dcda, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.67, y: 7.76}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2004759717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004759715}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 74.30246, y: -5.720797, z: 0}
+  m_LocalScale: {x: 0.5877, y: 0.57607234, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1177175117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011953715
 GameObject:
   m_ObjectHideFlags: 0
@@ -18402,6 +20828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011953716}
   - component: {fileID: 2011953717}
+  - component: {fileID: 2011953718}
   m_Layer: 0
   m_Name: arbusto_10
   m_TagString: Untagged
@@ -18476,6 +20903,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2011953718
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011953715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a36a45cbb2e5b3840928305344448adc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2020879054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19200,6 +21649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134583809}
   - component: {fileID: 2134583811}
+  - component: {fileID: 2134583812}
   m_Layer: 0
   m_Name: arbusto1_5
   m_TagString: Untagged
@@ -19274,6 +21724,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2134583812
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134583808}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2134973256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19385,6 +21857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142165153}
   - component: {fileID: 2142165154}
+  - component: {fileID: 2142165155}
   m_Layer: 0
   m_Name: arbusto2_5
   m_TagString: Untagged
@@ -19459,6 +21932,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2142165155
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142165152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2142783434
 GameObject:
   m_ObjectHideFlags: 0
@@ -19469,6 +21964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142783435}
   - component: {fileID: 2142783436}
+  - component: {fileID: 2142783437}
   m_Layer: 0
   m_Name: arbusto1_1
   m_TagString: Untagged
@@ -19543,6 +22039,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2142783437
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142783434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2143377559
 GameObject:
   m_ObjectHideFlags: 0
@@ -19553,6 +22071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143377560}
   - component: {fileID: 2143377561}
+  - component: {fileID: 2143377562}
   m_Layer: 0
   m_Name: arbusto2_3
   m_TagString: Untagged
@@ -19627,6 +22146,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2143377562
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143377559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 560fc792737b64342828f65577c37946, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2144042202
 GameObject:
   m_ObjectHideFlags: 0
@@ -20094,17 +22635,109 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1259457517}
     m_Modifications:
+    - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1385117
+      objectReference: {fileID: 0}
+    - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Size.y
+      value: 3.1469646
+      objectReference: {fileID: 0}
+    - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06925583
+      objectReference: {fileID: 0}
+    - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.21931356
+      objectReference: {fileID: 0}
+    - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 132949049986303655, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5135705828041193845, guid: 8c88c8c967509b845a1bb0e25812775a, type: 3}
     - target: {fileID: 132949049986303655, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 132949049986303655, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 132949049986303655, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_SortingLayerID
       value: -1813096207
       objectReference: {fileID: 0}
     - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438732004234172548, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903332950487565028, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1709442
+      objectReference: {fileID: 0}
+    - target: {fileID: 903332950487565028, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Size.y
+      value: 3.67099
+      objectReference: {fileID: 0}
+    - target: {fileID: 903332950487565028, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903332950487565028, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1388917
+      objectReference: {fileID: 0}
+    - target: {fileID: 903332950487565028, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 903332950487565028, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2548835026496715811, guid: 8306a90bfbbd76d4799e5350d796b3a8, type: 3}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_SortingLayer
@@ -20117,6 +22750,10 @@ PrefabInstance:
     - target: {fileID: 1540754234399746663, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_SortingLayerID
       value: -1813096207
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081051678625969541, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: MinDistance
+      value: 1.1615995
       objectReference: {fileID: 0}
     - target: {fileID: 5569277225849754505, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: sequenceNumber
@@ -20154,17 +22791,61 @@ PrefabInstance:
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5623218683320690375, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623218683320690375, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.87
+      objectReference: {fileID: 0}
     - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5812958143561058895, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931170528645983692, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931170528645983692, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931170528645983692, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1902
+      objectReference: {fileID: 0}
     - target: {fileID: 5931170528645983692, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.63
+      value: 70.32
       objectReference: {fileID: 0}
     - target: {fileID: 5931170528645983692, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.14
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 5931170528645983692, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20215,6 +22896,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3508813220671445209, guid: 6b1040dafa4390a4bba91a3a8f103923, type: 3}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732035846318075582, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
@@ -20227,12 +22924,72 @@ PrefabInstance:
       value: -1813096207
       objectReference: {fileID: 0}
     - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7514151546237967698, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875135244296288055, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6216807
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875135244296288055, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Size.y
+      value: 5.805698
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875135244296288055, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.13930821
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875135244296288055, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.4527099
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875135244296288055, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 7.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875135244296288055, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.92
       objectReference: {fileID: 0}
     - target: {fileID: 8096393151877444338, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_Name
       value: PuzzleSecuencia
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 148692040790651794, guid: f05e58a8eb46b544db22909a87f2cdcb, type: 3}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8971773638669303999, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_SortingLayer

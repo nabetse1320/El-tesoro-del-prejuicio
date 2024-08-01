@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 ////TODO: localization support
@@ -105,6 +106,13 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         {
             get => m_RebindOverlay;
             set => m_RebindOverlay = value;
+        }
+
+        
+        public EventSystem eventSystems
+        {
+            get => m_eventSystems;
+            set => m_eventSystems = value;
         }
 
         /// <summary>
@@ -267,6 +275,10 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 .OnCancel(
                     operation =>
                     {
+                        if (m_eventSystems != null)
+                        {
+                            m_eventSystems.enabled = true;
+                        }
                         m_RebindStopEvent?.Invoke(this, operation);
                         m_RebindOverlay?.SetActive(false);
                         UpdateBindingDisplay();
@@ -275,6 +287,10 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 .OnComplete(
                     operation =>
                     {
+                        if (m_eventSystems != null)
+                        {
+                            m_eventSystems.enabled = true;
+                        }
                         m_RebindOverlay?.SetActive(false);
                         m_RebindStopEvent?.Invoke(this, operation);
                         UpdateBindingDisplay();
@@ -296,6 +312,10 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 partName = $"Binding '{action.bindings[bindingIndex].name}'. ";
 
             // Bring up rebind overlay, if we have one.
+            if (m_eventSystems != null)
+            {
+                m_eventSystems.enabled = false;
+            }
             m_RebindOverlay?.SetActive(true);
             if (m_RebindText != null)
             {
@@ -387,6 +407,10 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         [Tooltip("Optional UI that will be shown while a rebind is in progress.")]
         [SerializeField]
         private GameObject m_RebindOverlay;
+
+        [Tooltip("Quitar Eventos de UI mientras está haciendo rebinding")]
+        [SerializeField]
+        private EventSystem m_eventSystems;
 
         [Tooltip("Optional text label that will be updated with prompt for user input.")]
         [SerializeField]

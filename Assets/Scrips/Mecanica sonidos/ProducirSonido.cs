@@ -6,6 +6,7 @@ using UnityEngine;
 public class ProducirSonido : MonoBehaviour
 {
     [SerializeField] private SoundGame secuenceManager;
+    private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
     private Color colorInicio;
     // Start is called before the first frame update
@@ -13,6 +14,8 @@ public class ProducirSonido : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         colorInicio = GetComponent<SpriteRenderer>().color;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = secuenceManager.sprites[secuenceManager.sounds.IndexOf(audioSource)];
     }
 
     public void Sonar()
