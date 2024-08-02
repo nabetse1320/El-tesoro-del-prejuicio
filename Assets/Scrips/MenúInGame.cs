@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Samples.RebindUI;
 using UnityEngine.SceneManagement;
 public class MenúInGame : MonoBehaviour
 {
@@ -11,21 +12,22 @@ public class MenúInGame : MonoBehaviour
     public GameObject[] elementosInGame;
     public GameObject[] elementosInMenu;
     public GameObject[] elementosMenu;
+    [Header("RebindActionOpcions")]
     [SerializeField] private RebindSaveLoad rebindLoad;
 
-    private void Update()
+    public void OnPauseStarted(InputAction.CallbackContext value)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (value.performed)
         {
             if (!MenuPausa.activeSelf)
             {
-                rebindLoad.ChargeRebinds();
                 menuPausa();
             }
             else
             {
-                rebindLoad.ChargeRebinds();
+                //rebindLoad.ChargeRebinds();
                 Return();
+
             }
         }
     }

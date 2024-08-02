@@ -7,13 +7,13 @@ public class RebindSaveLoad : MonoBehaviour
 
     private void Start()
     {
-        actions.Disable();
+        //actions.Disable();
         ChargeRebinds();
         actions.Enable();
     }
     public void OnEnable()
     {
-        ChargeRebinds();
+        //ChargeRebinds();
     }
 
     //public void OnDisable()
@@ -23,9 +23,12 @@ public class RebindSaveLoad : MonoBehaviour
     //}
     public void ChargeRebinds()
     {
+        
         var rebinds = PlayerPrefs.GetString("rebinds");
         if (!string.IsNullOrEmpty(rebinds))
+            //Debug.Log("A");
             actions.LoadBindingOverridesFromJson(rebinds);
+        
     }
     public void SaveRebinds()
     {

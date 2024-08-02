@@ -12,7 +12,7 @@ public class RebindMenuManager : MonoBehaviour
 
     void Start()
     {
-        rebindSaveLoad.ChargeRebinds();
+        //rebindSaveLoad.ChargeRebinds();
     }
     private void OnEnable()
     {
@@ -24,6 +24,7 @@ public class RebindMenuManager : MonoBehaviour
     }
     private void OnDisable()
     {
+        rebindSaveLoad.ChargeRebinds();
         ActivarInputs();
     }
 

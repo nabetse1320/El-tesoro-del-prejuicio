@@ -324,6 +324,15 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""0194ab5a-f657-4ead-a081-bf3d6a525ca8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -335,6 +344,17 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Vocabulario"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7535a161-9697-47eb-9b24-10be9eb1a540"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -417,6 +437,7 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Vocabulario = m_Menu.FindAction("Vocabulario", throwIfNotFound: true);
+        m_Menu_Pause = m_Menu.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -581,11 +602,13 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Menu;
     private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
     private readonly InputAction m_Menu_Vocabulario;
+    private readonly InputAction m_Menu_Pause;
     public struct MenuActions
     {
         private @ActionsController m_Wrapper;
         public MenuActions(@ActionsController wrapper) { m_Wrapper = wrapper; }
         public InputAction @Vocabulario => m_Wrapper.m_Menu_Vocabulario;
+        public InputAction @Pause => m_Wrapper.m_Menu_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -598,6 +621,9 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
             @Vocabulario.started += instance.OnVocabulario;
             @Vocabulario.performed += instance.OnVocabulario;
             @Vocabulario.canceled += instance.OnVocabulario;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IMenuActions instance)
@@ -605,6 +631,9 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
             @Vocabulario.started -= instance.OnVocabulario;
             @Vocabulario.performed -= instance.OnVocabulario;
             @Vocabulario.canceled -= instance.OnVocabulario;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IMenuActions instance)
@@ -681,5 +710,6 @@ public partial class @ActionsController: IInputActionCollection2, IDisposable
     public interface IMenuActions
     {
         void OnVocabulario(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

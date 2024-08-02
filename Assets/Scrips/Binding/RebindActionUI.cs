@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
 
 ////TODO: localization support
 
@@ -56,7 +58,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// <summary>
         /// Text component that receives the name of the action. Optional.
         /// </summary>
-        public Text actionLabel
+        public TextMeshProUGUI actionLabel
         {
             get => m_ActionLabel;
             set
@@ -70,7 +72,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// Text component that receives the display string of the binding. Can be <c>null</c> in which
         /// case the component entirely relies on <see cref="updateBindingUIEvent"/>.
         /// </summary>
-        public Text bindingText
+        public TextMeshProUGUI bindingText
         {
             get => m_BindingText;
             set
@@ -85,7 +87,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// </summary>
         /// <seealso cref="startRebindEvent"/>
         /// <seealso cref="rebindOverlay"/>
-        public Text rebindPrompt
+        public TextMeshProUGUI rebindPrompt
         {
             get => m_RebindText;
             set => m_RebindText = value;
@@ -225,17 +227,48 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             if (!ResolveActionAndBinding(out var action, out var bindingIndex))
                 return;
 
-            if (action.bindings[bindingIndex].isComposite)
-            {
-                // It's a composite. Remove overrides from part bindings.
-                for (var i = bindingIndex + 1; i < action.bindings.Count && action.bindings[i].isPartOfComposite; ++i)
-                    action.RemoveBindingOverride(i);
-            }
-            else
-            {
-                action.RemoveBindingOverride(bindingIndex);
-            }
+
+            ResetBinding(action,bindingIndex);
+            //if (action.bindings[bindingIndex].isComposite)
+            //{
+            //    // It's a composite. Remove overrides from part bindings.
+            //    for (var i = bindingIndex + 1; i < action.bindings.Count && action.bindings[i].isPartOfComposite; ++i)
+            //        action.RemoveBindingOverride(i);
+            //}
+            //else
+            //{
+            //    action.RemoveBindingOverride(bindingIndex);
+            //}
             UpdateBindingDisplay();
+        }
+
+        private void ResetBinding(InputAction action, int bindingIndex)
+        {
+            InputBinding newBinding = action.bindings[bindingIndex];
+            string oldOverridePath = newBinding.overridePath;
+
+            action.RemoveBindingOverride(bindingIndex);
+            foreach (InputActionMap map in action.actionMap.asset.actionMaps)
+            {
+                foreach (InputAction otherAction in map)
+                {
+                    if (otherAction == action)
+                    {
+                        continue;
+                    }
+
+                    for (int i = 0; i < otherAction.bindings.Count; i++)
+                    {
+                        InputBinding binding = otherAction.bindings[i];
+                        if (binding.overridePath == newBinding.path)
+                        {
+                            otherAction.ApplyBindingOverride(i, oldOverridePath);
+                        }
+                    }
+                }
+            }
+            
+
         }
 
         /// <summary>
@@ -248,19 +281,21 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 return;
 
             // If the binding is a composite, we need to rebind each part in turn.
+            string oldPath = action.bindings[bindingIndex].effectivePath;
             if (action.bindings[bindingIndex].isComposite)
             {
                 var firstPartIndex = bindingIndex + 1;
                 if (firstPartIndex < action.bindings.Count && action.bindings[firstPartIndex].isPartOfComposite)
-                    PerformInteractiveRebind(action, firstPartIndex, allCompositeParts: true);
+                    PerformInteractiveRebind(action, firstPartIndex,oldPath, allCompositeParts: true);
             }
             else
             {
-                PerformInteractiveRebind(action, bindingIndex);
+                
+                PerformInteractiveRebind(action, bindingIndex,oldPath);
             }
         }
 
-        private void PerformInteractiveRebind(InputAction action, int bindingIndex, bool allCompositeParts = false)
+        private void PerformInteractiveRebind(InputAction action, int bindingIndex,string oldPath, bool allCompositeParts = false)
         {
             m_RebindOperation?.Cancel(); // Will null out m_RebindOperation.
 
@@ -269,9 +304,11 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 m_RebindOperation?.Dispose();
                 m_RebindOperation = null;
             }
-
+            
             // Configure the rebind.
             m_RebindOperation = action.PerformInteractiveRebinding(bindingIndex)
+                
+                .WithCancelingThrough("<Keyboard>/escape")
                 .OnCancel(
                     operation =>
                     {
@@ -293,7 +330,9 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         }
                         m_RebindOverlay?.SetActive(false);
                         m_RebindStopEvent?.Invoke(this, operation);
+                        SwapSimilarBindings(action, bindingIndex, oldPath);
                         UpdateBindingDisplay();
+                        
                         CleanUp();
 
                         // If there's more composite parts we should bind, initiate a rebind
@@ -302,7 +341,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         {
                             var nextBindingIndex = bindingIndex + 1;
                             if (nextBindingIndex < action.bindings.Count && action.bindings[nextBindingIndex].isPartOfComposite)
-                                PerformInteractiveRebind(action, nextBindingIndex, true);
+                                PerformInteractiveRebind(action, nextBindingIndex, oldPath,true);
                         }
                     });
 
@@ -310,7 +349,6 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             var partName = default(string);
             if (action.bindings[bindingIndex].isPartOfComposite)
                 partName = $"Binding '{action.bindings[bindingIndex].name}'. ";
-
             // Bring up rebind overlay, if we have one.
             if (m_eventSystems != null)
             {
@@ -334,6 +372,34 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             m_RebindStartEvent?.Invoke(this, m_RebindOperation);
 
             m_RebindOperation.Start();
+        }
+        private void SwapSimilarBindings(InputAction action, int indexBinding, string oldPath)
+        {
+            InputBinding newBinding = action.bindings[indexBinding];
+
+
+            //action.RemoveBindingOverride(indexBinding);
+
+
+            foreach (InputActionMap map in action.actionMap.asset.actionMaps)
+            {
+                foreach (InputAction otherAction in map)
+                {
+                    if (otherAction == action)
+                    {
+                        continue;
+                    }
+                    for (int i = 0; i < otherAction.bindings.Count; i++)
+                    {
+                        InputBinding binding = otherAction.bindings[i];
+
+                        if (binding.effectivePath == newBinding.overridePath)
+                        {
+                            otherAction.ApplyBindingOverride(i, oldPath);
+                        }
+                    }
+                }
+            }
         }
 
         protected void OnEnable()
@@ -398,11 +464,11 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         [Tooltip("Text label that will receive the name of the action. Optional. Set to None to have the "
             + "rebind UI not show a label for the action.")]
         [SerializeField]
-        private Text m_ActionLabel;
+        private TextMeshProUGUI m_ActionLabel;
 
         [Tooltip("Text label that will receive the current, formatted binding string.")]
         [SerializeField]
-        private Text m_BindingText;
+        private TextMeshProUGUI m_BindingText;
 
         [Tooltip("Optional UI that will be shown while a rebind is in progress.")]
         [SerializeField]
@@ -414,7 +480,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
         [Tooltip("Optional text label that will be updated with prompt for user input.")]
         [SerializeField]
-        private Text m_RebindText;
+        private TextMeshProUGUI m_RebindText;
 
         [Tooltip("Event that is triggered when the way the binding is display should be updated. This allows displaying "
             + "bindings in custom ways, e.g. using images instead of text.")]
