@@ -6,12 +6,13 @@ using UnityEngine.InputSystem.Samples.RebindUI;
 using UnityEngine.SceneManagement;
 public class MenúInGame : MonoBehaviour
 {
-    public GameObject MenuPausa;
+    public GameObject menuDePausa;
+    public GameObject menuOpciones;
     public GameObject controlsMenu;
     public GameObject LogrosMenu;
     public GameObject[] elementosInGame;
-    public GameObject[] elementosInMenu;
-    public GameObject[] elementosMenu;
+    public GameObject[] elementosInMenuOptions;
+    public GameObject[] elementosMenuOpciones;
     [Header("RebindActionOpcions")]
     [SerializeField] private RebindSaveLoad rebindLoad;
 
@@ -19,11 +20,14 @@ public class MenúInGame : MonoBehaviour
     {
         if (value.performed)
         {
-            if (!MenuPausa.activeSelf)
+            if (!menuDePausa.activeSelf&&!menuOpciones.activeSelf)
             {
                 menuPausa();
             }
-            else
+            else if (menuOpciones.activeSelf)
+            {
+                ReturnToMenuPause();
+            }else
             {
                 //rebindLoad.ChargeRebinds();
                 Return();
@@ -48,27 +52,20 @@ public class MenúInGame : MonoBehaviour
     public void menuPausa()
     {
         Time.timeScale = 0;
-        foreach (GameObject elemento in elementosInGame)
-        {
-            if (elemento != null)
-            {
-                elemento.SetActive(false);
-            }
+        foreach (GameObject element in elementosInGame)
+        { 
+            element.SetActive(false);
         }
         LogrosMenu.SetActive(false);
-        MenuPausa.SetActive(true);
-        for (int i = 0; i < elementosInMenu.Length; i++)
-        {
-            if (i == 0)
-            {
-                elementosInMenu[i].SetActive(true);
-            }
-            else
-            {
-                elementosInMenu[i].SetActive(false);
-            }
-        }
+        menuOpciones.SetActive(false);
+        menuDePausa.SetActive(true);
 
+    }
+    public void AbrirMenuOpciones()
+    {
+        menuDePausa.SetActive(false);
+        menuOpciones.SetActive(true);
+        GeneralSettings();
     }
     public void AbrirLogros()
     {
@@ -80,7 +77,7 @@ public class MenúInGame : MonoBehaviour
                 elemento.SetActive(false);
             }
         }
-        foreach (GameObject elemento in elementosMenu)
+        foreach (GameObject elemento in elementosMenuOpciones)
         {
             if (elemento != null)
             {
@@ -88,66 +85,66 @@ public class MenúInGame : MonoBehaviour
             }
         }
         LogrosMenu.SetActive(true);
-        MenuPausa.SetActive(false);
+        menuDePausa.SetActive(false);
     }
 
 
     public void controlsSettings()
     {
-        elementosMenu[0].SetActive(true);
-        elementosMenu[1].SetActive(false);
-        elementosMenu[2].SetActive(false);
-        for (int i = 0; i < elementosInMenu.Length; i++)
+        elementosMenuOpciones[0].SetActive(false);
+        elementosMenuOpciones[1].SetActive(false);
+        elementosMenuOpciones[2].SetActive(true);
+        for (int i = 0; i < elementosInMenuOptions.Length; i++)
         {
-            if(i == 3)
+            if(i == 2)
             {
-                elementosInMenu[i].SetActive(true);
+                elementosInMenuOptions[i].SetActive(true);
             }
             else
             {
-                elementosInMenu[i].SetActive(false);
+                elementosInMenuOptions[i].SetActive(false);
             }
         }
         
     }
     public void GeneralSettings()
     {
-        elementosMenu[0].SetActive(false);
-        elementosMenu[1].SetActive(true);
-        elementosMenu[2].SetActive(false);
-        for (int i = 0; i < elementosInMenu.Length; i++)
+        elementosMenuOpciones[0].SetActive(true);
+        elementosMenuOpciones[1].SetActive(false);
+        elementosMenuOpciones[2].SetActive(false);
+        for (int i = 0; i < elementosInMenuOptions.Length; i++)
         {
-            if (i == 1)
+            if (i == 0)
             {
-                elementosInMenu[i].SetActive(true);
+                elementosInMenuOptions[i].SetActive(true);
             }
             else
             {
-                elementosInMenu[i].SetActive(false);
+                elementosInMenuOptions[i].SetActive(false);
             }
         }
     }
     public void SoundSettings()
     {
-        for (int i = 0; i < elementosInMenu.Length; i++)
+        for (int i = 0; i < elementosInMenuOptions.Length; i++)
         {
-            if (i == 2)
+            if (i == 1)
             {
-                elementosInMenu[i].SetActive(true);
+                elementosInMenuOptions[i].SetActive(true);
             }
             else
             {
-                elementosInMenu[i].SetActive(false);
+                elementosInMenuOptions[i].SetActive(false);
             }
         }
-        elementosMenu[0].SetActive(false);
-        elementosMenu[1].SetActive(false);
-        elementosMenu[2].SetActive(true);
+        elementosMenuOpciones[0].SetActive(false);
+        elementosMenuOpciones[1].SetActive(true);
+        elementosMenuOpciones[2].SetActive(false);
     }
     public void Return()
     {
         Time.timeScale = 1;
-        MenuPausa.SetActive(false);
+        menuDePausa.SetActive(false);
         LogrosMenu.SetActive(false);
         foreach (GameObject elemento in elementosInGame)
         {
@@ -156,30 +153,28 @@ public class MenúInGame : MonoBehaviour
                 elemento.SetActive(true);
             }
         }
-        foreach(GameObject elemento in elementosMenu)
+        
+    }
+    public void ReturnToMenuPause()
+    {
+        for (int i = 0; i < elementosInMenuOptions.Length; i++)
         {
-            if (elemento != null)
-            {
-                elemento.SetActive(false);
-            }
+            elementosInMenuOptions[i].SetActive(false);
         }
+        foreach (GameObject elemento in elementosMenuOpciones)
+        {
+            elemento.SetActive(false);
+        }
+        menuDePausa.SetActive(true);
+        menuOpciones.SetActive(false);
+        
+        
     }
      
      
     public void SalirAlMenu()
     {
-        for (int i = 0; i < elementosInMenu.Length; i++)
-        {
-            if (i == 4)
-            {
-                elementosInMenu[i].SetActive(true);
-            }
-            else
-            {
-                elementosInMenu[i].SetActive(false);
-            }
-        }
-        Time.timeScale = 1;
+        Return();
         Eventos.eve.PasarNivel?.Invoke(1);
 
     }

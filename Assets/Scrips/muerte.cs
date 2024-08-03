@@ -17,10 +17,13 @@ public class muerte : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Eventos.eve.resetCoinsInlvlDied.Invoke();
-            Eventos.eve.PasarNivel.Invoke(sceneIndex);
-            
+            ResetLvl();
         }
         
+    }
+    public void ResetLvl()
+    {
+        Eventos.eve.PasarNivel.Invoke(sceneIndex);
     }
 
 }

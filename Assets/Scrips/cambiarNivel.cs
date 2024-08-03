@@ -75,7 +75,7 @@ public class cambiarNivel : MonoBehaviour
     {
         SceneData.sceneToLoad = Scene;
         hijo.SetActive(true);
-        //Time.timeScale = 0;
+        Time.timeScale = 1;
         transitionAnimator.SetTrigger("StartTransition");
         bajarVol = true;
         yield return new WaitForSeconds(transitionTime);
