@@ -56,6 +56,8 @@ public class MenúInGame : MonoBehaviour
         { 
             element.SetActive(false);
         }
+        Eventos.eve.PausarPlayer.Invoke();
+        Eventos.eve.PausarPlayer2.Invoke();
         LogrosMenu.SetActive(false);
         menuOpciones.SetActive(false);
         menuDePausa.SetActive(true);
@@ -65,7 +67,6 @@ public class MenúInGame : MonoBehaviour
     {
         menuDePausa.SetActive(false);
         menuOpciones.SetActive(true);
-        GeneralSettings();
     }
     public void AbrirLogros()
     {
@@ -144,6 +145,8 @@ public class MenúInGame : MonoBehaviour
     public void Return()
     {
         Time.timeScale = 1;
+        Eventos.eve.DespausarPlayer.Invoke();
+        Eventos.eve.DespausarPlayer2.Invoke();
         menuDePausa.SetActive(false);
         LogrosMenu.SetActive(false);
         foreach (GameObject elemento in elementosInGame)

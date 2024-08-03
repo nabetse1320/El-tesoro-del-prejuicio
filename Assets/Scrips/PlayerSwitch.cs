@@ -95,7 +95,7 @@ public class PlayerSwitch : MonoBehaviour
     {
         if (context.started)
         {
-            if (((player1.isGrounded) || (player2.isGrounded))&&!NotSwitch)
+            if (((player1.isGrounded) || (player2.isGrounded))&&!NotSwitch&&!player1.pausePlayer&&!player2.pausePlayer)
             {
                 SwitchPlayer();
             }
