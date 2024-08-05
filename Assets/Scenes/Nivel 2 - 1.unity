@@ -2183,7 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3855584768543585072, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: SceneSig
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7043945285255105041, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: m_IsActive
@@ -5483,7 +5483,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.357044, y: 5.29567, z: -10}
+  m_LocalPosition: {x: -4.362209, y: 5.29564, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

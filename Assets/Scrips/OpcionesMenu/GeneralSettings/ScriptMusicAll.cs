@@ -10,9 +10,6 @@ public class VolumeSliderAll : MonoBehaviour
         // Carga la configuración del volumen
         float volume = PlayerPrefs.GetFloat("volumeAll");
 
-        // Establece el volumen inicial
-        SetVolumeAll(volume);
-
         // Configura el valor del slider
         slider1.value = volume;
 

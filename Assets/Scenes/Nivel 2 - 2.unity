@@ -3350,7 +3350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3855584768543585072, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: SceneSig
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7721617533407873750, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: m_Size.x
@@ -6934,7 +6934,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4640794, y: 14.11597, z: -10}
+  m_LocalPosition: {x: -7.4651775, y: 14.11597, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8255,6 +8255,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3797305865977171257, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797305865977171257, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3808683550730457406, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_VerticalFit
       value: 2
@@ -8477,7 +8485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5508203463180906340, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -721.484
+      value: -683.935
       objectReference: {fileID: 0}
     - target: {fileID: 5508486084364857757, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8489,7 +8497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5583003725708834444, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5618040267516973648, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8677,7 +8685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 392.6034
+      value: 383.4665
       objectReference: {fileID: 0}
     - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8793,7 +8801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.9099593
+      value: 0.8854513
       objectReference: {fileID: 0}
     - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMin.x
@@ -8801,7 +8809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.09004071
+      value: 0.11454871
       objectReference: {fileID: 0}
     - target: {fileID: 9040694120770990086, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8817,7 +8825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9040694120770990086, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 46.263
       objectReference: {fileID: 0}
     - target: {fileID: 9040694120770990086, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -26697,7 +26705,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: de216e02f28cb654ca975d7911c1c617, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

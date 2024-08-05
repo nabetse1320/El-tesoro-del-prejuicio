@@ -8,7 +8,6 @@ public class cambiarNivel : MonoBehaviour
 {
     [SerializeField] private AnimationClip clipTransition;
     private Animator transitionAnimator;
-    [SerializeField] private AudioSource audioSource;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private GameObject hijo;
 
@@ -28,26 +27,14 @@ public class cambiarNivel : MonoBehaviour
         transitionTime = clipTransition.length;
         hijo.SetActive(true);
         subirVol = true;
+        StartCoroutine(FadeInVolume(PlayerPrefs.GetFloat("volumeAll"), transitionTime));
         Invoke("ActivarCanva", transitionTime);
 
     }
     private void Update()
     {
-        if (audioSource!=null)
-        {
-            if (subirVol && audioSource.volume < 1)
-            {
-                audioSource.volume += transitionTime * Time.deltaTime;
-            }
-            else if (audioSource.volume == 1)
-            {
-                subirVol = false;
-            }
-            if (bajarVol && audioSource.volume > 0)
-            {
-                audioSource.volume += -transitionTime * Time.deltaTime;
-            }
-        }
+        
+        
         if (videoPlayer!=null)
         {
             if (subirVol && videoPlayer.GetDirectAudioVolume(0)<1)
@@ -75,6 +62,7 @@ public class cambiarNivel : MonoBehaviour
     {
         SceneData.sceneToLoad = Scene;
         hijo.SetActive(true);
+        StartCoroutine(FadeOutVolume(PlayerPrefs.GetFloat("volumeAll"),transitionTime));
         Time.timeScale = 1;
         transitionAnimator.SetTrigger("StartTransition");
         bajarVol = true;
@@ -91,6 +79,29 @@ public class cambiarNivel : MonoBehaviour
             Eventos.eve.PausarPlayer2.Invoke();
             LoadNextScene(SceneSig);
         }
+    }
+    IEnumerator FadeInVolume(float endVolume, float duration)
+    {
+        float currentTime = 0;
+        AudioListener.volume = 0;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            AudioListener.volume = Mathf.Lerp(0, endVolume, currentTime / duration);
+            yield return null;
+        }
+        AudioListener.volume = endVolume;
+    }
+    IEnumerator FadeOutVolume(float startVolume, float duration)
+    {
+        float currentTime = 0;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            AudioListener.volume = Mathf.Lerp(startVolume, 0, currentTime / duration);
+            yield return null;
+        }
+        AudioListener.volume = 0;
     }
 
     public void ActivarCollider()
