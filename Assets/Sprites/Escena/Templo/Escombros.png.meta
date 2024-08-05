@@ -64,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -265,14 +265,21 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Escombros_0: 1148098452804173400
+      Escombros_1: 8427637150109189243
+      Escombros_2: -148130535684685234
+      Escombros_3: -6819341683978457290
+      Escombros_4: -5294716344798630739
+      Escombros_5: 6458879428604056324
+      Escombros_6: 5894576369684641636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

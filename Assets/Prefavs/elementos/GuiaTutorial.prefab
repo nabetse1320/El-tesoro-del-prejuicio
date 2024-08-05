@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 1482047200629019001, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
       propertyPath: textMeshPro
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4337724932365227279}
     - target: {fileID: 6055713989208973421, guid: 01d1a7a0754721a41bd88c5c43969d72, type: 3}
       propertyPath: m_fontSize
       value: 8.3

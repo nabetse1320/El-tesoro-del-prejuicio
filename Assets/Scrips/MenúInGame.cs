@@ -70,6 +70,8 @@ public class MenúInGame : MonoBehaviour
     }
     public void AbrirLogros()
     {
+        Eventos.eve.PausarPlayer.Invoke();
+        Eventos.eve.PausarPlayer2.Invoke();
         Time.timeScale = 0;
         foreach (GameObject elemento in elementosInGame)
         {

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Logros : MonoBehaviour
 {
     //public static int logrosYaDesbloqueados;
-    [SerializeField] private GameObject[] logrosBloqueados;
     [SerializeField] private GameObject[] logrosDesbloqueados;
     [SerializeField] private Color colorDeSombreadoDeBotones = Color.gray;
 
@@ -27,11 +26,16 @@ public class Logros : MonoBehaviour
     public void ResetearLogros(int tamanoVectorLogros)
     {
         CambiarLogrosDesbloqueados.ReiniciarLogros(tamanoVectorLogros);
+        foreach (GameObject logro in logrosDesbloqueados) 
+        {
+            logro.GetComponent<Button>().interactable = false;
+        }
     }
     public void DesbloquearLogro(int logro)
     {
-        logrosBloqueados[logro].SetActive(false);
         logrosDesbloqueados[logro].SetActive(true);
+        logrosDesbloqueados[logro].GetComponent<Button>().interactable = true;
+
     }
 
     public void SombreadoBotones()
