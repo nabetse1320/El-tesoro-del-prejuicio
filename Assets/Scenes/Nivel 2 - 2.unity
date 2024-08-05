@@ -3350,7 +3350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3855584768543585072, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: SceneSig
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7721617533407873750, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: m_Size.x
@@ -26277,7 +26277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: logro
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

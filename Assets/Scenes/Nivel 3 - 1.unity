@@ -2167,7 +2167,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0590515, y: 19.997189, z: -10}
+  m_LocalPosition: {x: -4.0587354, y: 19.997179, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2360,7 +2360,7 @@ PrefabInstance:
     - target: {fileID: 567457149702824834, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: 'logrosBloqueados.Array.data[0]'
       value: 
-      objectReference: {fileID: 1386784486}
+      objectReference: {fileID: 0}
     - target: {fileID: 567457149702824834, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: 'logrosDesbloqueados.Array.data[0]'
       value: 
@@ -5913,11 +5913,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 103027004417443202, guid: b87da5bf5d669a346a4b53cfcf56e35b, type: 3}
   m_PrefabInstance: {fileID: 1066844490}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1386784486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2002517391595591892, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
-  m_PrefabInstance: {fileID: 599461671}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1396475248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4441945707853076602, guid: ee81d9c1b1045394495faa02f65e58e2, type: 3}
@@ -7225,7 +7220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: logro
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7653,7 +7648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3855584768543585072, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: SceneSig
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7721617533407873750, guid: 673726be7e51b5941b1a12d3994596bf, type: 3}
       propertyPath: m_Size.x

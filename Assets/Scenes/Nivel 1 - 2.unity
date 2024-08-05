@@ -1092,78 +1092,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f8b783149c2e6941ad2358a30c347f8, type: 3}
---- !u!1001 &54610933
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 194478352642463519, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_Name
-      value: GuiaTutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320631557928238049, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1606959362532551753, guid: 8edecb233cdf7b7428e3fd108bdfae7a, type: 3}
-    - target: {fileID: 6291286527014191510, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 98c2f4c9dff112e44a3d91f30bba6449, type: 2}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 24.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982935291179099163, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      propertyPath: textoIn
-      value: Dispara el gancho a las cajas para halarlas
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3367468228216773758, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
 --- !u!1 &62889757
 GameObject:
   m_ObjectHideFlags: 0
@@ -12392,7 +12320,7 @@ Transform:
   m_GameObject: {fileID: 860554419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.75492, y: 48.7035, z: -10}
+  m_LocalPosition: {x: -40.755943, y: 48.7035, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12954,6 +12882,10 @@ PrefabInstance:
     - target: {fileID: 4542981605786383801, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: m_Name
       value: moneda
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
+      propertyPath: logro
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30337,6 +30269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
+      propertyPath: logro
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31914,6 +31850,10 @@ PrefabInstance:
     - target: {fileID: 4542981605786383801, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: m_Name
       value: moneda (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
+      propertyPath: logro
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34712,7 +34652,6 @@ SceneRoots:
   - {fileID: 888969859}
   - {fileID: 1577620677}
   - {fileID: 822472211}
-  - {fileID: 54610933}
   - {fileID: 1350780873}
   - {fileID: 1735281890}
   - {fileID: 18043418}

@@ -2702,7 +2702,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7247167, y: 7.38091, z: -10}
+  m_LocalPosition: {x: 1.724988, y: 7.38088, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4798,6 +4798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1616068965}
   - {fileID: 1411345869}
   - {fileID: 1358225062}
   - {fileID: 2035827186}
@@ -7350,6 +7351,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1306943612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 901127232}
+    m_Modifications:
+    - target: {fileID: 194478352642463519, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_Name
+      value: GuiaTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: actions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: 'actions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2135091967827921746, guid: a686984651222fd48a23e3b4539c3fff, type: 3}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: textoEntreActions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: 'textoEntreActions.Array.data[0]'
+      value: Usa
+      objectReference: {fileID: 0}
+    - target: {fileID: 280206349896297908, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: 'textoEntreActions.Array.data[1]'
+      value: para lanzar el gancho de Izzy y arrastrar cajas u otros objetos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320631557928238049, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1606959362532551753, guid: 8edecb233cdf7b7428e3fd108bdfae7a, type: 3}
+    - target: {fileID: 4337724932365227279, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337724932365227279, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_fontSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291286527014191510, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 98c2f4c9dff112e44a3d91f30bba6449, type: 2}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.018986
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3367468228216773758, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
 --- !u!1 &1327098843
 GameObject:
   m_ObjectHideFlags: 0
@@ -9595,6 +9692,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1616068965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7818309385753462707, guid: d8ff2bc5c4d78004aa42f49620300dc2, type: 3}
+  m_PrefabInstance: {fileID: 1306943612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1631795412
 GameObject:
   m_ObjectHideFlags: 0

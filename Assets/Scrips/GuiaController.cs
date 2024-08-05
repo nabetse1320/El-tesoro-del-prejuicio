@@ -48,6 +48,6 @@ public class GuiaController : MonoBehaviour
     }
     private void questions() {
         string formula = textoIn;
-        textMeshPro.text = formula;
+        textMeshPro.text += formula;
     }
 }
