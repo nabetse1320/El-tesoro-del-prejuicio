@@ -105,8 +105,8 @@ TextureImporter:
         y: 6
         width: 681
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,14 +121,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 900a3a47ca5adac4e9db0027e3550ab4
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      piso ladrillo_0: -4369538001355388579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
