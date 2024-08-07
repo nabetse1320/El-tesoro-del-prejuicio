@@ -6934,7 +6934,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4651775, y: 14.11597, z: -10}
+  m_LocalPosition: {x: -7.461693, y: 14.11597, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8204,6 +8204,10 @@ PrefabInstance:
       value: SetCoins
       objectReference: {fileID: 0}
     - target: {fileID: 3631356874750080809, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
+      propertyPath: m_Size
+      value: 0.7709026
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631356874750080809, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_Value
       value: 1
       objectReference: {fileID: 0}
@@ -8497,7 +8501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5583003725708834444, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100.80289
       objectReference: {fileID: 0}
     - target: {fileID: 5618040267516973648, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8673,11 +8677,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7883265132929635228, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_SizeDelta.y
@@ -8801,7 +8805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.8854513
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMin.x
@@ -8809,7 +8813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8778739111674461549, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.11454871
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9040694120770990086, guid: e61e96b01e98d6946b01d15cda0ce2a5, type: 3}
       propertyPath: m_AnchorMax.y
