@@ -7,6 +7,7 @@ public class Dropper : MonoBehaviour
     private bool _hasDropped;
     [SerializeField] private GameObject drop;
     [SerializeField] private Transform dropPoint;
+    private GameObject currentInstantiate;
     
     void Start()
     {
@@ -18,13 +19,14 @@ public class Dropper : MonoBehaviour
     {
         if (!_hasDropped)
         {
-            Instantiate(drop, dropPoint.position, Quaternion.identity);
+            currentInstantiate = Instantiate(drop, dropPoint.position, Quaternion.identity);
             _hasDropped = true;
         }
     }
 
     public void ResetDrop()
     {
+        Destroy(currentInstantiate);
         _hasDropped = false;
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - ObInteract
   - Terreno
   - Detener
+  - Boss
   layers:
   - Default
   - TransparentFX

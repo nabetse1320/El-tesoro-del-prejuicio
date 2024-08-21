@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class BossStats : MonoBehaviour
@@ -9,8 +10,9 @@ public class BossStats : MonoBehaviour
     public bool isJumping;
     
     [SerializeField] private float _MaxHealth;
-    private float _CurrentHealth;
+    [SerializeField] private float _CurrentHealth;
     [SerializeField] private float _Damage;
+    public UnityEvent eventsToStuned;
     public float attackRange;
     public float jumpForce; 
     public float jumpDetectDistance; // Distancia para detectar si el jugador está encima
@@ -19,7 +21,16 @@ public class BossStats : MonoBehaviour
     public Transform LeftCorner;
     public Transform RightCorner;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private UnityEvent eventsToDead;
 
+    private void Update()
+    {
+        if (_CurrentHealth <=0)
+        {
+            eventsToDead.Invoke();
+            Invoke("Destroy",0.5f);
+        }
+    }
     private void Start()
     {
         _CurrentHealth = _MaxHealth;
@@ -27,7 +38,15 @@ public class BossStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        _CurrentHealth -= damage;
+        if (isStunned) 
+        {
+            _CurrentHealth -= damage;
+        }
+        
+    }
+    private void Destroy()
+    {
+        Destroy(this.gameObject);
     }
     
 }

@@ -7,6 +7,7 @@ using UnityEngine;
 public class Rope : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject Player;
+    private AudioSource audioSource;
     private Vector3 MovementStart;
     [SerializeField] private Transform EndPoint;
     [SerializeField] private float threshold;
@@ -21,7 +22,7 @@ public class Rope : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
         rappeling = false;
         
     }
@@ -65,10 +66,18 @@ public class Rope : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
         rappeling = true;
     }
     public void EndInteract()
     {
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
         Eventos.eve.ActivateSwitches.Invoke();
         Eventos.eve.DespausarPlayer.Invoke();
         Eventos.eve.DespausarPlayer2.Invoke();

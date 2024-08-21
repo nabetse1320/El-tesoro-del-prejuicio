@@ -246,6 +246,11 @@ public class PlayerController2 : MonoBehaviour
                     StartCoroutine(colicionador.GetComponent<SoundGame>().PlaySequence());
                 }
             }
+            if (colicionador.CompareTag("Boss"))
+            {
+
+                colicionador.GetComponent<BossStats>().TakeDamage(1);
+            }
         }
     }
 

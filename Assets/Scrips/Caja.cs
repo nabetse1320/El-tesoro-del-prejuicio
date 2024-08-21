@@ -56,6 +56,13 @@ public class Caja : MonoBehaviour
 
 
         }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            if (cont <= -speedToDoDamage)
+            {
+                collision.gameObject.GetComponent<BossController>().Stunear();
+            }
+        }
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (collision.gameObject.GetComponent<Enemigo>())
@@ -64,6 +71,18 @@ public class Caja : MonoBehaviour
                 {
                     collision.gameObject.GetComponent<Enemigo>().ResivirDaño(dañoCaida);
                 }
+            }
+            
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            if (cont <= -speedToDoDamage)
+            {
+                collision.gameObject.GetComponent<BossController>().Stunear();
             }
         }
     }

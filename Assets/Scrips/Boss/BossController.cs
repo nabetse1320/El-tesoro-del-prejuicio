@@ -1,4 +1,6 @@
 
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
@@ -9,6 +11,7 @@ public class BossController : MonoBehaviour
     private float journeyLength;
     private float startTime;
     private float stunTimer;
+    private bool atacando=false;
 
     private void Awake()
     {
@@ -68,10 +71,10 @@ public class BossController : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, _objetive.transform.position);
 
         // Si el jugador está dentro del rango de ataque
-        if (distanceToPlayer <= _stats.attackRange)
+        if (distanceToPlayer <= _stats.attackRange&&!atacando)
         {
             // Aquí puedes agregar la lógica para atacar al jugador
-            Attack();
+            StartCoroutine(Ataque());
         }
 
         // Verificar si el jugador está encima del enemigo
@@ -90,9 +93,18 @@ public class BossController : MonoBehaviour
     {
         // Implementa aquí la lógica para atacar al jugador
         Debug.Log("Atacando al jugador!");
+        Eventos.eve.perderVida.Invoke();
         // Usar _stats.Damage para calcular el daño a hacer al jugador
     }
-    
+    IEnumerator Ataque() 
+    {
+        atacando = true;
+        yield return new WaitForSeconds(0.5f);
+        Attack();
+        atacando = false;
+
+    }
+
     void JumpAndAttack()
     {
         if (!_stats.isJumping)
@@ -131,20 +143,17 @@ public class BossController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void Stunear()
     {
-        // Verificar si la colisión es con un objeto con tag "caja" y viene desde arriba
-        if (!_stats.isStunned && collision.gameObject.CompareTag(_BoxesTag) && collision.contacts[0].normal.y > 0.7f)
-        {
-            // Stunear al enemigo
-            _stats.isStunned = true;
-            Debug.Log("¡El enemigo ha sido stunado!");
+        // Stunear al enemigo
+        _stats.isStunned = true;
+        _stats.eventsToStuned.Invoke();
+        Debug.Log("¡El enemigo ha sido stunado!");
 
-            // Aquí podrías desactivar el movimiento del enemigo, reproducir una animación de stun, etc.
+        // Aquí podrías desactivar el movimiento del enemigo, reproducir una animación de stun, etc.
 
-            // Iniciar el temporizador de stun
-            stunTimer = 0.0f;
-        }
+        // Iniciar el temporizador de stun
+        stunTimer = 0.0f;
     }
 
 }

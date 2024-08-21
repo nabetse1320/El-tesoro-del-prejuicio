@@ -732,7 +732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207370776241827964, guid: f91ab9a609fdc194891b466365bb9993, type: 3}
       propertyPath: logro
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2702,7 +2702,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.724988, y: 7.38088, z: -10}
+  m_LocalPosition: {x: 1.7230201, y: 7.3810596, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10647,7 +10647,7 @@ MonoBehaviour:
   child: {fileID: 1726244116}
   multiInterruptor: 0
   numeroInterruptores: 2
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1868785745}
 --- !u!1001 &1732966867
 PrefabInstance:
   m_ObjectHideFlags: 0

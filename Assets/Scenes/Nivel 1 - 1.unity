@@ -706,6 +706,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 380786907265736844, guid: 01f38c5e5d4e34341bb4b5115ac1bbcb, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 418608410}
+    - target: {fileID: 380786907265736844, guid: 01f38c5e5d4e34341bb4b5115ac1bbcb, type: 3}
       propertyPath: multiInterruptor
       value: 0
       objectReference: {fileID: 0}
