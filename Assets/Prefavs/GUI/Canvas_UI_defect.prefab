@@ -641,7 +641,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2666985971362837056}
   m_HandleRect: {fileID: 3797305865977171257}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1137,14 +1137,10 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: "En un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos
-    del lat\xEDn, descubri\xF3 la fuente indudable. Lorem Ipsum viene de las secciones
-    1.10.32 y 1.10.33 de \"de Finnibus Bonorum et Malorum\" (Los Extremos del Bien
-    y El Mal) por Cicero, escrito en el a\xF1o 45 antes de Cristo. Este libro es
-    un tratado de teor\xEDa de \xE9ticas, muy popular durante el Renacimiento. La
-    primera linea del Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", viene de una
-    linea en la secci\xF3n 1.10.32"
-  newImage: {fileID: -8929639849589716263, guid: a32f649ae12f798458a2a5aab0337d0a, type: 3}
+  nuevoTexto: "Oro: Principal riqueza explotada y extra\xEDda por los colonizadores
+    espa\xF1oles en Santa Marta, objeto del deseo de piratas y corsarios que merodeaban
+    la regi\xF3n."
+  newImage: {fileID: 5488370903067918852, guid: 92adc2e15f66f504ab59e955c20ccb00, type: 3}
 --- !u!114 &6160457499236920768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,6 +1980,219 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &834626782806453965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9192890114300179611}
+  - component: {fileID: 8664300412340751453}
+  - component: {fileID: 3602888468319864334}
+  - component: {fileID: 81008589010947387}
+  - component: {fileID: 6470863929606173620}
+  - component: {fileID: 4978686314507631711}
+  - component: {fileID: 1742118624360493770}
+  m_Layer: 5
+  m_Name: Button8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9192890114300179611
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1734021126305433068}
+  m_Father: {fileID: 4856629169322974789}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 46.263, y: 0}
+  m_SizeDelta: {x: 442.652, y: 78.816}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8664300412340751453
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_CullTransparentMesh: 1
+--- !u!114 &3602888468319864334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8745099, g: 0.7686275, b: 0.53333336, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 4568492112461519243, guid: 774da149b3e219442a83f9a0ce5629f9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &81008589010947387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8490566, g: 0.495283, b: 0, a: 1}
+    m_PressedColor: {r: 0.75294125, g: 0.43921572, b: 0, a: 1}
+    m_SelectedColor: {r: 0.85098046, g: 0.49411768, b: 0, a: 1}
+    m_DisabledColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.6666667}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 3602888468319864334}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6470863929606173620}
+        m_TargetAssemblyTypeName: CambiarTextoEImagen, Assembly-CSharp
+        m_MethodName: CambiarElTextoEImagen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8665507548490836933}
+        m_TargetAssemblyTypeName: ScrollToTop, Assembly-CSharp
+        m_MethodName: UpScroll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6470863929606173620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb83dc62f6cbeb04f9239e0893479465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalLayoutGroup: {fileID: 3041827886753163620}
+  texto: {fileID: 182785602824381431}
+  imagen: {fileID: 8103085719348827272}
+  nuevoTexto: "Piedra de los Muertos: Una roca gigante en las monta\xF1as, donde
+    se dec\xEDa que los esp\xEDritus de los guerreros ind\xEDgenas ca\xEDdos se reun\xEDan
+    para proteger a su pueblo. A cualquiera que la tocara sin el permiso de los ancestros,
+    se le condenaba a una muerte inminente."
+  newImage: {fileID: -8607210036824843875, guid: 424d3cba24de68c49836c1a7e4399123, type: 3}
+--- !u!114 &4978686314507631711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348b3c93a12e28c44b062494e6251627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  isHighlighted: 0
+--- !u!114 &1742118624360493770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834626782806453965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7296c9c1e7d4a8749a399739ddb63943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventoARealizar:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742118624360493770}
+        m_TargetAssemblyTypeName: PressTarget, Assembly-CSharp
+        m_MethodName: ActivarOnclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventoDeseleccionar:
+    m_PersistentCalls:
+      m_Calls: []
+  isDefaultButton: 0
 --- !u!1 &887207638283850411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,7 +2944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: "Espetro de la bah\xEDa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
@@ -2762,8 +2971,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6521,7 +6730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Mar Caribe
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
@@ -7568,7 +7777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Tesoro escondido
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
@@ -7595,8 +7804,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8009,15 +8218,11 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: Fusce scelerisque eget orci sed hendrerit. Duis laoreet magna at dapibus
-    dignissim. Fusce viverra augue id venenatis bibendum. Vivamus dictum dignissim
-    dui id placerat. Vivamus iaculis neque nec elementum fringilla. Sed sit amet
-    tortor nec libero finibus tristique. Integer euismod, nulla vel consectetur cursus,
-    arcu felis mollis turpis, sed congue libero augue non sapien. Quisque eleifend
-    laoreet mollis. Quisque in diam ut urna volutpat venenatis. Fusce hendrerit purus
-    odio, eu tincidunt diam ultrices nec. Nam ex nulla, varius et aliquet lacinia,
-    scelerisque nec lacus.
-  newImage: {fileID: 7522614430542500894, guid: baec3f40a1a07c349a9e32b89da46c24, type: 3}
+  nuevoTexto: "El Espectro de la Bah\xEDa: Un fantasma que, seg\xFAn la leyenda,
+    aparec\xEDa en la Bah\xEDa de Santa Marta durante tormentas. Se cre\xEDa que
+    era el alma en pena de un capit\xE1n pirata que hab\xEDa traicionado a su tripulaci\xF3n
+    y estaba condenado a vagar eternamente."
+  newImage: {fileID: -6418316912537581047, guid: ef68491d90eb42e4aa19819f80442c0b, type: 3}
 --- !u!114 &1891838977762882718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8652,12 +8857,13 @@ RectTransform:
   - {fileID: 1492924084535094060}
   - {fileID: 8670509014456791384}
   - {fileID: 27122531340629622}
+  - {fileID: 4856629169322974789}
   m_Father: {fileID: 6568057723713095681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -100.80286}
-  m_SizeDelta: {x: -58.36513, y: 201.60571}
+  m_AnchoredPosition: {x: 1, y: 165.80283}
+  m_SizeDelta: {x: -58.36513, y: 331.6057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7603880758643043093
 CanvasRenderer:
@@ -10014,12 +10220,10 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: "De p\xE1ginas web usan el Lorem Ipsum como su texto por defecto, y
-    al hacer una b\xFAsqueda de \"Lorem Ipsum\" va a dar por resultado muchos sitios
-    web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones
-    han evolucionado a trav\xE9s de los a\xF1os, algunas veces por accidente, otras
-    veces a prop\xF3sito (por ejemplo insert\xE1ndole humor y cosas por el estilo)."
-  newImage: {fileID: 21300000, guid: 469a253f63bb4b8459e9e06d54bfd83f, type: 3}
+  nuevoTexto: "Tesoro escondido: Mito popular entre los habitantes, que contaba de
+    riquezas escondidas por los piratas en las costas de Santa Marta para ser recuperadas
+    m\xE1s adelante."
+  newImage: {fileID: 5488370903067918852, guid: 92adc2e15f66f504ab59e955c20ccb00, type: 3}
 --- !u!114 &7282026184630574306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11466,8 +11670,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8595901993139067008}
   m_HandleRect: {fileID: 8778739111674461549}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.7709025
+  m_Value: -0.000000092029744
+  m_Size: 0.6716776
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13819,6 +14023,42 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &6220824861613361332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4856629169322974789}
+  m_Layer: 5
+  m_Name: Boton8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4856629169322974789
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220824861613361332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9192890114300179611}
+  m_Father: {fileID: 5583003725708834444}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 299.93842, y: -960}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6285010277916608054
 GameObject:
   m_ObjectHideFlags: 0
@@ -13884,7 +14124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Pirata
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
@@ -14296,6 +14536,140 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &6499810723629226487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734021126305433068}
+  - component: {fileID: 4015087089243782414}
+  - component: {fileID: 5436535617526694640}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1734021126305433068
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499810723629226487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9192890114300179611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -16.000015, y: 3.9999695}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4015087089243782414
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499810723629226487}
+  m_CullTransparentMesh: 1
+--- !u!114 &5436535617526694640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499810723629226487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Piedra de los muertos
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
+  m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4280103006
+  m_fontColor: {r: 0.36862746, g: 0.18823531, b: 0.1137255, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6539205070711157518
 GameObject:
   m_ObjectHideFlags: 0
@@ -16416,8 +16790,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4124628948622235613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.22909743}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.6716776}
   m_AnchoredPosition: {x: 0.000061035156, y: 0.00012207031}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16524,7 +16898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: "Bah\xEDa de Santa Marta"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
@@ -16551,8 +16925,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16873,6 +17247,7 @@ MonoBehaviour:
   - {fileID: 7989592721363510381}
   - {fileID: 4574827454966356117}
   - {fileID: 3654438235172863846}
+  - {fileID: 834626782806453965}
   colorDeSombreadoDeBotones: {r: 1, g: 0.6273585, b: 0.6273585, a: 1}
 --- !u!1 &7733816717286365944
 GameObject:
@@ -17455,12 +17830,9 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: "El trozo de texto est\xE1ndar de Lorem Ipsum usado desde el a\xF1o
-    1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y
-    1.10.33 de \"de Finibus Bonorum et Malorum\" por Cicero son tambi\xE9n reproducidas
-    en su forma original exacta, acompa\xF1adas por versiones en Ingl\xE9s de la
-    traducci\xF3n realizada en 1914 por H. Rackham."
-  newImage: {fileID: -3564700131168975987, guid: 0ee08a19c8aa45040a4d3ab3675a7e6f, type: 3}
+  nuevoTexto: "Pirata: Ladr\xF3n del mar que operaba sin el respaldo de ning\xFAn
+    gobierno, asaltando y saqueando barcos y poblaciones costeras, como Santa Marta."
+  newImage: {fileID: 21300000, guid: f3f6d96da63159245826206ae9b25f4c, type: 3}
 --- !u!114 &8648588115442533321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17817,13 +18189,10 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: "Al contrario del pensamiento popular, el texto de Lorem Ipsum no es
-    simplemente texto aleatorio. Tiene sus raices en una pieza cl\xB4sica de la literatura
-    del Latin, que data del a\xF1o 45 antes de Cristo, haciendo que este adquiera
-    mas de 2000 a\xF1os de antiguedad. Richard McClintock, un profesor de Latin de
-    la Universidad de Hampden-Sydney en Virginia, encontr\xF3 una de las palabras
-    m\xE1s oscuras de la lengua del lat\xEDn, \"consecteur\"."
-  newImage: {fileID: 1606959362532551753, guid: 8edecb233cdf7b7428e3fd108bdfae7a, type: 3}
+  nuevoTexto: "Mar Caribe: Zona mar\xEDtima donde Santa Marta estaba ubicada, conocida
+    por ser frecuentemente visitada por corsarios y piratas debido a la abundancia
+    de rutas comerciales."
+  newImage: {fileID: 8537498265733798858, guid: 8ea4f1ea251b27e4ea997d32b00f3feb, type: 3}
 --- !u!114 &900883096078279777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18829,17 +19198,10 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-    archivos de texto. Lorem Ipsum ha sido el texto de relleno est\xE1ndar de las
-    industrias desde el a\xF1o 1500, cuando un impresor (N. del T. persona que se
-    dedica a la imprenta) desconocido us\xF3 una galer\xEDa de textos y los mezcl\xF3
-    de tal manera que logr\xF3 hacer un libro de textos especimen. No s\xF3lo sobrevivi\xF3
-    500 a\xF1os, sino que tambien ingres\xF3 como texto de relleno en documentos
-    electr\xF3nicos, quedando esencialmente igual al original. Fue popularizado en
-    los 60s con la creaci\xF3n de las hojas \"Letraset\", las cuales contenian pasajes
-    de Lorem Ipsum, y m\xE1s recientemente con software de autoedici\xF3n, como por
-    ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum."
-  newImage: {fileID: -1651732834319082880, guid: ab91a108335a1fd4d944244f649a1874, type: 3}
+  nuevoTexto: "\xC1rbol del Sapo: \xC1rbol gigante y milenario que se dec\xEDa albergaba
+    esp\xEDritus protectores. Seg\xFAn la leyenda, aquellos que intentaban talarlo
+    sufr\xEDan una maldici\xF3n que les transformaba en sapos."
+  newImage: {fileID: -6689379833902801089, guid: 285fc34909efb764a8f034c16293db12, type: 3}
 --- !u!114 &6587771584023573662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19316,19 +19678,10 @@ MonoBehaviour:
   verticalLayoutGroup: {fileID: 3041827886753163620}
   texto: {fileID: 182785602824381431}
   imagen: {fileID: 8103085719348827272}
-  nuevoTexto: "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles,
-    pero la mayor\xEDa sufri\xF3 alteraciones en alguna manera, ya sea porque se
-    le agreg\xF3 humor, o palabras aleatorias que no parecen ni un poco cre\xEDbles.
-    Si vas a utilizar un pasaje de Lorem Ipsum, necesit\xE1s estar seguro de que
-    no hay nada avergonzante escondido en el medio del texto. Todos los generadores
-    de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos
-    cuando sea necesario, haciendo a este el \xFAnico generador verdadero (v\xE1lido)
-    en la Internet. Usa un diccionario de mas de 200 palabras provenientes del lat\xEDn,
-    combinadas con estructuras muy \xFAtiles de sentencias, para generar texto de
-    Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estar\xE1
-    libre de repeticiones, humor agregado o palabras no caracter\xEDsticas del lenguaje,
-    etc."
-  newImage: {fileID: 21300000, guid: 76485f4804ca1a044bc501f16535009e, type: 3}
+  nuevoTexto: "Bah\xEDa de Santa Marta: Un puerto natural de aguas profundas que
+    fue crucial para el comercio y la defensa, pero tambi\xE9n un im\xE1n para piratas
+    y corsarios en busca de riquezas."
+  newImage: {fileID: -8779379118966231300, guid: 6ccf8b8404053884da4b4aa1d15adb6f, type: 3}
 --- !u!114 &3537405781503340952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19479,7 +19832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Oro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
@@ -19649,7 +20002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Arbol del sapo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
   m_sharedMaterial: {fileID: -3043059611596685916, guid: 34e5ebc64d26c224eb6ca4e24347e787, type: 2}
