@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
     private float startTime;
     private float stunTimer;
     private bool atacando=false;
+    [SerializeField] private Animator _animator;
 
     private void Awake()
     {
@@ -63,6 +64,7 @@ public class BossController : MonoBehaviour
         transform.position = Vector3.Lerp(_stats.LeftCorner.position, _stats.RightCorner.position, Mathf.PingPong(fracJourney, 1));
         
         
+        
     }
 
     void FindPlayer()
@@ -91,17 +93,18 @@ public class BossController : MonoBehaviour
 
     void Attack()
     {
-        // Implementa aquí la lógica para atacar al jugador
-        Debug.Log("Atacando al jugador!");
+        
         Eventos.eve.perderVida.Invoke();
         // Usar _stats.Damage para calcular el daño a hacer al jugador
     }
     IEnumerator Ataque() 
     {
+        _animator.SetBool("Atacando", true);
         atacando = true;
         yield return new WaitForSeconds(0.5f);
         Attack();
         atacando = false;
+        _animator.SetBool("Atacando", false);
 
     }
 
