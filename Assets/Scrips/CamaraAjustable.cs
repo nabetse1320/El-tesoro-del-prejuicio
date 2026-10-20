@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using Cinemachine;
 
 public class ZonaTrigger : MonoBehaviour
@@ -10,10 +10,10 @@ public class ZonaTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            // Activar la c·mara virtual de esta zona
+            // Activar la c√°mara virtual de esta zona
             camaraVirtual.Priority = 1;
 
-            // Desactivar todas las dem·s c·maras
+            // Desactivar todas las dem√°s c√°maras
             foreach (var camara in otrasCamaras)
             {
                 camara.Priority = 0;

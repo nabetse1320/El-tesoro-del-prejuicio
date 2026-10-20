@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 #if UNITY_EDITOR
@@ -68,7 +68,7 @@ public class Interruptorgeneral : MonoBehaviour
                 audioSource.clip = audioActivar;
                 audioSource.Play();
             }
-            Debug.Log("Se Activó");
+            Debug.Log("Se ActivÃ³");
             if (esperarTiempo)
             {
                 enumerator = EsperandoTiempo();
@@ -94,7 +94,7 @@ public class Interruptorgeneral : MonoBehaviour
             audioSource.clip = audioDesactivar;
             audioSource.Play();
         }
-        Debug.Log("Se desactivó");
+        Debug.Log("Se desactivÃ³");
         if (deactivationEvents != null)
         {
             foreach (var evento in deactivationEvents)
@@ -212,7 +212,7 @@ public class InterruptorgeneralEditor : Editor
             EditorGUILayout.PropertyField(presionMantenida);
         }
 
-        //GRUPO DE OPCIÓNES DE SI EMPIEZA O NO ACTIVO EL OBJETO -------------------------------------------------------------
+        //GRUPO DE OPCIÃ“NES DE SI EMPIEZA O NO ACTIVO EL OBJETO -------------------------------------------------------------
         EditorGUILayout.Space(10);
         soundGroup = EditorGUILayout.BeginFoldoutHeaderGroup(soundGroup, "Opciones de sonido");
         if (soundGroup)

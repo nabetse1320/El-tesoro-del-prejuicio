@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 public class ScrollToTop : MonoBehaviour
@@ -7,7 +7,7 @@ public class ScrollToTop : MonoBehaviour
 
     void Start()
     {
-        // Asegúrate de que el Scroll Rect esté en la posición inicial
+        // AsegÃºrate de que el Scroll Rect estÃ© en la posiciÃ³n inicial
         scrollRect = GetComponent<ScrollRect>();
         UpScroll();
     }

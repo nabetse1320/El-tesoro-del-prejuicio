@@ -24,7 +24,7 @@ public class Enemigo : MonoBehaviour
     [HideInInspector] public Collider2D[] hits;
     [SerializeField] private bool modoAtaque;
     [SerializeField] private int vida;
-    [SerializeField] public int da�o;
+    [SerializeField] public int daño;
 
     [Header("Configuraciones de movimiento:")]
     [SerializeField] private LayerMask otrosEnemigos;
@@ -35,7 +35,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private Transform inicioRaycastPared;
     [SerializeField] private LayerMask queEsSuelo;
 
-    [Header("Configuraciones de detecci�n al jugador:")]
+    [Header("Configuraciones de detección al jugador:")]
     [SerializeField] private float detectionRadius;
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private float tEsperaAtaque;
@@ -52,7 +52,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private GameObject arma;
 
     [Header("Configuraciones de ataque:")]
-    [SerializeField] private int da�oGolpe;
+    [SerializeField] private int dañoGolpe;
     [SerializeField] private float tEntreAtaques;
     [SerializeField] private float prueba;
     [SerializeField] private AnimationClip AnimacionAtaque;
@@ -241,7 +241,7 @@ public class Enemigo : MonoBehaviour
             animator.SetBool("Muerto",true);
             animator.SetBool("Alerta", false);
             animator.SetBool("Atacando", false);
-            animator.SetBool("da�o", false);
+            animator.SetBool("daño", false);
             Destroy(gameObject,1.5f);
         }
     }
@@ -371,13 +371,13 @@ public class Enemigo : MonoBehaviour
         
     }
 
-    public void ResivirDa�o(int da�o)
+    public void ResivirDaño(int daño)
     {
         if (!muerto)
         {
-            vida -= da�o;
+            vida -= daño;
             StopAllCoroutines();
-            animator.SetBool("da�o", true);
+            animator.SetBool("daño", true);
             StartCoroutine(WaitDamage());
         }
         
@@ -391,7 +391,7 @@ public class Enemigo : MonoBehaviour
         golpeEjecutado = false;
         atacando = false;
         parado = true;
-        animator.SetBool("da�o", false);
+        animator.SetBool("daño", false);
         if (clipResivirDano != null)
         {
             audioSource.clip=clipResivirDano;

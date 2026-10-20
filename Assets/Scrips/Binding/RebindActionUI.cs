@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.Events;
@@ -474,7 +474,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         [SerializeField]
         private GameObject m_RebindOverlay;
 
-        [Tooltip("Quitar Eventos de UI mientras est� haciendo rebinding")]
+        [Tooltip("Quitar Eventos de UI mientras está haciendo rebinding")]
         [SerializeField]
         private EventSystem m_eventSystems;
 

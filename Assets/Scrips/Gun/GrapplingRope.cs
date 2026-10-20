@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GrapplingRope : MonoBehaviour
 {
@@ -150,7 +150,7 @@ public class GrapplingRope : MonoBehaviour
             m_lineRenderer.SetPosition(i, currentPosition);
         }
 
-        // Comprueba si la cuerda ha llegado a su posici�n de origen
+        // Comprueba si la cuerda ha llegado a su posición de origen
         if (m_lineRenderer.GetPosition(0) == grapplingGun.firePoint.position)
         {
             isReturning = false;

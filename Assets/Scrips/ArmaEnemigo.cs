@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -35,7 +35,7 @@ public class ArmaEnemigo : MonoBehaviour
                         pivote.transform.localScale = new Vector3(16.31f, 16.31f, 16.31f);
 
                     }
-                    // Ajusta la velocidad de rotación según ea necesario
+                    // Ajusta la velocidad de rotaciÃ³n segÃºn ea necesario
                     Quaternion newRotation = Quaternion.Lerp(pivote.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
                     pivote.transform.rotation = new Quaternion(0, 0, newRotation.z, newRotation.w);
                 }
@@ -51,7 +51,7 @@ public class ArmaEnemigo : MonoBehaviour
                         Quaternion newRotation = Quaternion.Lerp(pivote.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * rotationSpeed);
                         pivote.transform.rotation = new Quaternion(0, 180, newRotation.z, newRotation.w);
                     }
-                    // Aquí se elimina la rotación en los ejes X y Y
+                    // AquÃ­ se elimina la rotaciÃ³n en los ejes X y Y
                                                                                                     //armaSprite.transform.localRotation = Quaternion.Euler(0, armaSprite.tra1nsform.rotation.y, armaSprite.transform.rotation.z);
                     pivote.transform.localScale = new Vector3(16.31f, 16.31f, 16.31f);
 
@@ -68,7 +68,7 @@ public class ArmaEnemigo : MonoBehaviour
     {
 
         var balaa = Instantiate(bala, transform.position, pivote.transform.rotation);
-        balaa.GetComponent<Proyectil>().SetDireccion(direccion,velocidadBala); // Pasa la dirección al proyectil
+        balaa.GetComponent<Proyectil>().SetDireccion(direccion,velocidadBala); // Pasa la direcciÃ³n al proyectil
         balaa.transform.parent = null; // Desvincula el proyectil del objeto padre
         Destroy(balaa, 2);
     }

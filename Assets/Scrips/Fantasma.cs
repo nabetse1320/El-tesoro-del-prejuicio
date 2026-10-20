@@ -1,10 +1,10 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Fantasma : MonoBehaviour
 {
-    [SerializeField] public int daÒo;
+    [SerializeField] public int da√±o;
     [SerializeField] private int vida = 30;
     [SerializeField] private float speed = 1;
     [SerializeField] private float detectionRange = 10.0f;
@@ -59,11 +59,11 @@ public class Fantasma : MonoBehaviour
             if (!resibiendoDano)
             {
                 float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-                // Si el jugador est· dentro del rango de detecciÛn y el enemigo no est· cargando ni volviendo
+                // Si el jugador est√° dentro del rango de detecci√≥n y el enemigo no est√° cargando ni volviendo
                 if (distanceToPlayer <= detectionRange && !isCharging && !isReturning && myCollider.bounds.Contains(player.transform.position))
                 {
                     
-                    // Establece la posiciÛn objetivo en la direcciÛn del jugador y marca al enemigo como cargando
+                    // Establece la posici√≥n objetivo en la direcci√≥n del jugador y marca al enemigo como cargando
                     targetPosition = player.transform.position + (player.transform.position - transform.position).normalized * chargeDistance;
                     isCharging = true;
                     animator.SetBool("Atacando", true);
@@ -71,7 +71,7 @@ public class Fantasma : MonoBehaviour
                     audioSource.Play();
                 }
 
-                // Si el enemigo ha alcanzado la posiciÛn objetivo, deja de cargar
+                // Si el enemigo ha alcanzado la posici√≥n objetivo, deja de cargar
                 if (Vector3.Distance(transform.position, targetPosition) <= 0.1f)
                 {
                     isCharging = false;
@@ -80,7 +80,7 @@ public class Fantasma : MonoBehaviour
 
                 }
 
-                // Mueve al enemigo hacia la posiciÛn objetivo
+                // Mueve al enemigo hacia la posici√≥n objetivo
                 if (isCharging)
                 {
                     Vector3 nextPosition = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
@@ -99,7 +99,7 @@ public class Fantasma : MonoBehaviour
                         }
                     }
                 }
-                // Si el enemigo no est· cargando y est· fuera del Collider, muÈvelo hacia el borde del Collider
+                // Si el enemigo no est√° cargando y est√° fuera del Collider, mu√©velo hacia el borde del Collider
                 else if (!myCollider.bounds.Contains(transform.position))
                 {
                     Vector3 directionToCenter = (myCollider.bounds.center - transform.position).normalized;
@@ -147,7 +147,7 @@ public class Fantasma : MonoBehaviour
                         }
                     }
                 }
-                // Si el enemigo no est· cargando y est· fuera del Collider, muÈvelo hacia el borde del Collider
+                // Si el enemigo no est√° cargando y est√° fuera del Collider, mu√©velo hacia el borde del Collider
                 else if (!myCollider.bounds.Contains(transform.position))
                 {
                     Vector3 directionToCenter = (myCollider.bounds.center - transform.position).normalized;
@@ -186,9 +186,9 @@ public class Fantasma : MonoBehaviour
         
     }
 
-    public void ResivirDaÒo(int daÒo)
+    public void ResivirDa√±o(int da√±o)
     {
-        vida -= daÒo;
+        vida -= da√±o;
         resibiendoDano = true;
         isCharging = false;
         animator.SetBool("Atacando", false);

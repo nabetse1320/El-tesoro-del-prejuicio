@@ -14,7 +14,7 @@ public class Cangrejo : MonoBehaviour
     [SerializeField] private int vida;
     [SerializeField] private float stunTime;
 
-    [Header("Configuraciones de detecci�n al jugador:")]
+    [Header("Configuraciones de detección al jugador:")]
     [SerializeField] private float detectionRadiusFirst;
     [SerializeField] private float detectionRadiusSecond;
     [SerializeField] private float timeToDetect;
@@ -153,13 +153,13 @@ public class Cangrejo : MonoBehaviour
 
     }
 
-    public void ResivirDa�o(int da�o)
+    public void ResivirDaño(int daño)
     {
-        vida -= da�o;
+        vida -= daño;
         StopAllCoroutines();
         detected = false;
         alerted = false;
-        animator.SetTrigger("Da�ado");
+        animator.SetTrigger("Dañado");
         if (clipDano !=null)
         {
             audioSource.clip= clipDano;

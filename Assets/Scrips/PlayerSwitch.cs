@@ -1,4 +1,4 @@
-using Cinemachine;
+Ôªøusing Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 //using static UnityEditor.Experimental.GraphView.GraphView;
@@ -114,12 +114,12 @@ public class PlayerSwitch : MonoBehaviour
     {
         if (player1Active)
         {
-            virtualCamera.Follow = Player2; // Cambiar el objetivo de la c·mara al personaje 2
+            virtualCamera.Follow = Player2; // Cambiar el objetivo de la c√°mara al personaje 2
 
         }
         else
         {
-            virtualCamera.Follow = Player1; // Cambiar el objetivo de la c·mara al personaje 1
+            virtualCamera.Follow = Player1; // Cambiar el objetivo de la c√°mara al personaje 1
         }
          
 

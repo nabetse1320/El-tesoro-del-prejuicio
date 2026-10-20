@@ -1,10 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Totem : MonoBehaviour
 {
-    [SerializeField] private int daño=5;
+    [SerializeField] private int daÃ±o=5;
     [SerializeField] private bool reusable = true;
     [Header("Si no es reusable:")]
     [SerializeField] private int usos = 1;
@@ -37,7 +37,7 @@ public class Totem : MonoBehaviour
             if (collision.GetComponent<Fantasma>() != null)
             {
                 collider.enabled = false;
-                collision.GetComponent<Fantasma>().ResivirDaño(daño);
+                collision.GetComponent<Fantasma>().ResivirDaÃ±o(daÃ±o);
                 if (!reusable)
                 {
                     usos -= 1;

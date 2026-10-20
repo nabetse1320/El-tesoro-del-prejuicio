@@ -340,7 +340,7 @@ public class GrapplingGun : MonoBehaviour
                     grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
                     grappleRope.enabled = true;
 
-                    // Mensaje de depuraci�n para imprimir la informaci�n del Raycast
+                    // Mensaje de depuración para imprimir la información del Raycast
                 }
                 else
                 {
@@ -357,7 +357,7 @@ public class GrapplingGun : MonoBehaviour
                     //objetc = true;
                     grappeledObject = hit.transform.gameObject;
                     objetc = true;
-                    // Mensaje de depuraci�n para imprimir la informaci�n del Raycast
+                    // Mensaje de depuración para imprimir la información del Raycast
                 }
                 else
                 {

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -8,7 +8,7 @@ public class FullscreenToggle : MonoBehaviour
 
     void Start()
     {
-        // Carga la configuración de pantalla completa
+        // Carga la configuraciÃ³n de pantalla completa
         bool isFullscreen = PlayerPrefs.GetInt("fullscreen", 1) == 1;
 
         // Establece el modo de pantalla inicial
@@ -17,7 +17,7 @@ public class FullscreenToggle : MonoBehaviour
         // Configura el estado del toggle
         toggle.isOn = isFullscreen;
 
-        // Añade un oyente al evento onValueChanged del toggle
+        // AÃ±ade un oyente al evento onValueChanged del toggle
         toggle.onValueChanged.AddListener(SetFullscreen);
     }
 
@@ -26,7 +26,7 @@ public class FullscreenToggle : MonoBehaviour
         // Cambia el modo de pantalla
         Screen.fullScreen = isFullscreen;
 
-        // Guarda la configuración de pantalla completa
+        // Guarda la configuraciÃ³n de pantalla completa
         PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
     }
 }

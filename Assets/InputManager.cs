@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
-        // Carga la configuración de entrada al inicio del juego
+        // Carga la configuraciÃ³n de entrada al inicio del juego
         if (PlayerPrefs.HasKey("Rebinds"))
         {
             string rebinds = PlayerPrefs.GetString("Rebinds");
@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
 
     public void SaveBindings()
     {
-        // Guarda la configuración de entrada cuando sea necesario
+        // Guarda la configuraciÃ³n de entrada cuando sea necesario
         string rebinds = actionMap.SaveBindingOverridesAsJson();
         PlayerPrefs.SetString("Rebinds", rebinds);
         PlayerPrefs.Save();

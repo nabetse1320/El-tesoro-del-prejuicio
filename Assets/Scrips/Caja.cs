@@ -6,7 +6,7 @@ using UnityEngine;
 public class Caja : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private int da�oCaida=10;
+    [SerializeField] private int dañoCaida=10;
     [SerializeField] private float speedToDoDamage=7;
     float cont;
 
@@ -69,7 +69,7 @@ public class Caja : MonoBehaviour
             {
                 if (cont<=-speedToDoDamage)
                 {
-                    collision.gameObject.GetComponent<Enemigo>().ResivirDa�o(da�oCaida);
+                    collision.gameObject.GetComponent<Enemigo>().ResivirDaño(dañoCaida);
                 }
             }
             

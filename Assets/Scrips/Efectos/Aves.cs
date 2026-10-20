@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,10 +32,10 @@ public class Aves : MonoBehaviour
             {
                 estaEjecutando = true;
 
-                // Aquí puedes poner el código para ejecutar tu animación.
+                // AquÃ­ puedes poner el cÃ³digo para ejecutar tu animaciÃ³n.
                 animator.SetBool("Volando", true);
 
-                // Espera hasta que la animación termine
+                // Espera hasta que la animaciÃ³n termine
                 yield return new WaitForSeconds(animation.length);
 
                 animator.SetBool("Volando", false);

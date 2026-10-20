@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -15,7 +15,7 @@ public class Interruptor : MonoBehaviour
     [SerializeField] private AudioSource otherAudioSource;
     [SerializeField] private AudioClip audioActivar;
     [SerializeField] private AudioClip audioDesactivar;
-    private bool primerTriggerYaEntró = false;
+    private bool primerTriggerYaEntrÃ³ = false;
     private Collider2D primerObjeto;
     private String tagPO;
    
@@ -29,13 +29,13 @@ public class Interruptor : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("ObInteract"))
         {
-            if (!primerTriggerYaEntró)
+            if (!primerTriggerYaEntrÃ³)
             {
                 if (otherAudioSource != null)
                 {
                     otherAudioSource.Play();
                 }
-                primerTriggerYaEntró = true;
+                primerTriggerYaEntrÃ³ = true;
                 if (animator!=null)
                 {
                     animator.SetBool("activado", true);
@@ -49,7 +49,7 @@ public class Interruptor : MonoBehaviour
                     audioSource.clip = audioActivar;
                     audioSource.Play();
                 }
-                // Aquí va tu código para cuando el primer trigger entra al collider
+                // AquÃ­ va tu cÃ³digo para cuando el primer trigger entra al collider
             }
         }
         
@@ -61,7 +61,7 @@ public class Interruptor : MonoBehaviour
         {
             if (primerObjeto == collision)
             {
-                primerTriggerYaEntró = false;
+                primerTriggerYaEntrÃ³ = false;
                 Eventos.eve.DesactivarPlataforma.Invoke(id);
                 Eventos.eve.DesactivarCuerda.Invoke(id);
                 if (animator!=null)
@@ -77,7 +77,7 @@ public class Interruptor : MonoBehaviour
             }
             else if (tagPO==("Player") && collision.CompareTag("Player"))
             {
-                primerTriggerYaEntró = false;
+                primerTriggerYaEntrÃ³ = false;
                 Eventos.eve.DesactivarPlataforma.Invoke(id);
                 Eventos.eve.DesactivarCuerda.Invoke(id);
                 if (animator!=null)

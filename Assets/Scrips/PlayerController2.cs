@@ -27,7 +27,7 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private float raycastDistanceInTheAir = 0.5f;
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
-    [SerializeField] private int da�oGolpe;
+    [SerializeField] private int dañoGolpe;
 
     [Header("SoundFX")]
     private AudioSource audioSource;
@@ -128,7 +128,7 @@ public class PlayerController2 : MonoBehaviour
 
         bool isAlmostIdle = isGrounded && rb.linearVelocity.magnitude < 0.1f;
 
-        // Actualizar isIdle a true si el personaje est� en reposo, de lo contrario, actualizar a false
+        // Actualizar isIdle a true si el personaje está en reposo, de lo contrario, actualizar a false
         isIdle = isAlmostIdle;
 
 
@@ -184,7 +184,7 @@ public class PlayerController2 : MonoBehaviour
             }
             else
             {
-                // Si el player est� en pausa (modo ocio), no est� realizando ninguna acci�n activa.
+                // Si el player está en pausa (modo ocio), no está realizando ninguna acción activa.
                 // Entonces, actualiza isIdle a true.
                 isIdle = true;
             }
@@ -224,11 +224,11 @@ public class PlayerController2 : MonoBehaviour
             {
                 if (colicionador.GetComponent<Enemigo>() != null)
                 {
-                    colicionador.GetComponent<Enemigo>().ResivirDa�o(da�oGolpe);
+                    colicionador.GetComponent<Enemigo>().ResivirDaño(dañoGolpe);
                 }
                 if (colicionador.GetComponent<Cangrejo>() != null)
                 {
-                    colicionador.GetComponent<Cangrejo>().ResivirDa�o(da�oGolpe);
+                    colicionador.GetComponent<Cangrejo>().ResivirDaño(dañoGolpe);
                 }
             }
             if (colicionador.CompareTag("ObInteract"))

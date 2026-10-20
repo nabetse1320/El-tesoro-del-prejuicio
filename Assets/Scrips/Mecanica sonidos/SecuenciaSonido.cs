@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,7 +11,7 @@ public class SoundGame : MonoBehaviour
     [Header("Evento a realizar")]
     [SerializeField] UnityEvent unityEvent;
     [HideInInspector] public List<int> sequence; // Secuencia de sonidos
-    [HideInInspector] public int currentSound = 0; // Õndice del sonido actual en la secuencia
+    [HideInInspector] public int currentSound = 0; // √çndice del sonido actual en la secuencia
     private bool isPlaying = false;
     private bool puzzleIsFinish;
 
@@ -30,14 +30,14 @@ public class SoundGame : MonoBehaviour
     {
         sequence.Clear();
 
-        // Crea una lista de Ìndices de sonidos
+        // Crea una lista de √≠ndices de sonidos
         List<int> soundIndices = new List<int>();
         for (int i = 0; i < sounds.Count; i++)
         {
             soundIndices.Add(i);
         }
 
-        // Si la longitud de la secuencia es mayor que el n˙mero de sonidos disponibles,
+        // Si la longitud de la secuencia es mayor que el n√∫mero de sonidos disponibles,
         // agrega sonidos adicionales al azar
         while (soundIndices.Count < length)
         {
@@ -45,7 +45,7 @@ public class SoundGame : MonoBehaviour
             soundIndices.Add(indiceSonido);
         }
 
-        // Mezcla la lista de Ìndices de sonidos
+        // Mezcla la lista de √≠ndices de sonidos
         for (int i = 0; i < soundIndices.Count; i++)
         {
             int temp = soundIndices[i];
@@ -54,7 +54,7 @@ public class SoundGame : MonoBehaviour
             soundIndices[randomIndex] = temp;
         }
 
-        // Agrega los Ìndices de sonidos a la secuencia
+        // Agrega los √≠ndices de sonidos a la secuencia
         sequence.AddRange(soundIndices);
     }
 
@@ -65,10 +65,10 @@ public class SoundGame : MonoBehaviour
         {
             if (isPlaying)
             {
-                yield break; // Si la secuencia ya est· siendo reproducida, termina la corrutina
+                yield break; // Si la secuencia ya est√° siendo reproducida, termina la corrutina
             }
 
-            isPlaying = true; // Indica que la secuencia est· siendo reproducida
+            isPlaying = true; // Indica que la secuencia est√° siendo reproducida
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
 
             foreach (int soundIndex in sequence)

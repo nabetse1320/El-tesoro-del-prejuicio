@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
@@ -193,7 +193,7 @@ public class CuerdaEditor : Editor
         EditorGUILayout.PropertyField(tiempoEspera);
         EditorGUILayout.PropertyField (audioSource);
 
-        //GRUPO DE OPCI”NES DE SI EMPIEZA O NO ACTIVO EL OBJETO -------------------------------------------------------------
+        //GRUPO DE OPCI√ìNES DE SI EMPIEZA O NO ACTIVO EL OBJETO -------------------------------------------------------------
         EditorGUILayout.Space(10);
         aparecerGroup = EditorGUILayout.BeginFoldoutHeaderGroup(aparecerGroup,"Opciones de si empieza o no activo");
         if (aparecerGroup)
@@ -205,7 +205,7 @@ public class CuerdaEditor : Editor
                 EditorGUILayout.PropertyField(id);
                 EditorGUILayout.EndFoldoutHeaderGroup();
 
-                //GRUPO DE OPCI”NES DE SI SER¡ MULTI-INTERRUPTOR -----------------------------------------------------------------
+                //GRUPO DE OPCI√ìNES DE SI SER√Å MULTI-INTERRUPTOR -----------------------------------------------------------------
                 EditorGUILayout.Space(10);
                 multiInterruptorGroup = EditorGUILayout.BeginFoldoutHeaderGroup(multiInterruptorGroup, "Opciones multi-interruptor");
                 if (multiInterruptorGroup)

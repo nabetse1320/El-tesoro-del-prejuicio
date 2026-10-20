@@ -51,7 +51,7 @@ public class SecuenciaFinal : MonoBehaviour
         Eventos.eve.PausarPlayer2.Invoke();
         Eventos.eve.CancelSwitches.Invoke();
 
-        playerSwitch = FindObjectOfType<PlayerSwitch>();
+        playerSwitch = FindFirstObjectByType<PlayerSwitch>();
         GameObject izzy = playerSwitch.p1;
         GameObject liam = playerSwitch.p2;
         rbIzzy = izzy.GetComponent<Rigidbody2D>();
@@ -91,7 +91,7 @@ public class SecuenciaFinal : MonoBehaviour
         rtTexto.pivot = new Vector2(0.5f, 0.5f);
         rtTexto.offsetMin = new Vector2(330f, 40f);
         rtTexto.offsetMax = new Vector2(-80f, -40f);
-        texto.enableWordWrapping = true;
+        texto.textWrappingMode = TextWrappingModes.Normal;
         texto.alignment = TextAlignmentOptions.MidlineLeft;
         texto.text = string.Empty;
 
@@ -179,7 +179,7 @@ public class SecuenciaFinal : MonoBehaviour
         segundo.GetComponent<SpriteRenderer>().sortingOrder = 0;
         StartCoroutine(Aparecer(segundo.GetComponent<Renderer>().material, 0.4f));
 
-        foreach (CinemachineVirtualCamera camara in FindObjectsOfType<CinemachineVirtualCamera>())
+        foreach (CinemachineVirtualCamera camara in FindObjectsByType<CinemachineVirtualCamera>(FindObjectsSortMode.None))
         {
             camara.Follow = primero.transform;
         }

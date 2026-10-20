@@ -76,7 +76,7 @@ public class Creditos : MonoBehaviour
         texto.color = color;
         texto.fontStyle = estilo;
         texto.alignment = TextAlignmentOptions.Center;
-        texto.enableWordWrapping = true;
+        texto.textWrappingMode = TextWrappingModes.Normal;
         return texto;
     }
 

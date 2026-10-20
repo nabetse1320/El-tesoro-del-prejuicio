@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
 
 public class VolumeSlider : MonoBehaviour
@@ -8,7 +8,7 @@ public class VolumeSlider : MonoBehaviour
 
     void Start()
     {
-        // Carga la configuraciÛn del volumen
+        // Carga la configuraci√≥n del volumen
         float volume = PlayerPrefs.GetFloat("volumeMusic"+slider.name);
 
         // Establece el volumen inicial
@@ -17,17 +17,17 @@ public class VolumeSlider : MonoBehaviour
         // Configura el valor del slider
         slider.value = volume;
 
-        // AÒade un oyente al evento onValueChanged del slider
+        // A√±ade un oyente al evento onValueChanged del slider
         slider.onValueChanged.AddListener(SetVolume);
     }
 
     public void SetVolume(float value)
     {
         // Encuentra todos los AudioSource en la escena
-        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+        AudioSource[] audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
         foreach (AudioSource audioSource in audioSources)
         {
-            // Si el AudioSource est· reproduciendo uno de los AudioClips deseados, cambia su volumen
+            // Si el AudioSource est√° reproduciendo uno de los AudioClips deseados, cambia su volumen
             foreach (AudioClip audioClip in audioClips)
             {
                 if (audioSource.clip == audioClip)
@@ -38,7 +38,7 @@ public class VolumeSlider : MonoBehaviour
             }
         }
 
-        // Guarda la configuraciÛn del volumen
+        // Guarda la configuraci√≥n del volumen
         PlayerPrefs.SetFloat("volumeMusic"+slider.name, value);
     }
 }

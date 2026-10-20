@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -14,7 +14,7 @@ public class VolumeControl : MonoBehaviour
         SetVolume(volume);
         // Configura el valor del slider
         volumeSlider.value = volume;
-        // Añade un oyente al evento onValueChanged del slider
+        // AÃ±ade un oyente al evento onValueChanged del slider
         volumeSlider.onValueChanged.AddListener(SetVolume);
     }
 
@@ -29,7 +29,7 @@ public class VolumeControl : MonoBehaviour
             }
         }
 
-        // Guarda la configuración del volumen
+        // Guarda la configuraciÃ³n del volumen
         PlayerPrefs.SetFloat("volumeMusic" + volumeSlider.name, value);
     }
 }

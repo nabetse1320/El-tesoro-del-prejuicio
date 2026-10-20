@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 
 public class Parallax : MonoBehaviour
@@ -6,13 +6,13 @@ public class Parallax : MonoBehaviour
     public Transform[] backgrounds;
     private float[] parallaxScales;
     public float smoothing = 1f;
-    public CinemachineVirtualCamera virtualCamera; // Agrega una referencia a la c�mara virtual de Cinemachine
+    public CinemachineVirtualCamera virtualCamera; // Agrega una referencia a la cámara virtual de Cinemachine
 
     private Vector3 previousCamPos;
 
     void Start()
     {
-        previousCamPos = virtualCamera.transform.position; // Usar la posici�n de la c�mara virtual de Cinemachine
+        previousCamPos = virtualCamera.transform.position; // Usar la posición de la cámara virtual de Cinemachine
         parallaxScales = new float[backgrounds.Length];
 
         for (int i = 0; i < backgrounds.Length; i++)
@@ -33,7 +33,7 @@ public class Parallax : MonoBehaviour
             }
 
             previousCamPos = virtualCamera.transform.position;
-        } // Actualizar la posici�n de la c�mara virtual
+        } // Actualizar la posición de la cámara virtual
     }
 
 }
