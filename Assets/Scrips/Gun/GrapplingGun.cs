@@ -270,6 +270,18 @@ public class GrapplingGun : MonoBehaviour
     }
 
 
+    // Gira al personaje solo si cambia de lado. Antes se reescribia la rotacion en cada frame
+    // y, mirando a la izquierda, Unity lo tomaba como un cambio del transform: eso anulaba la
+    // interpolacion del Rigidbody2D y el personaje (y la camara) iban a tirones.
+    private void MirarHacia(float anguloY)
+    {
+        Transform t = player.gameObject.transform;
+        if (Mathf.Abs(Mathf.DeltaAngle(t.eulerAngles.y, anguloY)) > 1f)
+        {
+            t.rotation = Quaternion.Euler(0f, anguloY, 0f);
+        }
+    }
+
     void RotateGun(Vector3 lookPoint, bool allowRotationOverTime)
     {
         Vector3 distanceVector = lookPoint - gunPivot.position;
@@ -280,14 +292,14 @@ public class GrapplingGun : MonoBehaviour
             firePoint.transform.localPosition = new Vector3(0.0349f, -0.0074f, 0);
             gunSprite.flipY = true;
             gunSprite.transform.localRotation = Quaternion.Euler(0, 0, 8);
-            player.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+            MirarHacia(180f);
         }
         else
         {
             firePoint.transform.localPosition = new Vector3(0.0349f, 0.0074f, 0);
             gunSprite.flipY = false;
             gunSprite.transform.localRotation = Quaternion.Euler(0, 0, -8);
-            player.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+            MirarHacia(0f);
         }
         if (rotateOverTime && allowRotationOverTime)
         {

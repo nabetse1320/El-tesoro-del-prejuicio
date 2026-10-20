@@ -16,29 +16,34 @@ public class ProducirSonido : MonoBehaviour
         colorInicio = GetComponent<SpriteRenderer>().color;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = secuenceManager.sprites[secuenceManager.sounds.IndexOf(audioSource)];
+        secuenceManager.RegistrarInstrumento(this);
     }
 
     public void Sonar()
     {
         if (!secuenceManager.PuzzleIsFinish)
         {
-            //if (!audioSource.isPlaying)
-            //{
-            //    audioSource.Play();
-            //}
-
             audioSource.Play();
             int soundIndex = secuenceManager.sounds.IndexOf(audioSource);
-            if (soundIndex != secuenceManager.sequence[secuenceManager.currentSound])
-            {
-                this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            }
+            // El aviso de error (rojo) o de exito (verde) lo muestra SoundGame en todos los instrumentos a la vez
             secuenceManager.CheckSound(soundIndex);
-            Invoke("ChangeColorWhite",0.5f);
-        } 
+        }
     }
-    private void ChangeColorWhite()
+
+    // Cambia el color del instrumento; con duracion > 0 vuelve a su color original al terminar
+    public void MostrarColor(Color color, float duracion)
     {
-        this.gameObject.GetComponent<SpriteRenderer>().color = colorInicio;
+        StopAllCoroutines();
+        spriteRenderer.color = color;
+        if (duracion > 0f)
+        {
+            StartCoroutine(RestaurarColor(duracion));
+        }
+    }
+
+    private IEnumerator RestaurarColor(float duracion)
+    {
+        yield return new WaitForSeconds(duracion);
+        spriteRenderer.color = colorInicio;
     }
 }

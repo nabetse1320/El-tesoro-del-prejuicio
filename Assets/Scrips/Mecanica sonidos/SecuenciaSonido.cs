@@ -15,6 +15,13 @@ public class SoundGame : MonoBehaviour
     private bool isPlaying = false;
     private bool puzzleIsFinish;
 
+    [Header("Avisos visuales")]
+    [SerializeField] private Color colorError = Color.red;
+    [SerializeField] private Color colorCompletado = Color.green;
+    [Tooltip("Tiempo que los instrumentos se quedan en rojo al fallar")]
+    [SerializeField] private float duracionColorError = 0.8f;
+    private readonly List<ProducirSonido> instrumentos = new List<ProducirSonido>();
+
     #region
     public bool PuzzleIsFinish { get{ return puzzleIsFinish; } } 
     #endregion
@@ -23,6 +30,25 @@ public class SoundGame : MonoBehaviour
     {
         puzzleIsFinish = false;
         GenerateSequence(sequenceNumber);
+    }
+
+    public void RegistrarInstrumento(ProducirSonido instrumento)
+    {
+        if (!instrumentos.Contains(instrumento))
+        {
+            instrumentos.Add(instrumento);
+        }
+    }
+
+    private void ColorearInstrumentos(Color color, float duracion)
+    {
+        foreach (ProducirSonido instrumento in instrumentos)
+        {
+            if (instrumento != null)
+            {
+                instrumento.MostrarColor(color, duracion);
+            }
+        }
     }
 
     // Genera una secuencia de sonidos
@@ -78,6 +104,9 @@ public class SoundGame : MonoBehaviour
             }
             yield return new WaitForSeconds(1);
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            // Tras escuchar la secuencia el jugador empieza siempre desde el primer sonido,
+            // aunque ya hubiera tocado algunos instrumentos
+            currentSound = 0;
             isPlaying = false; // Indica que la secuencia ha terminado de reproducirse
         }
         
@@ -91,17 +120,19 @@ public class SoundGame : MonoBehaviour
             currentSound++;
             if (currentSound >= sequence.Count)
             {
-                // El jugador ha completado la secuencia correctamente
+                // El jugador ha completado la secuencia correctamente: todos en verde
                 unityEvent.Invoke();
                 currentSound = 0;
                 puzzleIsFinish = true;
+                ColorearInstrumentos(colorCompletado, 0f);
             }
         }
         else
         {
-            // El jugador ha seleccionado el sonido incorrecto
-            
+            // El jugador ha seleccionado el sonido incorrecto: la secuencia se reinicia y
+            // todos los instrumentos se ponen en rojo a la vez para que lo note
             currentSound =0;
+            ColorearInstrumentos(colorError, duracionColorError);
         }
     }
 }

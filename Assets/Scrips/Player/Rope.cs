@@ -66,6 +66,14 @@ public class Rope : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        // Solo Izzy puede usar la tirolina. Antes, si Liam la activaba se reproducia el sonido
+        // y quedaba "armada", y al cambiar a Izzy se movia desde donde estuviera.
+        GameObject jugador = GameObject.FindGameObjectWithTag("Player");
+        if (rappeling || jugador == null || jugador.GetComponent<PlayerController>() == null)
+        {
+            return;
+        }
+        Player = jugador;
         if (audioSource != null)
         {
             audioSource.Play();
@@ -74,6 +82,12 @@ public class Rope : MonoBehaviour, IInteractable
     }
     public void EndInteract()
     {
+        // Si no se estaba usando la tirolina no hay nada que terminar (evita despausar o
+        // cambiar la gravedad del jugador al soltar la tecla de interactuar en otro momento)
+        if (!rappeling)
+        {
+            return;
+        }
         if (audioSource != null)
         {
             audioSource.Stop();
