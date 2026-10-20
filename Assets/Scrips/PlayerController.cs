@@ -152,8 +152,11 @@ public class PlayerController : MonoBehaviour
             moveVector = Vector2.zero;
         }
 
-        // Sin friccion en el aire para no quedarse pegado a las paredes
-        PhysicsMaterial2D material = isGrounded ? materialSuelo : materialAire;
+        // Friccion solo cuando esta quieto en el suelo. Al caminar, saltar o en el aire se usa
+        // el material sin friccion: si no, al empujar contra una pared o caja la friccion
+        // frenaba el salto. La velocidad horizontal ya se fija en FixedUpdate, asi que no resbala.
+        bool usarFriccion = isGrounded && moveVector.x == 0f && rb.linearVelocity.y <= 0.01f;
+        PhysicsMaterial2D material = usarFriccion ? materialSuelo : materialAire;
         if (colliders[0].sharedMaterial != material)
         {
             colliders[0].sharedMaterial = material;
@@ -183,6 +186,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (isGrounded)
                 {
+                    colliders[0].sharedMaterial = materialAire;
                     rb.AddForce(Vector2.up * jumpForce);
                 }
 
