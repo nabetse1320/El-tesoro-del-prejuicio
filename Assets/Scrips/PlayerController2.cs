@@ -33,6 +33,11 @@ public class PlayerController2 : MonoBehaviour
     private Vector2 offsetSuelo, sizeSuelo, offsetAire, sizeAire;
     private float formaAire; // 0 = forma de suelo, 1 = forma de salto
     private float distanciaPies;
+    [Tooltip("Inclinacion maxima (en grados) que se considera suelo para caminar por pendientes")]
+    [SerializeField] private float pendienteMaxima = 55f;
+    private readonly ContactPoint2D[] contactos = new ContactPoint2D[16];
+    private Joint2D[] joints;
+    private float tiempoDesdeSalto = 1f;
     private readonly RaycastHit2D[] resultadosCast = new RaycastHit2D[8];
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
@@ -74,6 +79,7 @@ public class PlayerController2 : MonoBehaviour
         colliders[0].enabled = true;
         colliders[1].enabled = false;
         distanciaPies = (sizeSuelo.y / 2f - offsetSuelo.y) * Mathf.Abs(transform.lossyScale.y);
+        joints = GetComponents<Joint2D>();
         distanciaSueloEnElAire = Mathf.Min(raycastDistance, distanciaPies + margenSueloEnElAire);
         isActive = false;
         controladorGolpe = transform.GetChild(0).GetComponent<Transform>();
@@ -129,6 +135,21 @@ public class PlayerController2 : MonoBehaviour
     {
         ActualizarFormaCollider();
         float velocidadX = moveVector.x * speed;
+        tiempoDesdeSalto += Time.fixedDeltaTime;
+
+        // En el suelo se camina a lo largo de la superficie a velocidad constante y se compensa
+        // la gravedad: sin friccion, en pendientes el personaje se aceleraba al bajar y al subir
+        // ganaba velocidad vertical que se sumaba al salto (saltos muy altos)
+        Vector2 normalSuelo, velocidadSuelo;
+        if (tiempoDesdeSalto > 0.2f && PuedeAjustarseAlSuelo() && ObtenerNormalSuelo(out normalSuelo, out velocidadSuelo))
+        {
+            Vector2 tangente = new Vector2(normalSuelo.y, -normalSuelo.x);
+            // Se suma la velocidad de lo que pisa (plataformas o cajas en movimiento)
+            rb.linearVelocity = tangente * velocidadX + velocidadSuelo;
+            rb.AddForce(-Physics2D.gravity * rb.gravityScale * rb.mass);
+            return;
+        }
+
         // En el aire no se empuja contra un obstaculo: si no, la base redondeada del collider
         // se apoyaba en la esquina de cajas o bordes y el personaje quedaba "flotando"
         if (!isGrounded && velocidadX != 0f && BloqueadoEnDireccion(Mathf.Sign(velocidadX)))
@@ -153,6 +174,41 @@ public class PlayerController2 : MonoBehaviour
             colliders[0].offset = Vector2.Lerp(offsetSuelo, offsetAire, formaAire);
             colliders[0].size = Vector2.Lerp(sizeSuelo, sizeAire, formaAire);
         }
+    }
+
+    private bool PuedeAjustarseAlSuelo()
+    {
+        // Gancho, lianas y cuerdas controlan al personaje quitandole la gravedad o con joints
+        if (rb.gravityScale == 0f) return false;
+        foreach (Joint2D joint in joints)
+        {
+            if (joint.enabled) return false;
+        }
+        return true;
+    }
+
+    private bool ObtenerNormalSuelo(out Vector2 normal, out Vector2 velocidadSuelo)
+    {
+        normal = Vector2.up;
+        velocidadSuelo = Vector2.zero;
+        float minimoY = Mathf.Cos(pendienteMaxima * Mathf.Deg2Rad);
+        bool encontrado = false;
+        int cantidad = colliders[0].GetContacts(contactos);
+        for (int i = 0; i < cantidad; i++)
+        {
+            // La normal apunta hacia otherCollider; se orienta siempre hacia el personaje
+            bool invertido = contactos[i].collider == colliders[0];
+            Collider2D otro = invertido ? contactos[i].otherCollider : contactos[i].collider;
+            if (otro == null || otro.isTrigger) continue;
+            Vector2 n = invertido ? -contactos[i].normal : contactos[i].normal;
+            if (n.y >= minimoY && (!encontrado || n.y > normal.y))
+            {
+                normal = n;
+                velocidadSuelo = otro.attachedRigidbody != null ? otro.attachedRigidbody.GetPointVelocity(contactos[i].point) : Vector2.zero;
+                encontrado = true;
+            }
+        }
+        return encontrado;
     }
 
     private bool BloqueadoEnDireccion(float direccion)
@@ -210,6 +266,9 @@ public class PlayerController2 : MonoBehaviour
             {
                 if (isGrounded)
                 {
+                    // El salto siempre parte de velocidad vertical 0 (en pendientes se sumaba)
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+                    tiempoDesdeSalto = 0f;
                     rb.AddForce(Vector2.up * jumpForce);
                 }
 
