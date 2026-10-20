@@ -138,7 +138,7 @@ public class GrapplingGun : MonoBehaviour
             {
                 if (Gamepad.current!=null) 
                 {
-                    Cursor.visible = false;
+                    MostrarCursor(false);
                     lookPointObject.gameObject.SetActive(true);
                     Vector2 gamepadInput = inputs.Player.Apuntado.ReadValue<Vector2>();
                     Vector3 newPosition = lookPointObject.position + (Vector3)(gamepadInput * Time.deltaTime * rotationSpeed);
@@ -156,7 +156,7 @@ public class GrapplingGun : MonoBehaviour
                 }
                 else
                 {
-                    Cursor.visible = true;
+                    MostrarCursor(true);
                     lookPointObject.gameObject.SetActive(false);
                     RotateGun(m_camera.ScreenToWorldPoint(Mouse.current.position.ReadValue()),true);
                 }
@@ -273,6 +273,16 @@ public class GrapplingGun : MonoBehaviour
     // Gira al personaje solo si cambia de lado. Antes se reescribia la rotacion en cada frame
     // y, mirando a la izquierda, Unity lo tomaba como un cambio del transform: eso anulaba la
     // interpolacion del Rigidbody2D y el personaje (y la camara) iban a tirones.
+    // Solo cambia la visibilidad del cursor si es distinta: asignarla en cada frame llama al
+    // sistema operativo en cada frame
+    private void MostrarCursor(bool visible)
+    {
+        if (Cursor.visible != visible)
+        {
+            Cursor.visible = visible;
+        }
+    }
+
     private void MirarHacia(float anguloY)
     {
         Transform t = player.gameObject.transform;
@@ -335,7 +345,7 @@ public class GrapplingGun : MonoBehaviour
         Vector2 distanceVector;
         if (Gamepad.current != null)
         {
-            Cursor.visible = false;
+            MostrarCursor(false);
             Vector2 gamepadInput = inputs.Player.Apuntado.ReadValue<Vector2>();
             Vector3 newPosition = lookPointObject.position + (Vector3)(gamepadInput * Time.deltaTime * rotationSpeed);
             distanceVector = (Vector2)newPosition - (Vector2)gunPivot.position;

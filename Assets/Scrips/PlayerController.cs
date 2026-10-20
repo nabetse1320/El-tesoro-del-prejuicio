@@ -92,9 +92,10 @@ public class PlayerController : MonoBehaviour
 
         //TiempoEntreAtaque = atrackClip.length;
 
-        _myInput = new Mapa();
-
-        _myInput.Enable();
+        // No se crea una copia propia de las acciones de entrada: no se usaba (el control llega por
+        // PlayerInput) y cada copia habilitada procesaba todos los eventos de entrada en cada frame.
+        //_myInput = new Mapa();
+        //_myInput.Enable();
     }
 
     private void OnDestroy()
