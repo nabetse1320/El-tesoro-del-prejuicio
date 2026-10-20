@@ -29,6 +29,7 @@ public class PlayerController2 : MonoBehaviour
     private float distanciaSueloEnElAire;
     private PhysicsMaterial2D materialSuelo;
     private PhysicsMaterial2D materialAire;
+    private readonly RaycastHit2D[] resultadosCast = new RaycastHit2D[8];
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
     [SerializeField] private int dañoGolpe;
@@ -114,7 +115,31 @@ public class PlayerController2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveVector.x * speed, rb.linearVelocity.y);
+        float velocidadX = moveVector.x * speed;
+        // En el aire no se empuja contra un obstaculo: si no, la base redondeada del collider
+        // se apoyaba en la esquina de cajas o bordes y el personaje quedaba "flotando"
+        if (!isGrounded && velocidadX != 0f && BloqueadoEnDireccion(Mathf.Sign(velocidadX)))
+        {
+            velocidadX = 0f;
+        }
+        rb.linearVelocity = new Vector2(velocidadX, rb.linearVelocity.y);
+    }
+
+    private bool BloqueadoEnDireccion(float direccion)
+    {
+        ContactFilter2D filtro = new ContactFilter2D();
+        filtro.useTriggers = false;
+        filtro.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+        int cantidad = colliders[0].Cast(new Vector2(direccion, 0f), filtro, resultadosCast, 0.05f);
+        for (int i = 0; i < cantidad; i++)
+        {
+            // Superficie que se opone al avance (pared o esquina)
+            if (resultadosCast[i].normal.x * direccion < -0.1f)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void Update()
