@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel 3 - 2.unity
     guid: 4c4f0d6537923a14a935d51074c8b4d7
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 0d992896a6ed4ad8bdde458f7ecc6317
   - enabled: 0
     path: Assets/Scenes/PruebaScene.unity
     guid: 261c37c32abec8c46ae5356abdd87f72

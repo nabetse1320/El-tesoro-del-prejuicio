@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2556478150482121743}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,8 +118,10 @@ MonoBehaviour:
   isJumping: 0
   _MaxHealth: 10
   _Damage: 2
-  attackRange: 5
-  jumpForce: 10
+  attackRange: 2.5
+  attackHeight: 2.5
+  attackCooldown: 1.5
+  jumpForce: 4
   jumpDetectDistance: 5
   speed: 3
   stunDuration: 3
