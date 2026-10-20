@@ -28,6 +28,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float margenSueloEnElAire = 0.15f;
     private float distanciaSueloEnElAire;
     private PhysicsMaterial2D materialSinFriccion;
+    [Tooltip("Tiempo que tarda el collider en pasar de la forma de suelo a la de salto (piernas recogidas) y viceversa")]
+    [SerializeField] private float tiempoCambioCollider = 0.08f;
+    private Vector2 offsetSuelo, sizeSuelo, offsetAire, sizeAire;
+    private float formaAire; // 0 = forma de suelo, 1 = forma de salto
+    private float distanciaPies;
     private readonly RaycastHit2D[] resultadosCast = new RaycastHit2D[8];
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
@@ -52,17 +57,22 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         colliders = GetComponents<CapsuleCollider2D>();
-        // Se usa siempre el collider de suelo (antes se alternaba con el collider de aire, que
-        // tiene los pies mas arriba, y al volver al suelo la fisica empujaba al personaje hacia
-        // arriba). El personaje nunca usa friccion: con friccion se quedaba pegado o resbalaba
-        // lento contra paredes y cajas al empujarlas en el aire, y la velocidad horizontal ya
-        // se fija en FixedUpdate, asi que no resbala al soltar el control.
+        // Se usa un solo collider que cambia de forma de manera gradual entre la del collider de
+        // suelo y la del collider de aire (pies mas arriba, como las piernas recogidas del salto).
+        // Antes se activaba uno u otro de golpe y al aterrizar el de suelo aparecia metido en el
+        // piso, la fisica empujaba al personaje hacia arriba y la camara daba tirones.
+        // El personaje nunca usa friccion: con friccion se quedaba pegado o resbalaba lento
+        // contra paredes y cajas, y la velocidad horizontal ya se fija en FixedUpdate.
         materialSinFriccion = colliders[1].sharedMaterial;
         colliders[0].sharedMaterial = materialSinFriccion;
         GetComponent<Rigidbody2D>().sharedMaterial = materialSinFriccion;
+        offsetSuelo = colliders[0].offset;
+        sizeSuelo = colliders[0].size;
+        offsetAire = colliders[1].offset;
+        sizeAire = colliders[1].size;
         colliders[0].enabled = true;
         colliders[1].enabled = false;
-        float distanciaPies = (colliders[0].size.y / 2f - colliders[0].offset.y) * Mathf.Abs(transform.lossyScale.y);
+        distanciaPies = (sizeSuelo.y / 2f - offsetSuelo.y) * Mathf.Abs(transform.lossyScale.y);
         distanciaSueloEnElAire = Mathf.Min(raycastDistance, distanciaPies + margenSueloEnElAire);
         //colliders[0].sharedMaterial.friction = 1;
         //colliders[1].sharedMaterial.friction = 0;
@@ -121,6 +131,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        ActualizarFormaCollider();
         float velocidadX = moveVector.x * speed;
         // En el aire no se empuja contra un obstaculo: si no, la base redondeada del collider
         // se apoyaba en la esquina de cajas o bordes y el personaje quedaba "flotando"
@@ -129,6 +140,23 @@ public class PlayerController : MonoBehaviour
             velocidadX = 0f;
         }
         rb.linearVelocity = new Vector2(velocidadX, rb.linearVelocity.y);
+    }
+
+    private void ActualizarFormaCollider()
+    {
+        // Forma de suelo si esta en el suelo o si va cayendo y el suelo esta cerca (asi recupera
+        // la forma antes de tocarlo y no aparece metido en el piso). Subiendo o lejos del suelo
+        // usa la forma de salto, para no engancharse con los bordes de las plataformas.
+        bool sueloCerca = rb.linearVelocity.y <= 0f
+            && Physics2D.Raycast(transform.position, Vector2.down, distanciaPies + 0.3f, groundLayer).collider != null;
+        float objetivo = (isGrounded || sueloCerca) ? 0f : 1f;
+        float nueva = Mathf.MoveTowards(formaAire, objetivo, Time.fixedDeltaTime / Mathf.Max(0.001f, tiempoCambioCollider));
+        if (nueva != formaAire)
+        {
+            formaAire = nueva;
+            colliders[0].offset = Vector2.Lerp(offsetSuelo, offsetAire, formaAire);
+            colliders[0].size = Vector2.Lerp(sizeSuelo, sizeAire, formaAire);
+        }
     }
 
     private bool BloqueadoEnDireccion(float direccion)
