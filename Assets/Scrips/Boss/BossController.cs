@@ -44,7 +44,7 @@ public class BossController : MonoBehaviour
         if (_rb != null)
         {
             _rb.bodyType = RigidbodyType2D.Kinematic;
-            _rb.velocity = Vector2.zero;
+            _rb.linearVelocity = Vector2.zero;
         }
         baseY = _stats.LeftCorner.position.y;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, MinX(), MaxX()), baseY, transform.position.z);

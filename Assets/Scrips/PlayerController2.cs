@@ -27,7 +27,7 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private float raycastDistanceInTheAir = 0.5f;
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
-    [SerializeField] private int dañoGolpe;
+    [SerializeField] private int daï¿½oGolpe;
 
     [Header("SoundFX")]
     private AudioSource audioSource;
@@ -94,7 +94,7 @@ public class PlayerController2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveVector.x * speed, rb.linearVelocity.y);
     }
 
     private void Update()
@@ -126,14 +126,14 @@ public class PlayerController2 : MonoBehaviour
             colliders[1].enabled = false;
         }
 
-        bool isAlmostIdle = isGrounded && rb.velocity.magnitude < 0.1f;
+        bool isAlmostIdle = isGrounded && rb.linearVelocity.magnitude < 0.1f;
 
-        // Actualizar isIdle a true si el personaje está en reposo, de lo contrario, actualizar a false
+        // Actualizar isIdle a true si el personaje estï¿½ en reposo, de lo contrario, actualizar a false
         isIdle = isAlmostIdle;
 
 
-        isJumping = !isGrounded && rb.velocity.y > 0;
-        isFalling = !isGrounded && rb.velocity.y < 0;
+        isJumping = !isGrounded && rb.linearVelocity.y > 0;
+        isFalling = !isGrounded && rb.linearVelocity.y < 0;
 
         if (isFalling || isJumping) animator.ResetTrigger("Atacar");
 
@@ -184,7 +184,7 @@ public class PlayerController2 : MonoBehaviour
             }
             else
             {
-                // Si el player está en pausa (modo ocio), no está realizando ninguna acción activa.
+                // Si el player estï¿½ en pausa (modo ocio), no estï¿½ realizando ninguna acciï¿½n activa.
                 // Entonces, actualiza isIdle a true.
                 isIdle = true;
             }
@@ -224,11 +224,11 @@ public class PlayerController2 : MonoBehaviour
             {
                 if (colicionador.GetComponent<Enemigo>() != null)
                 {
-                    colicionador.GetComponent<Enemigo>().ResivirDaño(dañoGolpe);
+                    colicionador.GetComponent<Enemigo>().ResivirDaï¿½o(daï¿½oGolpe);
                 }
                 if (colicionador.GetComponent<Cangrejo>() != null)
                 {
-                    colicionador.GetComponent<Cangrejo>().ResivirDaño(dañoGolpe);
+                    colicionador.GetComponent<Cangrejo>().ResivirDaï¿½o(daï¿½oGolpe);
                 }
             }
             if (colicionador.CompareTag("ObInteract"))

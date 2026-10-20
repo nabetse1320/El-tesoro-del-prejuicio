@@ -24,7 +24,7 @@ public class Enemigo : MonoBehaviour
     [HideInInspector] public Collider2D[] hits;
     [SerializeField] private bool modoAtaque;
     [SerializeField] private int vida;
-    [SerializeField] public int daño;
+    [SerializeField] public int daï¿½o;
 
     [Header("Configuraciones de movimiento:")]
     [SerializeField] private LayerMask otrosEnemigos;
@@ -35,7 +35,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private Transform inicioRaycastPared;
     [SerializeField] private LayerMask queEsSuelo;
 
-    [Header("Configuraciones de detección al jugador:")]
+    [Header("Configuraciones de detecciï¿½n al jugador:")]
     [SerializeField] private float detectionRadius;
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private float tEsperaAtaque;
@@ -52,7 +52,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private GameObject arma;
 
     [Header("Configuraciones de ataque:")]
-    [SerializeField] private int dañoGolpe;
+    [SerializeField] private int daï¿½oGolpe;
     [SerializeField] private float tEntreAtaques;
     [SerializeField] private float prueba;
     [SerializeField] private AnimationClip AnimacionAtaque;
@@ -152,7 +152,7 @@ public class Enemigo : MonoBehaviour
                         {
                             animator.SetBool("Alerta",false);
                             animator.SetBool("Atacando", false);
-                            rb.velocity = new Vector2(velocidadMovimiento * 0.2f * transform.right.x, rb.velocity.y);
+                            rb.linearVelocity = new Vector2(velocidadMovimiento * 0.2f * transform.right.x, rb.linearVelocity.y);
                             aRango = false;
                             break;
                         }
@@ -207,7 +207,7 @@ public class Enemigo : MonoBehaviour
                     animator.SetBool("Alerta", false);
                     animator.SetBool("Atacando", false);
                 }
-                rb.velocity = new Vector2(velocidadMovimiento * transform.right.x, rb.velocity.y);
+                rb.linearVelocity = new Vector2(velocidadMovimiento * transform.right.x, rb.linearVelocity.y);
             }
             if (informacionSuelo || !isGrounded)
             {
@@ -241,7 +241,7 @@ public class Enemigo : MonoBehaviour
             animator.SetBool("Muerto",true);
             animator.SetBool("Alerta", false);
             animator.SetBool("Atacando", false);
-            animator.SetBool("daño", false);
+            animator.SetBool("daï¿½o", false);
             Destroy(gameObject,1.5f);
         }
     }
@@ -371,13 +371,13 @@ public class Enemigo : MonoBehaviour
         
     }
 
-    public void ResivirDaño(int daño)
+    public void ResivirDaï¿½o(int daï¿½o)
     {
         if (!muerto)
         {
-            vida -= daño;
+            vida -= daï¿½o;
             StopAllCoroutines();
-            animator.SetBool("daño", true);
+            animator.SetBool("daï¿½o", true);
             StartCoroutine(WaitDamage());
         }
         
@@ -391,7 +391,7 @@ public class Enemigo : MonoBehaviour
         golpeEjecutado = false;
         atacando = false;
         parado = true;
-        animator.SetBool("daño", false);
+        animator.SetBool("daï¿½o", false);
         if (clipResivirDano != null)
         {
             audioSource.clip=clipResivirDano;

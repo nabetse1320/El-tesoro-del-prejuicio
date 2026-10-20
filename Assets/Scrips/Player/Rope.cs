@@ -39,7 +39,7 @@ public class Rope : MonoBehaviour, IInteractable
             Eventos.eve.PausarPlayer.Invoke();
             Eventos.eve.PausarPlayer2.Invoke();
             Player.GetComponent<Rigidbody2D>().gravityScale = 0;
-            Player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            Player.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
 
             t = Mathf.Clamp01(currentTime / totalDuration);
             easingValue = myEasingCurve.Evaluate(t);

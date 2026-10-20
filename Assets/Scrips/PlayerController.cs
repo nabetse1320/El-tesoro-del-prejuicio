@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2 (moveVector.x*speed,rb.velocity.y);
+        rb.linearVelocity = new Vector2 (moveVector.x*speed,rb.linearVelocity.y);
         
     }
 
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = CheckGrounded();
         
 
-        bool isAlmostIdle = isGrounded && rb.velocity.magnitude < 0.1f;
+        bool isAlmostIdle = isGrounded && rb.linearVelocity.magnitude < 0.1f;
 
         // Actualizar isIdle a true si el personaje est� en reposo, de lo contrario, actualizar a false
         isIdle = isAlmostIdle;
@@ -154,8 +154,8 @@ public class PlayerController : MonoBehaviour
 
         //collider.sharedMaterial.friction = isGrounded ? 1 : 0; ;
 
-        bool isJumping = !isGrounded && rb.velocity.y > 0;
-        bool isFalling = !isGrounded && rb.velocity.y < 0;
+        bool isJumping = !isGrounded && rb.linearVelocity.y > 0;
+        bool isFalling = !isGrounded && rb.linearVelocity.y < 0;
 
         if (isFalling || isJumping) animator.ResetTrigger("Atacar");
         

@@ -14,7 +14,7 @@ public class Cangrejo : MonoBehaviour
     [SerializeField] private int vida;
     [SerializeField] private float stunTime;
 
-    [Header("Configuraciones de detección al jugador:")]
+    [Header("Configuraciones de detecciï¿½n al jugador:")]
     [SerializeField] private float detectionRadiusFirst;
     [SerializeField] private float detectionRadiusSecond;
     [SerializeField] private float timeToDetect;
@@ -91,13 +91,13 @@ public class Cangrejo : MonoBehaviour
                 timer = AddForceDuring();
                 StartCoroutine(timer);
             }
-            if (rb.velocityX > atackVelocity)
+            if (rb.linearVelocityX > atackVelocity)
             {
-                rb.velocityX = atackVelocity;
+                rb.linearVelocityX = atackVelocity;
             }
-            if (rb.velocityX < -atackVelocity)
+            if (rb.linearVelocityX < -atackVelocity)
             {
-                rb.velocityX = -atackVelocity;
+                rb.linearVelocityX = -atackVelocity;
             }
             if (!atacando && alerted)
             {
@@ -110,7 +110,7 @@ public class Cangrejo : MonoBehaviour
                     }
 
                 }
-                rb.velocity = new Vector2(movementVelocity * transform.right.x, rb.velocity.y);
+                rb.linearVelocity = new Vector2(movementVelocity * transform.right.x, rb.linearVelocity.y);
                 animator.SetBool("caminando", true);
 
             }
@@ -153,13 +153,13 @@ public class Cangrejo : MonoBehaviour
 
     }
 
-    public void ResivirDaño(int daño)
+    public void ResivirDaï¿½o(int daï¿½o)
     {
-        vida -= daño;
+        vida -= daï¿½o;
         StopAllCoroutines();
         detected = false;
         alerted = false;
-        animator.SetTrigger("Dañado");
+        animator.SetTrigger("Daï¿½ado");
         if (clipDano !=null)
         {
             audioSource.clip= clipDano;

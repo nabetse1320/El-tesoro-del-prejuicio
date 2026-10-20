@@ -35,7 +35,7 @@ public class Liana : MonoBehaviour, IInteractable
             MovementStart = PlayerTransform.position;
             Eventos.eve.CancelSwitches.Invoke();
             player.GetComponent<Rigidbody2D>().gravityScale = 0;
-            player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            player.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
 
             t = Mathf.Clamp01(currentTime / totalDuration);
             easingValue = myEasingCurve.Evaluate(t);

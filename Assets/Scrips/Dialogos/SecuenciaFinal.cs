@@ -59,7 +59,7 @@ public class SecuenciaFinal : MonoBehaviour
 
         // Esperar a que el personaje termine de caer si entró saltando
         float espera = 0f;
-        while (espera < 1.5f && Mathf.Abs(rbIzzy.velocity.y) + Mathf.Abs(rbLiam.velocity.y) > 0.05f)
+        while (espera < 1.5f && Mathf.Abs(rbIzzy.linearVelocity.y) + Mathf.Abs(rbLiam.linearVelocity.y) > 0.05f)
         {
             espera += Time.deltaTime;
             yield return null;
@@ -195,8 +195,8 @@ public class SecuenciaFinal : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             tiempo += Time.fixedDeltaTime;
-            rbIzzy.velocity = new Vector2(velocidadCaminar, rbIzzy.velocity.y);
-            rbLiam.velocity = new Vector2(velocidadCaminar, rbLiam.velocity.y);
+            rbIzzy.linearVelocity = new Vector2(velocidadCaminar, rbIzzy.linearVelocity.y);
+            rbLiam.linearVelocity = new Vector2(velocidadCaminar, rbLiam.linearVelocity.y);
 
             if (!fade && (segundo.transform.position.x >= destinoX || tiempo > 20f))
             {
@@ -227,7 +227,7 @@ public class SecuenciaFinal : MonoBehaviour
         Animator animator = personaje.GetComponent<Animator>();
         SetBoolSiExiste(animator, "Corriendo", false);
         SetBoolSiExiste(animator, "CorriendoEspalda", false);
-        personaje.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, personaje.GetComponent<Rigidbody2D>().velocity.y);
+        personaje.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0f, personaje.GetComponent<Rigidbody2D>().linearVelocity.y);
     }
 
     private void AnimarCaminata(GameObject personaje)

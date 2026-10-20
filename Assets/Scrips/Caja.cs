@@ -6,7 +6,7 @@ using UnityEngine;
 public class Caja : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private int dañoCaida=10;
+    [SerializeField] private int daï¿½oCaida=10;
     [SerializeField] private float speedToDoDamage=7;
     float cont;
 
@@ -26,9 +26,9 @@ public class Caja : MonoBehaviour
     private void Update()
     {
         lastPosition = transform.position;
-        if (rb.velocity.y != 0)
+        if (rb.linearVelocity.y != 0)
         {
-            cont = rb.velocity.y;
+            cont = rb.linearVelocity.y;
         }
         else
         {
@@ -69,7 +69,7 @@ public class Caja : MonoBehaviour
             {
                 if (cont<=-speedToDoDamage)
                 {
-                    collision.gameObject.GetComponent<Enemigo>().ResivirDaño(dañoCaida);
+                    collision.gameObject.GetComponent<Enemigo>().ResivirDaï¿½o(daï¿½oCaida);
                 }
             }
             
@@ -90,7 +90,7 @@ public class Caja : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Terreno"))
         {
-            if (transform.position.x != lastPosition.x || rb.velocity.x != 0)
+            if (transform.position.x != lastPosition.x || rb.linearVelocity.x != 0)
             {
                 if (!audioSource.isPlaying)
                 {

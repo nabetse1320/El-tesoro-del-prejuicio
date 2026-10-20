@@ -340,7 +340,7 @@ public class GrapplingGun : MonoBehaviour
                     grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
                     grappleRope.enabled = true;
 
-                    // Mensaje de depuración para imprimir la información del Raycast
+                    // Mensaje de depuraciï¿½n para imprimir la informaciï¿½n del Raycast
                 }
                 else
                 {
@@ -357,7 +357,7 @@ public class GrapplingGun : MonoBehaviour
                     //objetc = true;
                     grappeledObject = hit.transform.gameObject;
                     objetc = true;
-                    // Mensaje de depuración para imprimir la información del Raycast
+                    // Mensaje de depuraciï¿½n para imprimir la informaciï¿½n del Raycast
                 }
                 else
                 {
@@ -414,7 +414,7 @@ public class GrapplingGun : MonoBehaviour
                     break;
                 case LaunchType.Transform_Launch:
                     m_rigidbody.gravityScale = 0;
-                    m_rigidbody.velocity = Vector2.zero;
+                    m_rigidbody.linearVelocity = Vector2.zero;
                     break;
             }
         }
