@@ -19,7 +19,8 @@ public class BindingTutorialLeter : MonoBehaviour
 
     void Update()
     {
-        if (actions!=null)
+        // Solo escribe si hay acciones configuradas; si no, deja el texto del cartel (textoIn) intacto
+        if (actions!=null && actions.Length > 0)
         {
             String text = "";
             for (int i = 0; i < textoEntreActions.Length; i++)
@@ -30,7 +31,11 @@ public class BindingTutorialLeter : MonoBehaviour
                     text += "\"" + actions[i].action.GetBindingDisplayString(0) + "\" ";
                 }
             }
-            texto.text = text;
+            // Evita regenerar el texto de TextMeshPro en cada frame si no cambio
+            if (texto.text != text)
+            {
+                texto.text = text;
+            }
         }
         
     }

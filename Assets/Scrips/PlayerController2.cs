@@ -24,7 +24,11 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private float radioGolpe;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float raycastDistance = 1f;
-    [SerializeField] private float raycastDistanceInTheAir = 0.5f;
+    [Tooltip("Margen bajo los pies para detectar el suelo mientras esta en el aire")]
+    [SerializeField] private float margenSueloEnElAire = 0.15f;
+    private float distanciaSueloEnElAire;
+    private PhysicsMaterial2D materialSuelo;
+    private PhysicsMaterial2D materialAire;
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
     [SerializeField] private int dañoGolpe;
@@ -49,6 +53,15 @@ public class PlayerController2 : MonoBehaviour
     private void Awake()
     {
         colliders = GetComponents<CapsuleCollider2D>();
+        // Se usa siempre el collider de suelo y solo se cambia su material (con o sin friccion).
+        // Antes se alternaba con el collider de aire, que tiene los pies mas arriba, y al
+        // volver al suelo la fisica empujaba al personaje hacia arriba (tirones en camara).
+        materialSuelo = colliders[0].sharedMaterial;
+        materialAire = colliders[1].sharedMaterial;
+        colliders[0].enabled = true;
+        colliders[1].enabled = false;
+        float distanciaPies = (colliders[0].size.y / 2f - colliders[0].offset.y) * Mathf.Abs(transform.lossyScale.y);
+        distanciaSueloEnElAire = Mathf.Min(raycastDistance, distanciaPies + margenSueloEnElAire);
         isActive = false;
         controladorGolpe = transform.GetChild(0).GetComponent<Transform>();
         animator = GetComponent<Animator>();
@@ -113,24 +126,11 @@ public class PlayerController2 : MonoBehaviour
         {
             moveVector = Vector2.zero;
         }
-        if (!isGrounded)
+        // Sin friccion en el aire para no quedarse pegado a las paredes
+        PhysicsMaterial2D material = isGrounded ? materialSuelo : materialAire;
+        if (colliders[0].sharedMaterial != material)
         {
-            colliders[1].enabled = true;
-            if (colliders[0].enabled)
-            {
-                raycastDistance -= raycastDistanceInTheAir;
-            }
-            colliders[0].enabled = false;
-
-        }
-        else
-        {
-            if (!colliders[0].enabled)
-            {
-                raycastDistance += raycastDistanceInTheAir;
-            }
-            colliders[0].enabled = true;
-            colliders[1].enabled = false;
+            colliders[0].sharedMaterial = material;
         }
 
         bool isAlmostIdle = isGrounded && rb.linearVelocity.magnitude < 0.1f;
@@ -264,7 +264,9 @@ public class PlayerController2 : MonoBehaviour
 
     private bool CheckGrounded() {
         Vector2 raycastOrigin = transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance, groundLayer);
+        // En el aire el rayo es mas corto: solo detecta el suelo justo antes de tocarlo
+        float distancia = isGrounded ? raycastDistance : distanciaSueloEnElAire;
+        RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, distancia, groundLayer);
         return (hit.collider != null);
     }
 
