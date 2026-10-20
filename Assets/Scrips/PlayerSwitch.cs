@@ -38,6 +38,13 @@ public class PlayerSwitch : MonoBehaviour
         inputs.Enable();
 
     }
+
+    private void OnDestroy()
+    {
+        // Liberar las acciones de entrada creadas en Awake (evita fugas al cambiar de escena)
+        inputs?.Disable();
+        inputs?.Dispose();
+    }
     private void Start()
     {
         player1 = p1.GetComponent<PlayerController>();

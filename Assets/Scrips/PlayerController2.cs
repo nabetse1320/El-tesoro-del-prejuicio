@@ -62,6 +62,13 @@ public class PlayerController2 : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        // Liberar las acciones de entrada creadas en Awake (evita fugas al cambiar de escena)
+        _myInput?.Disable();
+        _myInput?.Dispose();
+    }
+
     private void OnEnable()
     {
         ////Movimiento

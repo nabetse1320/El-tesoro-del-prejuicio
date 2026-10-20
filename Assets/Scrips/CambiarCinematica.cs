@@ -18,6 +18,13 @@ public class CambiarCinematica : MonoBehaviour
         inputs.Enable();
         StartCoroutine(FinalizarCinematica());
     }
+
+    private void OnDestroy()
+    {
+        // Liberar las acciones de entrada creadas en Awake (evita fugas al cambiar de escena)
+        inputs?.Disable();
+        inputs?.Dispose();
+    }
     IEnumerator FinalizarCinematica()
     {
         yield return new WaitForSeconds((float)clip.length);
