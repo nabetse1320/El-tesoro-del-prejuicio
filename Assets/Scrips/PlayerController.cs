@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Margen bajo los pies para detectar el suelo mientras esta en el aire")]
     [SerializeField] private float margenSueloEnElAire = 0.15f;
     private float distanciaSueloEnElAire;
-    private PhysicsMaterial2D materialSuelo;
-    private PhysicsMaterial2D materialAire;
+    private PhysicsMaterial2D materialSinFriccion;
     private readonly RaycastHit2D[] resultadosCast = new RaycastHit2D[8];
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
@@ -53,11 +52,14 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         colliders = GetComponents<CapsuleCollider2D>();
-        // Se usa siempre el collider de suelo y solo se cambia su material (con o sin friccion).
-        // Antes se alternaba con el collider de aire, que tiene los pies mas arriba, y al
-        // volver al suelo la fisica empujaba al personaje hacia arriba (tirones en camara).
-        materialSuelo = colliders[0].sharedMaterial;
-        materialAire = colliders[1].sharedMaterial;
+        // Se usa siempre el collider de suelo (antes se alternaba con el collider de aire, que
+        // tiene los pies mas arriba, y al volver al suelo la fisica empujaba al personaje hacia
+        // arriba). El personaje nunca usa friccion: con friccion se quedaba pegado o resbalaba
+        // lento contra paredes y cajas al empujarlas en el aire, y la velocidad horizontal ya
+        // se fija en FixedUpdate, asi que no resbala al soltar el control.
+        materialSinFriccion = colliders[1].sharedMaterial;
+        colliders[0].sharedMaterial = materialSinFriccion;
+        GetComponent<Rigidbody2D>().sharedMaterial = materialSinFriccion;
         colliders[0].enabled = true;
         colliders[1].enabled = false;
         float distanciaPies = (colliders[0].size.y / 2f - colliders[0].offset.y) * Mathf.Abs(transform.lossyScale.y);
@@ -176,15 +178,6 @@ public class PlayerController : MonoBehaviour
             moveVector = Vector2.zero;
         }
 
-        // Friccion solo cuando esta quieto en el suelo. Al caminar, saltar o en el aire se usa
-        // el material sin friccion: si no, al empujar contra una pared o caja la friccion
-        // frenaba el salto. La velocidad horizontal ya se fija en FixedUpdate, asi que no resbala.
-        bool usarFriccion = isGrounded && moveVector.x == 0f && rb.linearVelocity.y <= 0.01f;
-        PhysicsMaterial2D material = usarFriccion ? materialSuelo : materialAire;
-        if (colliders[0].sharedMaterial != material)
-        {
-            colliders[0].sharedMaterial = material;
-        }
 
         //collider.sharedMaterial.friction = isGrounded ? 1 : 0; ;
 
@@ -210,7 +203,6 @@ public class PlayerController : MonoBehaviour
             {
                 if (isGrounded)
                 {
-                    colliders[0].sharedMaterial = materialAire;
                     rb.AddForce(Vector2.up * jumpForce);
                 }
 
