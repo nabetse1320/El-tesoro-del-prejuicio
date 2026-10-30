@@ -22,7 +22,7 @@ public class PlayerController2 : MonoBehaviour
 
     [Header("Combo de espada (Lian)")]
     [Tooltip("Duracion total de cada paso del combo en segundos (paso 1, paso 2, paso 3 = estocada)")]
-    [SerializeField] private float[] duracionAtaque = { 0.5f, 0.45f, 0.6f };
+    [SerializeField] private float[] duracionAtaque = { 0.5f, 0.45f, 0.85f };
     [Tooltip("Segundos desde que empieza el paso en los que se hace el golpe (Golpe)")]
     [SerializeField] private float[] tiempoImpacto = { 0.25f, 0.2333f, 0.2333f };
     [Tooltip("Segundos desde que empieza el paso a partir de los cuales una pulsacion guardada encadena el siguiente paso. El paso 3 no encadena")]
@@ -30,7 +30,7 @@ public class PlayerController2 : MonoBehaviour
     [Tooltip("Segundos despues de terminar un paso sin pulsar en los que aun se puede pulsar para seguir el combo. Si se pasa, el combo vuelve al paso 1")]
     [SerializeField] private float ventanaCombo = 0.35f;
     [Tooltip("Enfriamiento en segundos tras terminar la estocada (paso 3) antes de poder empezar otro combo")]
-    [SerializeField] private float enfriamientoFinal = 0.25f;
+    [SerializeField] private float enfriamientoFinal = 0.1f;
 
     private static readonly int[] hashesAtaque =
     {
@@ -112,7 +112,7 @@ public class PlayerController2 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-        duracionAtaque = AsegurarTres(duracionAtaque, 0.5f, 0.45f, 0.6f);
+        duracionAtaque = AsegurarTres(duracionAtaque, 0.5f, 0.45f, 0.85f);
         tiempoImpacto = AsegurarTres(tiempoImpacto, 0.25f, 0.2333f, 0.2333f);
         tiempoEncadenar = AsegurarTres(tiempoEncadenar, 0.31f, 0.2933f, 0f);
 
