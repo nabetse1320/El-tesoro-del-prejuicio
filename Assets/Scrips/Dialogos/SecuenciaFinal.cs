@@ -93,6 +93,9 @@ public class SecuenciaFinal : MonoBehaviour
         rtTexto.offsetMax = new Vector2(-80f, -40f);
         texto.textWrappingMode = TextWrappingModes.Normal;
         texto.alignment = TextAlignmentOptions.MidlineLeft;
+        // El prefab trae un m_margin con valores negativos (x=-427) que desplaza el texto hacia
+        // la izquierda, fuera de la pantalla; el texto ya queda acotado por offsetMin/offsetMax
+        texto.margin = Vector4.zero;
         texto.text = string.Empty;
 
         panel.SetActive(true);
@@ -195,6 +198,13 @@ public class SecuenciaFinal : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             tiempo += Time.fixedDeltaTime;
+            // Los controles estan desactivados, pero PlayerInput sigue enviando eventos de
+            // movimiento (OnMovementCancelled pone Corriendo en false): se reafirma la animacion
+            // y el sentido en cada paso para que no se quede en la pose de reposo
+            AnimarCaminata(izzy);
+            AnimarCaminata(liam);
+            izzy.transform.eulerAngles = Vector3.zero;
+            liam.transform.eulerAngles = Vector3.zero;
             rbIzzy.linearVelocity = new Vector2(velocidadCaminar, rbIzzy.linearVelocity.y);
             rbLiam.linearVelocity = new Vector2(velocidadCaminar, rbLiam.linearVelocity.y);
 
