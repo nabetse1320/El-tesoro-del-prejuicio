@@ -5400,7 +5400,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.37967, y: 14.1655, z: -10.111833}
+  m_LocalPosition: {x: -17.3625, y: 14.165489, z: -10.111833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14829,6 +14829,10 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1765889973}
+    - target: {fileID: 3092382968091881747, guid: c6598578907071b4aa8fa15a1cebf416, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3207537974873406202, guid: c6598578907071b4aa8fa15a1cebf416, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 10
