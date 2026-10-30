@@ -26,6 +26,8 @@ public class BossStats : MonoBehaviour
     public Transform RightCorner;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private UnityEvent eventsToDead;
+    [Tooltip("Segundos que el boss sigue en escena tras morir, para que se vea la animacion de muerte")]
+    [SerializeField] private float tiempoAntesDeDestruir = 2.5f;
 
     private bool isDead;
 
@@ -56,7 +58,7 @@ public class BossStats : MonoBehaviour
         // Solo se ejecuta una vez, aunque reciba mas golpes en el mismo frame
         isDead = true;
         eventsToDead.Invoke();
-        Invoke("Destroy", 0.5f);
+        Invoke("Destroy", tiempoAntesDeDestruir);
     }
 
     private void Destroy()

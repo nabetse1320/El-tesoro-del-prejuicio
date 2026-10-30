@@ -25,6 +25,8 @@ public class BossController : MonoBehaviour
     private float baseY;
     private SpriteRenderer _sprite;
     private bool muerto;
+    // Tiempo que se mantiene la animacion de ataque despues de aplicar el golpe
+    private const float duracionFinGolpe = 0.15f;
 
     private void Awake()
     {
@@ -59,8 +61,12 @@ public class BossController : MonoBehaviour
             {
                 muerto = true;
                 StopAllCoroutines();
+                atacando = false;
                 SetAnimBool("Atacando", false);
+                SetAnimBool("idle", false);
                 SetAnimBool("Muerto", true);
+                // Muerto no golpea ni bloquea al jugador; el cuerpo queda en el piso
+                if (_collider != null) _collider.enabled = false;
             }
             return;
         }
@@ -197,6 +203,8 @@ public class BossController : MonoBehaviour
             Attack();
         }
         attackTimer = _stats.attackCooldown;
+        // Se mantiene la animacion del golpe un poco mas para que se vean sus ultimos frames
+        yield return new WaitForSeconds(duracionFinGolpe);
         atacando = false;
         SetAnimBool("Atacando", false);
     }
@@ -246,6 +254,7 @@ public class BossController : MonoBehaviour
         if (_stats.IsDead) return;
         // Stunear al enemigo
         _stats.isStunned = true;
+        SetAnimBool("idle", true);
         _stats.eventsToStuned.Invoke();
         Debug.Log("¡El enemigo ha sido stunado!");
 
