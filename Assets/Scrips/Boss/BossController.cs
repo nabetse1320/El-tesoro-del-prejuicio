@@ -269,6 +269,12 @@ public class BossController : MonoBehaviour
         stunTimer = 0.0f;
     }
 
+    public void ReproducirHerido()
+    {
+        if (_stats.IsDead) return;
+        SetAnimTrigger("Herido");
+    }
+
     private void SetAnimBool(string parametro, bool valor)
     {
         if (_animator == null) return;
@@ -277,6 +283,20 @@ public class BossController : MonoBehaviour
             if (p.name == parametro)
             {
                 _animator.SetBool(parametro, valor);
+                return;
+            }
+        }
+    }
+
+    private void SetAnimTrigger(string parametro)
+    {
+        if (_animator == null) return;
+        foreach (AnimatorControllerParameter p in _animator.parameters)
+        {
+            // Solo si el parametro existe y es de tipo Trigger (los controllers antiguos no lo tienen)
+            if (p.name == parametro && p.type == AnimatorControllerParameterType.Trigger)
+            {
+                _animator.SetTrigger(parametro);
                 return;
             }
         }

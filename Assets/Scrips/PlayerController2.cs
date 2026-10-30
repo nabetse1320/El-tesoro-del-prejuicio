@@ -11,15 +11,41 @@ public class PlayerController2 : MonoBehaviour
     public Animator animator;
     private CapsuleCollider2D[] colliders;
     public bool isGrounded;
-    private float TiempoEntreAtaque;
-    private float TiempoSiguienteAtaque;
     public bool isActive;
     public bool pausePlayer;
     [HideInInspector] public bool muerto;
     [SerializeField] private bool isJumping;
     [SerializeField] private bool isFalling;
 
+    // Ya no se usa para medir el ataque: la duracion de cada paso esta en duracionAtaque[]
     [SerializeField] private AnimationClip atrackClip;
+
+    [Header("Combo de espada (Lian)")]
+    [Tooltip("Duracion total de cada paso del combo en segundos (paso 1, paso 2, paso 3 = estocada)")]
+    [SerializeField] private float[] duracionAtaque = { 0.5f, 0.5f, 0.75f };
+    [Tooltip("Segundos desde que empieza el paso en los que se hace el golpe (Golpe)")]
+    [SerializeField] private float[] tiempoImpacto = { 0.2f, 0.2f, 0.3f };
+    [Tooltip("Segundos desde que empieza el paso a partir de los cuales una pulsacion guardada encadena el siguiente paso. El paso 3 no encadena")]
+    [SerializeField] private float[] tiempoEncadenar = { 0.3f, 0.3f, 0f };
+    [Tooltip("Segundos despues de terminar un paso sin pulsar en los que aun se puede pulsar para seguir el combo. Si se pasa, el combo vuelve al paso 1")]
+    [SerializeField] private float ventanaCombo = 0.35f;
+    [Tooltip("Enfriamiento en segundos tras terminar la estocada (paso 3) antes de poder empezar otro combo")]
+    [SerializeField] private float enfriamientoFinal = 0.25f;
+
+    private static readonly int[] hashesAtaque =
+    {
+        Animator.StringToHash("Ataque1"),
+        Animator.StringToHash("Ataque2"),
+        Animator.StringToHash("Ataque3")
+    };
+    private Coroutine rutinaCombo;
+    private bool comboEnCurso;      // hay una rutina de combo activa
+    private bool atacando;          // un paso del combo se esta reproduciendo
+    private bool ventanaAbierta;    // el paso anterior termino y se puede seguir el combo
+    private bool ataqueEnCola;      // se ha pulsado ataque durante el combo
+    private int pasoActual;         // 1..3 mientras hay combo, 0 si no
+    private float finEnfriamiento;  // Time.time hasta el que no se puede empezar un combo
+
     [SerializeField] private Transform controladorGolpe;
     [SerializeField] private float radioGolpe;
     [SerializeField] private LayerMask groundLayer;
@@ -86,7 +112,9 @@ public class PlayerController2 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-        TiempoEntreAtaque = atrackClip.length;
+        duracionAtaque = AsegurarTres(duracionAtaque, 0.5f, 0.5f, 0.75f);
+        tiempoImpacto = AsegurarTres(tiempoImpacto, 0.2f, 0.2f, 0.3f);
+        tiempoEncadenar = AsegurarTres(tiempoEncadenar, 0.3f, 0.3f, 0f);
 
         // No se crea una copia propia de las acciones de entrada: no se usaba (el control llega por
         // PlayerInput) y cada copia habilitada procesaba todos los eventos de entrada en cada frame.
@@ -131,6 +159,9 @@ public class PlayerController2 : MonoBehaviour
         Eventos.eve.MuertePlayer.RemoveListener(Muerto);
         Eventos.eve.RevivirPlayer.RemoveListener(Vivo);
         //Eventos.eve.perderVida.RemoveListener(Herido);
+
+        // Al desactivarse el objeto se paran las corrutinas: limpiar el estado del combo
+        CancelarCombo();
     }
 
     private void FixedUpdate()
@@ -240,6 +271,13 @@ public class PlayerController2 : MonoBehaviour
             moveVector = Vector2.zero;
         }
 
+        // Si el combo esta activo y el personaje deja de poder atacar (muerte, pausa, cambio de
+        // personaje o salto/caida), se interrumpe el combo
+        if (comboEnCurso && !PuedeAtacar())
+        {
+            CancelarCombo();
+        }
+
         bool isAlmostIdle = isGrounded && rb.linearVelocity.magnitude < 0.1f;
 
         // Actualizar isIdle a true si el personaje está en reposo, de lo contrario, actualizar a false
@@ -248,13 +286,6 @@ public class PlayerController2 : MonoBehaviour
 
         isJumping = !isGrounded && rb.linearVelocity.y > 0;
         isFalling = !isGrounded && rb.linearVelocity.y < 0;
-
-        if (isFalling || isJumping) animator.ResetTrigger("Atacar");
-
-        if (TiempoSiguienteAtaque > 0)
-        {
-            TiempoSiguienteAtaque -= Time.deltaTime;
-        }
 
         animator.SetBool("Callendo", isFalling);
         animator.SetBool("Saltando", isJumping);
@@ -319,18 +350,145 @@ public class PlayerController2 : MonoBehaviour
        
     }
 
+    // True mientras se reproduce un paso del combo (no cuenta la ventana de espera entre pasos)
+    public bool EstaAtacando
+    {
+        get { return atacando; }
+    }
+
     public void OnAtackStarted(InputAction.CallbackContext value)
     {
-        if (value.started&&isActive)
+        if (!value.started) return;
+        if (!PuedeAtacar()) return;
+
+        if (comboEnCurso)
         {
-            if (TiempoSiguienteAtaque <= 0 && isActive && !muerto && !pausePlayer)
+            // Pulsacion durante el combo: se guarda para encadenar el siguiente paso.
+            // Durante la ventana entre pasos tambien se guarda (la rutina la usa para seguir el combo)
+            if ((atacando && pasoActual < 3) || ventanaAbierta)
             {
-                animator.SetTrigger("Atacar");
-                if (isGrounded) { Golpe(); TiempoSiguienteAtaque = TiempoEntreAtaque; }
+                ataqueEnCola = true;
             }
+            return;
         }
-        
-        
+
+        if (Time.time < finEnfriamiento) return;
+
+        comboEnCurso = true;
+        rutinaCombo = StartCoroutine(RutinaCombo(1));
+    }
+
+    private IEnumerator RutinaCombo(int paso)
+    {
+        while (true)
+        {
+            int i = paso - 1;
+            pasoActual = paso;
+            atacando = true;
+            ventanaAbierta = false;
+            ataqueEnCola = false;
+            animator.Play(hashesAtaque[i], 0, 0f);
+
+            float duracion = Mathf.Max(0.01f, duracionAtaque[i]);
+            // El golpe no puede ser posterior al final del paso
+            float impacto = Mathf.Min(tiempoImpacto[i], duracion);
+            bool golpeado = false;
+            bool encadenar = false;
+            float tiempo = 0f;
+
+            while (tiempo < duracion)
+            {
+                yield return null;
+                if (!PuedeAtacar())
+                {
+                    ResetearCombo();
+                    yield break;
+                }
+                tiempo += Time.deltaTime;
+
+                if (!golpeado && tiempo >= impacto)
+                {
+                    golpeado = true;
+                    Golpe();
+                }
+                if (paso < 3 && ataqueEnCola && tiempo >= tiempoEncadenar[i])
+                {
+                    encadenar = true;
+                    break;
+                }
+            }
+            // Cada paso hace su golpe exactamente una vez
+            if (!golpeado) Golpe();
+
+            if (encadenar)
+            {
+                paso++;
+                continue;
+            }
+
+            // El paso termino sin pulsacion guardada
+            atacando = false;
+
+            if (paso >= 3)
+            {
+                // Fin de la estocada: enfriamiento y vuelta al paso 1
+                finEnfriamiento = Time.time + enfriamientoFinal;
+                ResetearCombo();
+                yield break;
+            }
+
+            // Ventana para pulsar y continuar con el siguiente paso
+            ventanaAbierta = true;
+            float espera = 0f;
+            while (espera < ventanaCombo && !ataqueEnCola)
+            {
+                yield return null;
+                if (!PuedeAtacar())
+                {
+                    ResetearCombo();
+                    yield break;
+                }
+                espera += Time.deltaTime;
+            }
+            ventanaAbierta = false;
+
+            if (!ataqueEnCola)
+            {
+                // Se acabo la ventana: el combo vuelve al paso 1
+                ResetearCombo();
+                yield break;
+            }
+
+            paso++;
+        }
+    }
+
+    private bool PuedeAtacar()
+    {
+        return isActive && !muerto && !pausePlayer && isGrounded;
+    }
+
+    private void CancelarCombo()
+    {
+        if (rutinaCombo != null) StopCoroutine(rutinaCombo);
+        ResetearCombo();
+    }
+
+    private void ResetearCombo()
+    {
+        rutinaCombo = null;
+        comboEnCurso = false;
+        atacando = false;
+        ventanaAbierta = false;
+        ataqueEnCola = false;
+        pasoActual = 0;
+    }
+
+    private static float[] AsegurarTres(float[] valores, float a, float b, float c)
+    {
+        // Protege contra arrays vacios o incompletos (p. ej. si se editan en el Inspector)
+        if (valores == null || valores.Length < 3) return new float[] { a, b, c };
+        return valores;
     }
 
     private void Golpe() 

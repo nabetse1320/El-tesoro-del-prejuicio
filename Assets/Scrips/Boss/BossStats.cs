@@ -30,9 +30,15 @@ public class BossStats : MonoBehaviour
     [SerializeField] private float tiempoAntesDeDestruir = 2.5f;
 
     private bool isDead;
+    private BossController controladorBoss;
 
     public bool IsDead { get { return isDead; } }
     public float Damage { get { return _Damage; } }
+
+    private void Awake()
+    {
+        controladorBoss = GetComponent<BossController>();
+    }
 
     private void Start()
     {
@@ -49,6 +55,11 @@ public class BossStats : MonoBehaviour
             if (_CurrentHealth <= 0)
             {
                 Morir();
+            }
+            else if (controladorBoss != null)
+            {
+                // Golpe que no mata: reproducir la animacion de herido
+                controladorBoss.ReproducirHerido();
             }
         }
     }
