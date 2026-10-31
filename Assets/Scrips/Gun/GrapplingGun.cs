@@ -65,6 +65,19 @@ public class GrapplingGun : MonoBehaviour
     [SerializeField] private float groundSubida=2.3f;
     IEnumerator solt;
 
+    [Header("Enganchar enemigos (piratas y cangrejos):")]
+    [Tooltip("Velocidad (unidades por segundo) a la que el gancho atrae al enemigo hacia Izzy. Las cajas van a unas 3-4 u/s y frenan al acercarse")]
+    [Range(1f, 25f)][SerializeField] private float velocidadAtraerEnemigo = 8f;
+    [Tooltip("Separacion entre el cuerpo del enemigo y el de Izzy a la que se detiene (cuerpo a cuerpo)")]
+    [Range(0f, 1f)][SerializeField] private float separacionFinalEnemigo = 0.1f;
+    [Tooltip("Segundos que el enemigo queda aturdido. Empiezan a contar cuando ya esta junto a Izzy")]
+    [SerializeField] private float tiempoAturdimiento = 0.6f;
+    private float ultimaDistanciaEnemigo;     // para detectar si el enemigo se ha quedado atascado
+    private float tiempoSinAvanzar;
+    private IEnganchable enemigoEnganchado;   // enemigo al que apunta el gancho lanzado
+    private Collider2D colliderEnemigo;       // collider tocado, para que la cuerda siga al enemigo
+    private bool atrayendoEnemigo;            // el gancho llego al enemigo y lo esta arrastrando
+
     [Header("SoundFX")]
     private AudioSource audioSource;
     [SerializeField] private AudioClip ganchoAudio;
@@ -106,7 +119,29 @@ public class GrapplingGun : MonoBehaviour
         //inputs.Player.gancho.canceled -= OnEngageCanceled;
         //inputs.Player.gancho.started -= OnEngageStarted;
         if (audioSource!=null) { audioSource.Stop(); }
-        
+        // Si se cambia de personaje con un enemigo enganchado, se suelta (queda aturdido)
+        SoltarEnemigo();
+
+        // Al cambiar de personaje el gancho se desactiva a mitad de lanzar o recoger la cuerda. Si
+        // la cuerda se queda "encendida", al volver a Izzy se reactiva, se vuelve a lanzar sola al
+        // ultimo punto enganchado y el resorte ancla a Izzy alli. Se apaga todo del todo
+        // (la tirolina y las cuerdas tambien ocultan el gancho con Izzy sin gravedad: solo se le
+        // devuelve la gravedad si el gancho estaba en uso)
+        bool enUso = (grappleRope != null && grappleRope.enabled) || (m_springJoint2D != null && m_springJoint2D.enabled);
+        objetc = false;
+        grappeledObject = null;
+        if (grappleRope != null)
+        {
+            grappleRope.enabled = false;
+        }
+        if (m_springJoint2D != null)
+        {
+            m_springJoint2D.enabled = false;
+        }
+        if (enUso && m_rigidbody != null)
+        {
+            m_rigidbody.gravityScale = 1;
+        }
     }
     
 
@@ -173,8 +208,113 @@ public class GrapplingGun : MonoBehaviour
                 grapplePoint = grappeledObject.transform.position;
                 //grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
             }
-           
+            if (atrayendoEnemigo && colliderEnemigo != null)
+            {
+                // La punta de la cuerda sigue al enemigo mientras se le arrastra
+                grapplePoint = colliderEnemigo.bounds.center;
+            }
+
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!atrayendoEnemigo) return;
+
+        // El enemigo murio o se destruyo mientras se le arrastraba
+        if (!EnemigoValido() || !enemigoEnganchado.PuedeEngancharse)
+        {
+            SoltarEnemigo();
+            RecogerCuerda();
+            return;
+        }
+
+        Rigidbody2D cuerpo = enemigoEnganchado.Cuerpo;
+        // Separacion real entre los cuerpos (no entre los centros): asi se detiene cuerpo a cuerpo
+        float separacion = SeparacionCuerpos(cuerpo);
+
+        // Si se queda atascado (p. ej. contra una pared) se le suelta donde esta
+        if (ultimaDistanciaEnemigo - separacion > 0.01f)
+        {
+            tiempoSinAvanzar = 0f;
+        }
+        else
+        {
+            tiempoSinAvanzar += Time.fixedDeltaTime;
+        }
+        ultimaDistanciaEnemigo = separacion;
+
+        // Margen pequeño: el ultimo paso lo deja justo en la separacion final y, por redondeo,
+        // puede quedar unas milesimas por encima
+        if (separacion <= separacionFinalEnemigo + 0.05f || tiempoSinAvanzar > 0.25f)
+        {
+            // Ya esta junto a Izzy: aqui empieza el aturdimiento y la cuerda vuelve
+            SoltarEnemigo();
+            RecogerCuerda();
+            return;
+        }
+
+        // Velocidad constante hacia Izzy, sin pasarse de la separacion final en este paso
+        Vector2 haciaIzzy = ((Vector2)gunHolder.position - cuerpo.position).normalized;
+        float paso = velocidadAtraerEnemigo * Time.fixedDeltaTime;
+        float avance = Mathf.Min(paso, separacion - separacionFinalEnemigo);
+        cuerpo.linearVelocity = haciaIzzy * (avance / Time.fixedDeltaTime);
+    }
+
+    // Menor distancia entre los colliders solidos del enemigo y los de Izzy (ignora triggers
+    // como los de deteccion de daño). Si no los hay, usa la distancia entre centros
+    private float SeparacionCuerpos(Rigidbody2D cuerpoEnemigo)
+    {
+        float minimo = float.MaxValue;
+        int nEnemigo = cuerpoEnemigo.GetAttachedColliders(collidersEnemigo);
+        int nIzzy = m_rigidbody.GetAttachedColliders(collidersIzzy);
+        for (int i = 0; i < nEnemigo; i++)
+        {
+            Collider2D a = collidersEnemigo[i];
+            if (!a.enabled || a.isTrigger) continue;
+            for (int j = 0; j < nIzzy; j++)
+            {
+                Collider2D b = collidersIzzy[j];
+                if (!b.enabled || b.isTrigger) continue;
+                ColliderDistance2D d = Physics2D.Distance(a, b);
+                if (d.isValid && d.distance < minimo) minimo = d.distance;
+            }
+        }
+        if (minimo == float.MaxValue)
+        {
+            minimo = Vector2.Distance(cuerpoEnemigo.position, m_rigidbody.position);
+        }
+        return minimo;
+    }
+    private readonly Collider2D[] collidersEnemigo = new Collider2D[8];
+    private readonly Collider2D[] collidersIzzy = new Collider2D[8];
+
+    // La interfaz no se compara con null como un objeto de Unity destruido: se comprueba el componente
+    private bool EnemigoValido()
+    {
+        return enemigoEnganchado != null && (enemigoEnganchado as UnityEngine.Object) != null;
+    }
+
+    // Termina el arrastre del enemigo (si lo hay) y lo deja aturdido
+    private void SoltarEnemigo()
+    {
+        if (EnemigoValido() && atrayendoEnemigo)
+        {
+            enemigoEnganchado.SoltarEnganche(tiempoAturdimiento);
+        }
+        atrayendoEnemigo = false;
+        enemigoEnganchado = null;
+        colliderEnemigo = null;
+    }
+
+    // Recoge la cuerda tras atraer a un enemigo, igual que al soltar el boton
+    private void RecogerCuerda()
+    {
+        if (solt != null)
+        {
+            StopCoroutine(solt);
+        }
+        Canceled();
     }
     
     public void OnEngagePerformed(InputAction.CallbackContext value)
@@ -200,6 +340,9 @@ public class GrapplingGun : MonoBehaviour
     {
         if (value.canceled)
         {
+            // Con un enemigo ya enganchado, soltar el boton no corta el arrastre: se le trae
+            // hasta Izzy y alli queda aturdido
+            if (atrayendoEnemigo) return;
             if (player.isActive && !player.muerto && !player.pausePlayer)
             {
                 Canceled();
@@ -214,6 +357,7 @@ public class GrapplingGun : MonoBehaviour
     {
         //grappleRope.enabled = false;
         objetc = false;
+        SoltarEnemigo();
 
         m_springJoint2D.enabled = false;
         if (grappleRope.enabled && grappleRope.strightLine)
@@ -227,7 +371,7 @@ public class GrapplingGun : MonoBehaviour
         }
         //StartCoroutine(cuerdaReturn());
         m_rigidbody.gravityScale = 1;
-        audioSource.Stop();
+        if (audioSource != null) audioSource.Stop();
         Eventos.eve.cambiarBarraCoolDown.Invoke(1);
     }
     IEnumerator CuerdaCoolDown()
@@ -260,7 +404,7 @@ public class GrapplingGun : MonoBehaviour
                     solt = Soltar();
                     StartCoroutine(solt);
                     SetGrapplePoint();
-                    if (ganchoAudio != null && grappleRope.enabled)
+                    if (ganchoAudio != null && audioSource != null && grappleRope.enabled)
                     {
                         audioSource.PlayOneShot(ganchoAudio);
                     }
@@ -323,11 +467,19 @@ public class GrapplingGun : MonoBehaviour
     private IEnumerator Soltar()
     {
         float tiempoPasado = 0;
+        // El gancho dura lo que su sonido; si no tiene sonido asignado, lo que dura el sonido original
+        float duracion = ganchoAudio != null ? ganchoAudio.length : 2.33f;
 
-        while (tiempoPasado < ganchoAudio.length)
+        while (tiempoPasado < duracion)
         {
             tiempoPasado += Time.deltaTime;
-            Eventos.eve.cambiarBarraCoolDown.Invoke(1-tiempoPasado/ganchoAudio.length);
+            Eventos.eve.cambiarBarraCoolDown.Invoke(1-tiempoPasado/duracion);
+            yield return null;
+        }
+        // Si se acaba el tiempo del gancho arrastrando a un enemigo, se espera a que llegue a
+        // Izzy (al llegar se recoge la cuerda y esta rutina se detiene)
+        while (atrayendoEnemigo)
+        {
             yield return null;
         }
         //yield return new WaitForSeconds(ganchoAudio.length);
@@ -336,8 +488,9 @@ public class GrapplingGun : MonoBehaviour
         grappleRope.EnableReverse();
         inCoolDown = true;
         objetc = false;
+        SoltarEnemigo();
         m_rigidbody.gravityScale = 1;
-        audioSource.Stop();
+        if (audioSource != null) audioSource.Stop();
         StartCoroutine(CuerdaCoolDown());
     }
     void SetGrapplePoint()
@@ -355,13 +508,31 @@ public class GrapplingGun : MonoBehaviour
             distanceVector = m_camera.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - gunPivot.position; 
         }
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, distanceVector.normalized);
+        SoltarEnemigo();
 
         if (hit)
         {
             //Visualizar el raycast en la escena
             Debug.DrawRay(firePoint.position, distanceVector.normalized * hit.distance, Color.green, 0.2f);
 
-            if (hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll)
+            // Piratas y cangrejos (el boss y el fantasma no son enganchables)
+            IEnganchable enemigo = hit.collider.GetComponentInParent<IEnganchable>();
+            if (enemigo != null && enemigo.PuedeEngancharse)
+            {
+                if (Vector2.Distance(hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
+                {
+                    grapplePoint = hit.point;
+                    grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
+                    grappleRope.enabled = true;
+                    enemigoEnganchado = enemigo;
+                    colliderEnemigo = hit.collider;
+                }
+                else
+                {
+                    StopCoroutine(solt);
+                }
+            }
+            else if (hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll)
             {
                 if (Vector2.Distance(hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
                 {
@@ -411,6 +582,24 @@ public class GrapplingGun : MonoBehaviour
 
     public void Grapple()
     {
+        // La cuerda llego a un enemigo: se le arrastra hacia Izzy (Izzy no se mueve)
+        if (enemigoEnganchado != null)
+        {
+            if (EnemigoValido() && enemigoEnganchado.PuedeEngancharse)
+            {
+                enemigoEnganchado.Enganchar();
+                atrayendoEnemigo = true;
+                ultimaDistanciaEnemigo = float.MaxValue;
+                tiempoSinAvanzar = 0f;
+            }
+            else
+            {
+                SoltarEnemigo();
+                RecogerCuerda();
+            }
+            return;
+        }
+
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {

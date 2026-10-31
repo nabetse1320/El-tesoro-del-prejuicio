@@ -6,7 +6,7 @@ using UnityEngine;
 using static UnityEngine.InputSystem.Controls.AxisControl;
 using static UnityEngine.UI.Image;
 
-public class Enemigo : MonoBehaviour
+public class Enemigo : MonoBehaviour, IEnganchable
 {
     
     private Rigidbody2D rb;
@@ -23,6 +23,8 @@ public class Enemigo : MonoBehaviour
     public bool parado;
     private bool escondiendose;
     private bool golpeEjecutado = false;
+    private bool enganchado;          // lo esta arrastrando el gancho de Izzy
+    private float finAturdimiento;    // Time.time hasta el que sigue aturdido tras el gancho
     [HideInInspector] public Collider2D[] hits;
     [SerializeField] private bool modoAtaque;
     [SerializeField] private int vida;
@@ -120,7 +122,16 @@ public class Enemigo : MonoBehaviour
     private void Update()
     {
         
-        if (!muerto) 
+        if (!muerto && Aturdido)
+        {
+            // Aturdido tras el gancho: no se mueve ni ataca (mientras lo arrastran, el gancho
+            // controla su velocidad)
+            if (!enganchado)
+            {
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            }
+        }
+        else if (!muerto) 
         {
             
             DebugRaycast();
@@ -405,6 +416,48 @@ public class Enemigo : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         
+    }
+
+    public Rigidbody2D Cuerpo
+    {
+        get { return rb; }
+    }
+
+    public bool PuedeEngancharse
+    {
+        get { return !muerto && isActiveAndEnabled && rb != null && rb.bodyType == RigidbodyType2D.Dynamic; }
+    }
+
+    public bool Aturdido
+    {
+        get { return enganchado || Time.time < finAturdimiento; }
+    }
+
+    public void Enganchar()
+    {
+        if (muerto) return;
+        enganchado = true;
+        // Cancela el ataque, la deteccion o el escondite que estuviera haciendo
+        StopAllCoroutines();
+        atacando = false;
+        golpeEjecutado = false;
+        detectandoPlayer = false;
+        escondiendose = false;
+        animator.SetBool("Atacando", false);
+        animator.SetBool("Alerta", false);
+        animator.SetBool("daño", false);
+    }
+
+    public void SoltarEnganche(float tiempoAturdido)
+    {
+        if (!enganchado) return;
+        enganchado = false;
+        finAturdimiento = Time.time + tiempoAturdido;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        // Al recuperarse va a por el jugador, como cuando recibe un golpe
+        playerDetectado = true;
+        modoAtaque = true;
+        parado = !isCac;
     }
 
     public void ResivirDaño(int daño)

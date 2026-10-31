@@ -15,7 +15,9 @@ public class Collisiones : MonoBehaviour
             {
                 Eventos.eve.perderVida.Invoke();
             }
-            if (collision.GetComponent<Cangrejo>())
+            // Un cangrejo aturdido por el gancho no hace daño al tocar al jugador
+            Cangrejo cangrejo = collision.GetComponent<Cangrejo>();
+            if (cangrejo != null && !cangrejo.Aturdido)
             {
                 Eventos.eve.perderVida.Invoke();
             }

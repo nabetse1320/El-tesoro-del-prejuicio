@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cangrejo : MonoBehaviour
+public class Cangrejo : MonoBehaviour, IEnganchable
 {
     private Animator animator;
     private Rigidbody2D rb;
@@ -10,6 +10,8 @@ public class Cangrejo : MonoBehaviour
     private bool atacando;
     private bool detected;
     private bool muerto;
+    private bool enganchado;          // lo esta arrastrando el gancho de Izzy
+    private float finAturdimiento;    // Time.time hasta el que sigue aturdido tras el gancho
 
     [SerializeField] private int vida;
     [SerializeField] private float stunTime;
@@ -56,7 +58,16 @@ public class Cangrejo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!muerto) 
+        if (!muerto && Aturdido)
+        {
+            // Aturdido tras el gancho: no se mueve ni embiste (mientras lo arrastran, el gancho
+            // controla su velocidad)
+            if (!enganchado)
+            {
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            }
+        }
+        else if (!muerto) 
         {
             //DebugRaycast();
             isGrounded = CheckGrounded();
@@ -145,6 +156,43 @@ public class Cangrejo : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
+    }
+
+    public Rigidbody2D Cuerpo
+    {
+        get { return rb; }
+    }
+
+    public bool PuedeEngancharse
+    {
+        get { return !muerto && isActiveAndEnabled && rb != null && rb.bodyType == RigidbodyType2D.Dynamic; }
+    }
+
+    public bool Aturdido
+    {
+        get { return enganchado || Time.time < finAturdimiento; }
+    }
+
+    public void Enganchar()
+    {
+        if (muerto) return;
+        enganchado = true;
+        // Cancela el embiste y la deteccion que estuviera haciendo
+        StopAllCoroutines();
+        atacando = false;
+        animator.SetBool("caminando", false);
+        if (audioSource != null && audioSource.clip == clipCaminata) audioSource.Stop();
+    }
+
+    public void SoltarEnganche(float tiempoAturdido)
+    {
+        if (!enganchado) return;
+        enganchado = false;
+        finAturdimiento = Time.time + tiempoAturdido;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        // Al recuperarse sigue persiguiendo al jugador, como cuando recibe un golpe
+        detected = true;
+        alerted = true;
     }
 
     public void ResivirDaño(int daño)
