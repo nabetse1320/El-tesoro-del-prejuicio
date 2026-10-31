@@ -221,12 +221,9 @@ public class BossController : MonoBehaviour
 
     void Attack()
     {
-        // Cada invocacion de perderVida quita un punto de vida al jugador
+        // Quita un punto de vida al jugador por cada punto de daño (respetando su invulnerabilidad)
         int golpes = Mathf.Max(1, Mathf.RoundToInt(_stats.Damage));
-        for (int i = 0; i < golpes; i++)
-        {
-            Eventos.eve.perderVida.Invoke();
-        }
+        controladorVida.Dañar(golpes);
     }
 
     IEnumerator Ataque()

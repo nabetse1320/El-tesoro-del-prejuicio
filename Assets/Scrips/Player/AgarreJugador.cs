@@ -149,7 +149,12 @@ public class AgarreJugador
             brazoArma.SetActive(true);
         }
         Eventos.eve.ActivateSwitches.Invoke();
-        Eventos.eve.DespausarPlayer.Invoke();
-        Eventos.eve.DespausarPlayer2.Invoke();
+        // Si se suelta por morir, el control lo devuelve el controlador de vida al reaparecer
+        bool muerto = (izzy != null && izzy.muerto) || (liam != null && liam.muerto);
+        if (!muerto)
+        {
+            Eventos.eve.DespausarPlayer.Invoke();
+            Eventos.eve.DespausarPlayer2.Invoke();
+        }
     }
 }

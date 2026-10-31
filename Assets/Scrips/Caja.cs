@@ -9,6 +9,7 @@ public class Caja : MonoBehaviour
     [SerializeField] private int dañoCaida=10;
     [SerializeField] private float speedToDoDamage=7;
     float cont;
+    int framesQuieta;
 
     [Header("SoundFX")]
     private AudioSource audioSource;
@@ -26,20 +27,18 @@ public class Caja : MonoBehaviour
     private void Update()
     {
         lastPosition = transform.position;
+        // 'cont' guarda la ultima velocidad de caida: al chocar la velocidad ya es 0, asi que se
+        // conserva un frame mas antes de ponerla a 0 (antes se creaba una corrutina en cada frame)
         if (rb.linearVelocity.y != 0)
         {
             cont = rb.linearVelocity.y;
+            framesQuieta = 0;
         }
-        else
+        else if (framesQuieta < 2)
         {
-            StartCoroutine(ReiniciarCont());
+            framesQuieta++;
+            if (framesQuieta >= 2) cont = 0;
         }
-        
-    }
-    IEnumerator ReiniciarCont()
-    {
-        yield return new WaitForNextFrameUnit();
-        cont = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

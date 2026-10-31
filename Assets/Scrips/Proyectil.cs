@@ -25,7 +25,9 @@ public class Proyectil : MonoBehaviour
         // Velocidad constante (unidades/segundo): se normaliza la dirección para que
         // la rapidez no dependa de la distancia al jugador ni de la masa del proyectil
         GetComponent<Rigidbody2D>().linearVelocity = direccion.normalized * velocidadBala;
-        GetComponent<Transform>().rotation = Quaternion.Euler(direccion.x,0,direccion.z);
+        // Es una bala de cañon redonda con el brillo arriba a la izquierda: va sin girar. Antes
+        // usaba la direccion como si fueran angulos y la inclinaba en X (se veia aplastada)
+        transform.rotation = Quaternion.identity;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

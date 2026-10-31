@@ -13,20 +13,20 @@ public class Collisiones : MonoBehaviour
         {
             if (collision.GetComponent<Fantasma>())
             {
-                Eventos.eve.perderVida.Invoke();
+                controladorVida.Dañar();
             }
             // Un cangrejo aturdido por el gancho no hace daño al tocar al jugador
             Cangrejo cangrejo = collision.GetComponent<Cangrejo>();
             if (cangrejo != null && !cangrejo.Aturdido)
             {
-                Eventos.eve.perderVida.Invoke();
+                controladorVida.Dañar();
             }
         }
         if (collision.CompareTag("Bala"))
         {
             if (collision.GetComponent<Proyectil>())
             {
-                Eventos.eve.perderVida.Invoke();
+                controladorVida.Dañar();
                 collision.GetComponent<Proyectil>().Destruir();
             }
         }

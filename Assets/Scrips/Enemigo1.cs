@@ -378,7 +378,8 @@ public class Enemigo : MonoBehaviour, IEnganchable
                     audioSource.clip = clipAtaque;
                     audioSource.Play();
                 }
-                Eventos.eve.disparoEnemigo.Invoke();
+                // Dispara solo el arma de este pirata (antes era un aviso global y disparaban todos)
+                ArmaEnemigo.DispararDe(gameObject);
             }
             // Marcar el golpe como ejecutado
         }
@@ -399,7 +400,9 @@ public class Enemigo : MonoBehaviour, IEnganchable
         {
             if (colicionador.CompareTag("Player"))
             {
-                Eventos.eve.perderVida.Invoke();
+                // Un golpe quita una sola vida aunque toque varios colliders del jugador
+                controladorVida.Dañar();
+                break;
             }
         }
     }

@@ -16,6 +16,10 @@ public class muerte : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // Pierde una vida entera y reaparece en el ultimo checkpoint (al quedarse sin vidas
+            // el controlador de vida reinicia el nivel). Sin controlador de vida en la escena se
+            // reinicia el nivel como antes
+            if (controladorVida.PerderVidaEntera()) return;
             Eventos.eve.resetCoinsInlvlDied.Invoke();
             ResetLvl();
         }

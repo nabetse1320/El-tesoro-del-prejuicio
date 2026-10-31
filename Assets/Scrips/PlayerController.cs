@@ -40,6 +40,17 @@ public class PlayerController : MonoBehaviour
     private float tiempoDesdeSalto = 1f;
     private readonly RaycastHit2D[] resultadosCast = new RaycastHit2D[8];
     [SerializeField] private float jumpForce;
+    [Tooltip("Margen (s) para poder saltar justo despues de salir de un borde")]
+    [SerializeField] private float coyoteTime = 0.1f;
+    [Tooltip("Si se pulsa saltar hasta estos segundos antes de aterrizar, salta al tocar el suelo")]
+    [SerializeField] private float bufferSalto = 0.12f;
+    [Tooltip("Al soltar saltar mientras sube, su velocidad vertical se multiplica por esto (1 = todos los saltos iguales)")]
+    [Range(0.2f, 1f)]
+    [SerializeField] private float multiplicadorSaltoCorto = 0.5f;
+    private float ultimoSuelo = -10f;   // Time.time de la ultima vez que estaba en el suelo
+    private float saltoPedido = -10f;   // Time.time de la ultima pulsacion de saltar
+    private bool saltoEnCurso;          // subiendo por un salto del jugador (se puede cortar)
+    private bool cortePendiente;        // se solto saltar antes de que empezara a subir
     [SerializeField] private float speed;
     [Header("SoundFX")]
     private AudioSource audioSource;
@@ -270,6 +281,21 @@ public class PlayerController : MonoBehaviour
         // (evita parpadeos de la pose al bajar escalones o pendientes)
         tiempoSinSuelo = isGrounded ? 0f : tiempoSinSuelo + Time.deltaTime;
 
+        // Coyote time y buffer de salto. Justo despues de saltar el rayo aun ve el suelo un
+        // instante: se espera un poco para no permitir un segundo salto
+        if (isGrounded && tiempoDesdeSalto > 0.15f)
+        {
+            ultimoSuelo = Time.time;
+            saltoEnCurso = false;
+        }
+        if (saltoEnCurso && rb.linearVelocity.y <= 0f && tiempoDesdeSalto > 0.1f)
+        {
+            saltoEnCurso = false;
+            cortePendiente = false;
+        }
+        if (cortePendiente && rb.linearVelocity.y > 0f) CortarSalto();
+        IntentarSaltar();
+
         bool isJumping = !isGrounded && rb.linearVelocity.y > 0;
         bool isFalling = !isGrounded && rb.linearVelocity.y < 0 && tiempoSinSuelo >= margenCaida;
         if (tiempoPoseAire > 0f)
@@ -296,18 +322,50 @@ public class PlayerController : MonoBehaviour
         {
             if (!pausePlayer && isActive)
             {
-                if (isGrounded)
-                {
-                    // El salto siempre parte de velocidad vertical 0 (en pendientes se sumaba)
-                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-                    tiempoDesdeSalto = 0f;
-                    rb.AddForce(Vector2.up * jumpForce);
-                }
-
+                // Se recuerda la pulsacion: si aun no toca el suelo, salta al aterrizar (buffer)
+                saltoPedido = Time.time;
+                IntentarSaltar();
                 isIdle = false;
             }
         }
+        else if (value.canceled)
+        {
+            CortarSalto();
+        }
 
+    }
+
+    // Salta si esta en el suelo o acaba de dejarlo (coyote time) y hay un salto pedido hace poco
+    private void IntentarSaltar()
+    {
+        if (pausePlayer || !isActive) return;
+        if (Time.time - saltoPedido > bufferSalto) return;
+        if (Time.time - ultimoSuelo > coyoteTime) return;
+
+        saltoPedido = -10f;
+        ultimoSuelo = -10f; // no se puede volver a saltar hasta tocar el suelo otra vez
+        // El salto siempre parte de velocidad vertical 0 (en pendientes se sumaba)
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+        tiempoDesdeSalto = 0f;
+        rb.AddForce(Vector2.up * jumpForce);
+        saltoEnCurso = true;
+    }
+
+    // Al soltar el boton mientras sube, el salto se queda mas corto
+    private void CortarSalto()
+    {
+        if (!saltoEnCurso) return;
+        if (rb.linearVelocity.y > 0f)
+        {
+            saltoEnCurso = false;
+            cortePendiente = false;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * multiplicadorSaltoCorto);
+        }
+        else
+        {
+            // Soltado antes de que la fisica aplicara el impulso: se corta en cuanto empiece a subir
+            cortePendiente = true;
+        }
     }
 
     public void OnMovementPerformed(InputAction.CallbackContext value)

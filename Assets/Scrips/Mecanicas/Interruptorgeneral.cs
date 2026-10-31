@@ -21,11 +21,11 @@ public class Interruptorgeneral : MonoBehaviour
     [SerializeField] private AudioSource otherAudioSource;
     [SerializeField] private AudioClip audioActivar;
     [SerializeField] private AudioClip audioDesactivar;
-    private Collider2D primerObjeto;
-    private String tagPO;
     IEnumerator enumerator;
     private bool esperando = false;
-    private bool primerTriggerYaEntro;
+    // Lo que esta encima del interruptor (jugador o cajas)
+    private readonly HashSet<Collider2D> encima = new HashSet<Collider2D>();
+    private bool activado;
 
     #region Getters y Setters
     public bool EsperarTiempo { get { return esperarTiempo; } }
@@ -37,54 +37,104 @@ public class Interruptorgeneral : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
-    private void Update()
+
+    private static bool Cuenta(Collider2D c)
     {
-        
+        return c.CompareTag("Player") || c.CompareTag("ObInteract");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.CompareTag("Player") || collision.CompareTag("ObInteract")) && !esperando)
+        if (!Cuenta(collision)) return;
+        bool estabaVacio = encima.Count == 0;
+        encima.Add(collision);
+
+        if (esperarTiempo)
         {
-            if (otherAudioSource != null)
+            // Temporizado: se activa al pisarlo y se apaga solo pasado el tiempo
+            if (!esperando)
             {
-                otherAudioSource.Play();
-            }
-            if (animator != null)
-            {
-                animator.SetBool("activado", true);
-            }
-            primerObjeto = collision;
-            tagPO = collision.tag;
-            if (activationEvents != null)
-            {
-                foreach (var evento in activationEvents)
-                {
-                    evento.Invoke();
-                }
-            }
-            if (audioSource != null)
-            {
-                audioSource.clip = audioActivar;
-                audioSource.Play();
-            }
-            Debug.Log("Se Activó");
-            if (esperarTiempo)
-            {
+                Activar();
                 enumerator = EsperandoTiempo();
                 StartCoroutine(enumerator);
             }
         }
-
-
+        else if (estabaVacio || !activado)
+        {
+            // Solo al pasar de vacio a pisado (antes cada objeto que entraba lo volvia a activar)
+            Activar();
+        }
     }
 
     IEnumerator EsperandoTiempo()
     {
         esperando = true;
-
         yield return new WaitForSeconds(tiempoAEsperar);
+        Desactivar();
+        esperando = false;
+    }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Se quita aunque ya no tenga la etiqueta (al cambiar de personaje el anterior pasa a Untagged)
+        if (encima.Remove(collision))
+        {
+            ComprobarVacio();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        // Algo encima que se destruye o desactiva no llama a OnTriggerExit2D
+        if (encima.Count > 0)
+        {
+            encima.RemoveWhere(c => c == null || !c.enabled || !c.gameObject.activeInHierarchy);
+            ComprobarVacio();
+        }
+    }
+
+    private void ComprobarVacio()
+    {
+        if (encima.Count > 0) return;
+        if (!esperarTiempo && presionMantenida && activado)
+        {
+            Desactivar();
+        }
+        else if (!esperarTiempo && !presionMantenida)
+        {
+            // Sin mantener: queda activado, pero se puede volver a pulsar al bajarse y subirse
+            activado = false;
+        }
+    }
+
+    private void Activar()
+    {
+        activado = true;
+        if (otherAudioSource != null)
+        {
+            otherAudioSource.Play();
+        }
+        if (animator != null)
+        {
+            animator.SetBool("activado", true);
+        }
+        if (activationEvents != null)
+        {
+            foreach (var evento in activationEvents)
+            {
+                evento.Invoke();
+            }
+        }
+        if (audioSource != null)
+        {
+            audioSource.clip = audioActivar;
+            audioSource.Play();
+        }
+    }
+
+    private void Desactivar()
+    {
+        activado = false;
         if (animator != null)
         {
             animator.SetBool("activado", false);
@@ -94,65 +144,11 @@ public class Interruptorgeneral : MonoBehaviour
             audioSource.clip = audioDesactivar;
             audioSource.Play();
         }
-        Debug.Log("Se desactivó");
         if (deactivationEvents != null)
         {
             foreach (var evento in deactivationEvents)
             {
                 evento.Invoke();
-
-            }
-        }
-        esperando = false;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!esperarTiempo)
-        {
-            if ((collision.CompareTag("Player") || collision.CompareTag("ObInteract")) && presionMantenida)
-            {
-                if (primerObjeto == collision)
-                {
-                    primerTriggerYaEntro = false;
-                    if (deactivationEvents != null)
-                    {
-                        foreach (var evento in deactivationEvents)
-                        {
-                            evento.Invoke();
-                        }
-                    }
-                    if (animator != null)
-                    {
-                        animator.SetBool("activado", false);
-                    }
-                    if (audioSource != null)
-                    {
-                        audioSource.clip = audioDesactivar;
-                        audioSource.Play();
-                    }
-
-                }
-                else if (tagPO == ("Player") && collision.CompareTag("Player"))
-                {
-                    primerTriggerYaEntro = false;
-                    if (deactivationEvents != null)
-                    {
-                        foreach (var evento in deactivationEvents)
-                        {
-                            evento.Invoke();
-                        }
-                    }
-                    if (animator != null)
-                    {
-                        animator.SetBool("activado", false);
-                    }
-                    if (audioSource != null)
-                    {
-                        audioSource.clip = audioDesactivar;
-                        audioSource.Play();
-                    }
-                }
             }
         }
     }
