@@ -10,6 +10,8 @@ public class SoundGame : MonoBehaviour
     public Sprite[] sprites;// Lista de sonidos
     [Header("Evento a realizar")]
     [SerializeField] UnityEvent unityEvent;
+    [Tooltip("Identificador unico del puzzle dentro de la zona (mismo valor en las escenas que lo comparten). Vacio = no se guarda")]
+    [SerializeField] private string idPersistente;
     [HideInInspector] public List<int> sequence; // Secuencia de sonidos
     [HideInInspector] public int currentSound = 0; // Índice del sonido actual en la secuencia
     private bool isPlaying = false;
@@ -23,12 +25,18 @@ public class SoundGame : MonoBehaviour
     private readonly List<ProducirSonido> instrumentos = new List<ProducirSonido>();
 
     #region
-    public bool PuzzleIsFinish { get{ return puzzleIsFinish; } } 
+    public bool PuzzleIsFinish { get{ return puzzleIsFinish; } }
+    public Color ColorCompletado { get { return colorCompletado; } }
     #endregion
+
+    private void Awake()
+    {
+        // Awake va antes que todos los Start: los instrumentos ya ven si el puzzle estaba completado
+        puzzleIsFinish = EstadoMundo.MecanismoCompletado(idPersistente);
+    }
 
     private void Start()
     {
-        puzzleIsFinish = false;
         GenerateSequence(sequenceNumber);
     }
 
@@ -124,6 +132,7 @@ public class SoundGame : MonoBehaviour
                 unityEvent.Invoke();
                 currentSound = 0;
                 puzzleIsFinish = true;
+                EstadoMundo.RegistrarMecanismoCompletado(idPersistente);
                 ColorearInstrumentos(colorCompletado, 0f);
             }
         }

@@ -17,6 +17,8 @@ public class PlataformaDeslizante : MonoBehaviour
     
     [SerializeField] private bool iniciaActivado = false;
     [SerializeField] private int idPlataforma;
+    [Tooltip("idPersistente del puzzle que la abre. Si ya estaba completado en un nivel anterior de la zona, aparece abierta. Vacio = no se guarda")]
+    [SerializeField] private string idMecanismoPersistente;
     
     [SerializeField] private bool idModificable = false;
     [SerializeField] private int maxId=2;
@@ -45,7 +47,15 @@ public class PlataformaDeslizante : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         cont=0;
-        if (iniciaActivado)
+        if (EstadoMundo.MecanismoCompletado(idMecanismoPersistente))
+        {
+            // Estado de "abierta" (el mismo que deja Activar()) sin animar ni sonar.
+            // El Animator arranca en deslizarAbajo, que es esa pose.
+            animator.SetBool("deslizar", false);
+            act = true;
+            desact = false;
+        }
+        else if (iniciaActivado)
         {
             animator.SetBool("deslizar", true);
             act = true;

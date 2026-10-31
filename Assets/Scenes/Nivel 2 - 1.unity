@@ -1001,6 +1001,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3517068636162617776, guid: 9b311a1e2b43ed44595ca697a97ef5cf, type: 3}
+      propertyPath: idPersistente
+      value: z2_enemigo_1
+      objectReference: {fileID: 0}
     - target: {fileID: 536044592879556288, guid: 9b311a1e2b43ed44595ca697a97ef5cf, type: 3}
       propertyPath: m_Name
       value: Enemigo
@@ -6909,6 +6913,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1312201247155953655, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
+      propertyPath: idPersistente
+      value: z2_enemigo_2
+      objectReference: {fileID: 0}
     - target: {fileID: 2705162444866009223, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: m_Name
       value: EnemigoDistancia Variant
@@ -16748,6 +16756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1312201247155953655, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
+      propertyPath: idPersistente
+      value: z2_enemigo_3
+      objectReference: {fileID: 0}
     - target: {fileID: 2705162444866009223, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: m_Name
       value: EnemigoDistancia Variant (1)
@@ -21280,6 +21292,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 544323207}
     m_Modifications:
     - target: {fileID: 656690385893040558, guid: 3f8b783149c2e6941ad2358a30c347f8, type: 3}
+      propertyPath: idMecanismoPersistente
+      value: z2_puzzle_secuencia
+      objectReference: {fileID: 0}
+    - target: {fileID: 656690385893040558, guid: 3f8b783149c2e6941ad2358a30c347f8, type: 3}
       propertyPath: idPlataforma
       value: 2
       objectReference: {fileID: 0}
@@ -23456,6 +23472,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1259457517}
     m_Modifications:
+    - target: {fileID: 5569277225849754505, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
+      propertyPath: idPersistente
+      value: z2_puzzle_secuencia
+      objectReference: {fileID: 0}
     - target: {fileID: 97528120839534808, guid: ce82b466f22085240ad6527d8c003a5b, type: 3}
       propertyPath: m_Size.x
       value: 1.1385117

@@ -17,6 +17,11 @@ public class ProducirSonido : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = secuenceManager.sprites[secuenceManager.sounds.IndexOf(audioSource)];
         secuenceManager.RegistrarInstrumento(this);
+        if (secuenceManager.PuzzleIsFinish)
+        {
+            // Puzzle ya completado en un nivel anterior: el instrumento aparece en verde, sin animacion
+            spriteRenderer.color = secuenceManager.ColorCompletado;
+        }
     }
 
     public void Sonar()

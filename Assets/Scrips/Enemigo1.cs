@@ -25,6 +25,8 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private bool modoAtaque;
     [SerializeField] private int vida;
     [SerializeField] public int daño;
+    [Tooltip("Identificador unico dentro de la zona (mismo valor en las escenas que comparten enemigo). Vacio = no se guarda")]
+    [SerializeField] private string idPersistente;
 
     [Header("Configuraciones de movimiento:")]
     [SerializeField] private LayerMask otrosEnemigos;
@@ -64,6 +66,15 @@ public class Enemigo : MonoBehaviour
 
 
 
+
+    private void Awake()
+    {
+        // Derrotado en un nivel anterior de la zona: no vuelve a aparecer
+        if (EstadoMundo.EnemigoDerrotado(idPersistente))
+        {
+            transform.root.gameObject.SetActive(false);
+        }
+    }
 
     void Start()
     {
@@ -238,6 +249,7 @@ public class Enemigo : MonoBehaviour
         {
             StopAllCoroutines();
             muerto= true;
+            EstadoMundo.RegistrarEnemigoDerrotado(idPersistente);
             animator.SetBool("Muerto",true);
             animator.SetBool("Alerta", false);
             animator.SetBool("Atacando", false);
