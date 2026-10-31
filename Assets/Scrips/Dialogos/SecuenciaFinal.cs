@@ -1,25 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
-using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 // Secuencia final del juego: al entrar a la camara del tesoro se muestra el dialogo
 // entre Liam e Izzy, luego ambos caminan solos hacia la salida y se pasa a los creditos.
 public class SecuenciaFinal : MonoBehaviour
 {
-    [System.Serializable]
-    public class LineaDialogo
-    {
-        [Tooltip("Liam o Izzy")]
-        public string personaje;
-        [TextArea(2, 4)] public string texto;
-    }
-
     [Header("Dialogo")]
-    [SerializeField] private LineaDialogo[] dialogo;
+    [Tooltip("Lineas del dialogo: Liam o Izzy")]
+    [SerializeField] private UtilDialogos.Linea[] dialogo;
     [SerializeField] private GameObject canvasDialogosPrefab;
     [SerializeField] private float tiempoEntreChar = 0.03f;
 
@@ -76,81 +67,13 @@ public class SecuenciaFinal : MonoBehaviour
 
     private IEnumerator MostrarDialogo()
     {
-        if (canvasDialogosPrefab == null || dialogo == null || dialogo.Length == 0) yield break;
-
-        GameObject canvas = Instantiate(canvasDialogosPrefab);
-        GameObject panel = canvas.transform.Find("PanelDialogos").gameObject;
-        TextMeshProUGUI texto = panel.GetComponentInChildren<TextMeshProUGUI>(true);
-        GameObject retratoLiam = canvas.transform.Find("Imagenes/Liam").gameObject;
-        GameObject retratoIzzy = canvas.transform.Find("Imagenes/Lizzy").gameObject;
-
-        // El texto ocupa el panel dejando espacio a la izquierda para el retrato
-        RectTransform rtTexto = texto.rectTransform;
-        rtTexto.anchorMin = Vector2.zero;
-        rtTexto.anchorMax = Vector2.one;
-        rtTexto.pivot = new Vector2(0.5f, 0.5f);
-        rtTexto.offsetMin = new Vector2(330f, 40f);
-        rtTexto.offsetMax = new Vector2(-80f, -40f);
-        texto.textWrappingMode = TextWrappingModes.Normal;
-        texto.alignment = TextAlignmentOptions.MidlineLeft;
-        // El prefab trae un m_margin con valores negativos (x=-427) que desplaza el texto hacia
-        // la izquierda, fuera de la pantalla; el texto ya queda acotado por offsetMin/offsetMax
-        texto.margin = Vector4.zero;
-        texto.text = string.Empty;
-
-        panel.SetActive(true);
-        panel.GetComponent<Animator>().SetBool("abrir", true);
-        yield return new WaitForSeconds(0.3f);
-
-        foreach (LineaDialogo linea in dialogo)
-        {
-            bool hablaLiam = linea.personaje.Trim().ToLower() == "liam";
-            retratoLiam.SetActive(hablaLiam);
-            retratoIzzy.SetActive(!hablaLiam);
-
-            // Escribir la linea letra por letra; una pulsacion la completa
-            texto.text = string.Empty;
-            bool completa = false;
-            foreach (char c in linea.texto)
-            {
-                texto.text += c;
-                if (PresionoContinuar())
-                {
-                    completa = true;
-                    break;
-                }
-                yield return new WaitForSeconds(tiempoEntreChar);
-            }
-            texto.text = linea.texto;
-            if (completa) yield return null;
-
-            // Esperar a que el jugador pase a la siguiente linea
-            while (!PresionoContinuar())
-            {
-                yield return null;
-            }
-            yield return null;
-        }
-
-        retratoLiam.SetActive(false);
-        retratoIzzy.SetActive(false);
-        panel.GetComponent<Animator>().SetBool("abrir", false);
-        yield return new WaitForSeconds(0.5f);
-        Destroy(canvas);
+        yield return StartCoroutine(UtilDialogos.Mostrar(canvasDialogosPrefab, dialogo, tiempoEntreChar, NombreRetrato, null));
     }
 
-    private bool PresionoContinuar()
+    // Liam usa su retrato; cualquier otro personaje (Izzy) usa el de Lizzy
+    private static string NombreRetrato(string personaje)
     {
-        Keyboard teclado = Keyboard.current;
-        if (teclado != null && (teclado.spaceKey.wasPressedThisFrame || teclado.enterKey.wasPressedThisFrame || teclado.eKey.wasPressedThisFrame))
-            return true;
-        Mouse mouse = Mouse.current;
-        if (mouse != null && mouse.leftButton.wasPressedThisFrame)
-            return true;
-        Gamepad mando = Gamepad.current;
-        if (mando != null && (mando.buttonSouth.wasPressedThisFrame || mando.buttonEast.wasPressedThisFrame))
-            return true;
-        return false;
+        return personaje.Trim().ToLower() == "liam" ? "Liam" : "Lizzy";
     }
 
     #endregion
