@@ -22,13 +22,15 @@ public class PlayerController2 : MonoBehaviour
 
     [Header("Combo de espada (Lian)")]
     [Tooltip("Duracion total de cada paso del combo en segundos (paso 1, paso 2, paso 3 = estocada)")]
-    [SerializeField] private float[] duracionAtaque = { 0.5f, 0.45f, 0.85f };
+    [SerializeField] private float[] duracionAtaque = { 0.5f, 0.45f, 0.95f };
     [Tooltip("Segundos desde que empieza el paso en los que se hace el golpe (Golpe)")]
     [SerializeField] private float[] tiempoImpacto = { 0.25f, 0.2333f, 0.2333f };
     [Tooltip("Segundos desde que empieza el paso a partir de los cuales una pulsacion guardada encadena el siguiente paso. El paso 3 no encadena")]
     [SerializeField] private float[] tiempoEncadenar = { 0.31f, 0.2933f, 0f };
     [Tooltip("Segundos despues de terminar un paso sin pulsar en los que aun se puede pulsar para seguir el combo. Si se pasa, el combo vuelve al paso 1")]
     [SerializeField] private float ventanaCombo = 0.35f;
+    [Tooltip("Segundos desde que empieza la estocada (paso 3) en los que acaba la pausa del ultimo frame del golpe. Si se pulso ataque durante la estocada, aqui se reinicia el combo sin volver a la pose de idle")]
+    [SerializeField] private float finPausaEstocada = 0.5833f;
     [Tooltip("Enfriamiento en segundos tras terminar la estocada (paso 3) antes de poder empezar otro combo")]
     [SerializeField] private float enfriamientoFinal = 0.1f;
 
@@ -112,7 +114,7 @@ public class PlayerController2 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-        duracionAtaque = AsegurarTres(duracionAtaque, 0.5f, 0.45f, 0.85f);
+        duracionAtaque = AsegurarTres(duracionAtaque, 0.5f, 0.45f, 0.95f);
         tiempoImpacto = AsegurarTres(tiempoImpacto, 0.25f, 0.2333f, 0.2333f);
         tiempoEncadenar = AsegurarTres(tiempoEncadenar, 0.31f, 0.2933f, 0f);
 
@@ -364,8 +366,9 @@ public class PlayerController2 : MonoBehaviour
         if (comboEnCurso)
         {
             // Pulsacion durante el combo: se guarda para encadenar el siguiente paso.
-            // Durante la ventana entre pasos tambien se guarda (la rutina la usa para seguir el combo)
-            if ((atacando && pasoActual < 3) || ventanaAbierta)
+            // Durante la ventana entre pasos tambien se guarda (la rutina la usa para seguir el combo).
+            // Durante la estocada (paso 3) se guarda para reiniciar el combo al acabar la pausa
+            if (atacando || ventanaAbierta)
             {
                 ataqueEnCola = true;
             }
@@ -394,6 +397,7 @@ public class PlayerController2 : MonoBehaviour
             float impacto = Mathf.Min(tiempoImpacto[i], duracion);
             bool golpeado = false;
             bool encadenar = false;
+            bool reiniciar = false;
             float tiempo = 0f;
 
             while (tiempo < duracion)
@@ -416,6 +420,13 @@ public class PlayerController2 : MonoBehaviour
                     encadenar = true;
                     break;
                 }
+                // Tras la pausa de la estocada, si se pulso ataque, se salta la vuelta a la pose
+                // de idle y el combo empieza otra vez desde el paso 1
+                if (paso >= 3 && ataqueEnCola && tiempo >= finPausaEstocada)
+                {
+                    reiniciar = true;
+                    break;
+                }
             }
             // Cada paso hace su golpe exactamente una vez
             if (!golpeado) Golpe();
@@ -423,6 +434,11 @@ public class PlayerController2 : MonoBehaviour
             if (encadenar)
             {
                 paso++;
+                continue;
+            }
+            if (reiniciar)
+            {
+                paso = 1;
                 continue;
             }
 
