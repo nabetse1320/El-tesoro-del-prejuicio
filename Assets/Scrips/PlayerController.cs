@@ -266,8 +266,18 @@ public class PlayerController : MonoBehaviour
 
         //collider.sharedMaterial.friction = isGrounded ? 1 : 0; ;
 
+        // Al salir de un borde caminando no cuenta como caida hasta llevar un instante en el aire
+        // (evita parpadeos de la pose al bajar escalones o pendientes)
+        tiempoSinSuelo = isGrounded ? 0f : tiempoSinSuelo + Time.deltaTime;
+
         bool isJumping = !isGrounded && rb.linearVelocity.y > 0;
-        bool isFalling = !isGrounded && rb.linearVelocity.y < 0;
+        bool isFalling = !isGrounded && rb.linearVelocity.y < 0 && tiempoSinSuelo >= margenCaida;
+        if (tiempoPoseAire > 0f)
+        {
+            // Recien soltado de una cuerda o tirolina: aun sin velocidad vertical ya esta cayendo
+            tiempoPoseAire -= Time.deltaTime;
+            if (!isGrounded && !isJumping) isFalling = true;
+        }
 
         if (isFalling || isJumping) animator.ResetTrigger("Atacar");
         
@@ -366,6 +376,20 @@ public class PlayerController : MonoBehaviour
         float distancia = isGrounded ? raycastDistance : distanciaSueloEnElAire;
         RaycastHit2D hit = Physics2D.Raycast(raycastOrigin, Vector2.down, distancia, groundLayer);
         return (hit.collider != null);
+    }
+
+    // Al soltarse de una cuerda o tirolina: pone ya en este frame la pose de salto o caida si esta
+    // en el aire (con velocidad vertical 0 el Animator pasaria a Idle y desde ahi no llega a la caida)
+    private float tiempoPoseAire;
+    private float tiempoSinSuelo;
+    private const float margenCaida = 0.08f;
+
+    public void ActualizarPoseAire(Vector2 velocidad)
+    {
+        tiempoPoseAire = 0.2f;
+        isGrounded = CheckGrounded();
+        animator.SetBool("Saltando", !isGrounded && velocidad.y > 0f);
+        animator.SetBool("Callendo", !isGrounded && velocidad.y <= 0f);
     }
     private void Herido()
     {

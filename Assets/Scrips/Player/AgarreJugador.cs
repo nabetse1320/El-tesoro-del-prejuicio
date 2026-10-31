@@ -142,6 +142,8 @@ public class AgarreJugador
             Animador.SetBool(parametroAnimator, false);
             Animador.speed = 1f;
         }
+        if (izzy != null) izzy.ActualizarPoseAire(velocidadSalida);
+        else if (liam != null) liam.ActualizarPoseAire(velocidadSalida);
         if (brazoArma != null)
         {
             brazoArma.SetActive(true);
