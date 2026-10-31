@@ -20,10 +20,6 @@ public class BossController : MonoBehaviour
     [SerializeField] private float tiempoDespegue = 0.29f;
     [Tooltip("Tiempo de la animacion de aterrizaje antes de volver a caminar")]
     [SerializeField] private float duracionAterrizaje = 0.42f;
-    [Tooltip("El jugador debe estar por encima del boss al menos esta altura para que salte hacia el")]
-    [SerializeField] private float alturaMinimaParaSaltar = 2.0f;
-    [Tooltip("Distancia horizontal maxima al jugador para iniciar un salto")]
-    [SerializeField] private float distanciaHorizontalSalto = 6.0f;
     [Tooltip("Altura extra, sobre la del jugador, a la que llega el pico del salto")]
     [SerializeField] private float margenAlturaSalto = 1.2f;
     [Tooltip("Altura minima del pico del salto")]
@@ -195,7 +191,7 @@ public class BossController : MonoBehaviour
             return;
         }
 
-        // Si el jugador esta por encima (en un platform) y cerca, el boss salta hacia el
+        // Si el jugador esta justo encima del boss (en un platform), el boss salta
         if (!atacando && !_stats.isJumping && jumpTimer <= 0 && JugadorEncima())
         {
             StartCoroutine(JumpAndAttack());
@@ -210,8 +206,17 @@ public class BossController : MonoBehaviour
 
     private bool JugadorEncima()
     {
-        Vector2 distancia = _objetive.transform.position - transform.position;
-        return distancia.y > alturaMinimaParaSaltar && Mathf.Abs(distancia.x) <= distanciaHorizontalSalto;
+        Vector2 origen = transform.position;
+        RaycastHit2D[] hits = Physics2D.RaycastAll(origen, Vector2.up, _stats.jumpDetectDistance);
+        foreach (RaycastHit2D hit in hits)
+        {
+            if (hit.collider == null || hit.collider == _collider) continue;
+            if (hit.collider.CompareTag("Player"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void Attack()
@@ -250,13 +255,13 @@ public class BossController : MonoBehaviour
         yield return new WaitForSeconds(tiempoDespegue);
         if (_stats.isStunned || _stats.IsDead) yield break;
 
-        // Al despegar se fija el punto del jugador: el boss vuela hacia el y cae ahi
+        // Al despegar se fija la altura del salto segun el jugador; el boss salta en su lugar (sin moverse en x)
         Vector3 inicio = transform.position;
-        float xDestino = _objetive != null ? Mathf.Clamp(_objetive.transform.position.x, MinX(), MaxX()) : inicio.x;
+        float xJugador = _objetive != null ? _objetive.transform.position.x : inicio.x;
         float yJugador = _objetive != null ? _objetive.transform.position.y : baseY;
         // El pico queda a la altura del jugador (mas un margen), tambien sobre los platforms
         float altura = Mathf.Clamp(yJugador - baseY + margenAlturaSalto, alturaMinimaSalto, alturaMaximaSalto);
-        int dirJugador = xDestino >= inicio.x ? 1 : -1;
+        int dirJugador = xJugador >= inicio.x ? 1 : -1;
         Mirar(dirJugador);
 
         float tiempo = 0f;
@@ -267,10 +272,9 @@ public class BossController : MonoBehaviour
             if (_stats.isStunned || _stats.IsDead) yield break;
             tiempo += Time.deltaTime;
             float t = Mathf.Clamp01(tiempo / duracionSalto);
-            // Llega encima del jugador en el pico (mitad del vuelo) y desde ahi solo sube y baja
-            float x = Mathf.Lerp(inicio.x, xDestino, Mathf.Clamp01(t * 2f));
+            // Sube y baja en la misma posicion x del despegue
             float y = baseY + altura * 4f * t * (1f - t);
-            transform.position = new Vector3(x, y, inicio.z);
+            transform.position = new Vector3(inicio.x, y, inicio.z);
 
             // En el pico golpea al jugador si esta al alcance, sin la demora del ataque en el piso
             if (!golpeo && t >= 0.5f)
@@ -281,7 +285,7 @@ public class BossController : MonoBehaviour
             yield return null;
         }
 
-        transform.position = new Vector3(xDestino, baseY, inicio.z);
+        transform.position = new Vector3(inicio.x, baseY, inicio.z);
         ReproducirEstado("Aterrizaje");
         yield return new WaitForSeconds(duracionAterrizaje);
 
