@@ -19,6 +19,13 @@ public class Interactor : MonoBehaviour
     #region
     public GameObject InteractableGetter {  get{ return Interactable; } }
     #endregion
+
+    // Personaje que esta llamando a Interact() (la tirolina y las cuerdas lo usan para saber a quien mover)
+    public static GameObject JugadorInteractuando { get; private set; }
+
+    // Lo que se activo con Interact(): al soltar la tecla se termina aunque el personaje ya haya
+    // salido de su trigger (en la tirolina o la cuerda se mueve con el personaje agarrado)
+    private IInteractable enUso;
     
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -35,6 +42,16 @@ public class Interactor : MonoBehaviour
     }
     public void EndInteract()
     {
+        if (enUso != null)
+        {
+            IInteractable anterior = enUso;
+            enUso = null;
+            if ((anterior as UnityEngine.Object) != null)
+            {
+                anterior.EndInteract();
+            }
+            return;
+        }
         if (Interactable != null)
         {
             if (Interactable.TryGetComponent(out IInteractable interactObj))
@@ -50,9 +67,12 @@ public class Interactor : MonoBehaviour
         {
             if (Interactable.TryGetComponent(out IInteractable interactObj))
             {
+                enUso = interactObj;
+                JugadorInteractuando = gameObject;
                 interactObj.Interact();
+                JugadorInteractuando = null;
             }
-        } 
+        }
         
     }
 }
