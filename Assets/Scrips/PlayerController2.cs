@@ -272,7 +272,7 @@ public class PlayerController2 : MonoBehaviour
         }
 
         // Si el combo esta activo y el personaje deja de poder atacar (muerte, pausa, cambio de
-        // personaje o salto/caida), se interrumpe el combo
+        // personaje o salto/caida) o empieza a caminar, se interrumpe el combo
         if (comboEnCurso && !PuedeAtacar())
         {
             CancelarCombo();
@@ -465,7 +465,8 @@ public class PlayerController2 : MonoBehaviour
 
     private bool PuedeAtacar()
     {
-        return isActive && !muerto && !pausePlayer && isGrounded;
+        // No se ataca caminando: la animacion de ataque deja las piernas estaticas
+        return isActive && !muerto && !pausePlayer && isGrounded && Mathf.Abs(moveVector.x) <= 0.01f;
     }
 
     private void CancelarCombo()
