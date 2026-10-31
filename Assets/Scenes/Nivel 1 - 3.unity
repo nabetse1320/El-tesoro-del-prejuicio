@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7737561079282067539, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: velocidadBala
-      value: 0.15
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7771269842456079358, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3779,7 +3779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7737561079282067539, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: velocidadBala
-      value: 0.15
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7771269842456079358, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4174,7 +4174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7737561079282067539, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: velocidadBala
-      value: 0.15
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7771269842456079358, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4631,7 +4631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7737561079282067539, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: velocidadBala
-      value: 0.15
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7771269842456079358, guid: ff1491857e24e044e9cee25da0ed5334, type: 3}
       propertyPath: m_LocalPosition.x

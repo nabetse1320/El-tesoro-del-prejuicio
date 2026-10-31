@@ -11,6 +11,8 @@ public class Enemigo : MonoBehaviour
     
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer spriteCuerpo;
+    private SpriteRenderer[] spritesArma;
     private bool muerto;
     [SerializeField] private bool isGrounded;
     private bool aRango;
@@ -89,7 +91,29 @@ public class Enemigo : MonoBehaviour
         playerDetectado = false;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteCuerpo = GetComponent<SpriteRenderer>();
+        if (arma != null)
+        {
+            spritesArma = arma.GetComponentsInChildren<SpriteRenderer>(true);
+        }
         modoAtaque = false;
+    }
+
+    private void LateUpdate()
+    {
+        // Al morir, la animación de muerte solo desvanece el sprite del cuerpo;
+        // copiamos su alpha al brazo/pistola para que desaparezcan al mismo tiempo
+        if (muerto && spriteCuerpo != null && spritesArma != null)
+        {
+            float alpha = spriteCuerpo.color.a;
+            foreach (var sprite in spritesArma)
+            {
+                if (sprite == null) continue;
+                Color color = sprite.color;
+                color.a = alpha;
+                sprite.color = color;
+            }
+        }
     }
 
 

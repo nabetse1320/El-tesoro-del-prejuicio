@@ -165,7 +165,7 @@ MonoBehaviour:
   bala: {fileID: 534091811786577311, guid: 53f6b9d0ec2d37f45ac7e02762fe9122, type: 3}
   armaSprite: {fileID: 4384889846443654743}
   rotationSpeed: 2
-  velocidadBala: 0.2
+  velocidadBala: 10
 --- !u!1 &3416587480220640073
 GameObject:
   m_ObjectHideFlags: 0

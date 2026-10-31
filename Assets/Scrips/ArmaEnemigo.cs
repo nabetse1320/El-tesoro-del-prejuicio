@@ -11,6 +11,7 @@ public class ArmaEnemigo : MonoBehaviour
     [SerializeField] private GameObject bala;
     [SerializeField] private GameObject armaSprite;
     [SerializeField] private float rotationSpeed;
+    [Tooltip("Velocidad constante de la bala en unidades por segundo")]
     [SerializeField] private float velocidadBala;
     private bool proyectilDisparado = false;
 

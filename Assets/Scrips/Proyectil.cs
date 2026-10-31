@@ -22,7 +22,9 @@ public class Proyectil : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Rigidbody2D>().AddForce(direccion* velocidadBala, ForceMode2D.Impulse);
+        // Velocidad constante (unidades/segundo): se normaliza la dirección para que
+        // la rapidez no dependa de la distancia al jugador ni de la masa del proyectil
+        GetComponent<Rigidbody2D>().linearVelocity = direccion.normalized * velocidadBala;
         GetComponent<Transform>().rotation = Quaternion.Euler(direccion.x,0,direccion.z);
     }
     private void OnTriggerEnter2D(Collider2D collision)

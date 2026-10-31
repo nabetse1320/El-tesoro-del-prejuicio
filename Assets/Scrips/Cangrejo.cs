@@ -30,8 +30,10 @@ public class Cangrejo : MonoBehaviour
 
     [Header("Configuraciones de ataque:")]
     [SerializeField] private AnimationClip detectClip;
+    [Tooltip("Velocidad constante del embiste (unidades por segundo)")]
     [SerializeField] private float atackVelocity;
     [SerializeField] private float atackTime;
+    private float tiempoFinAtaque;
 
     [Header("SoundFX")]
     private AudioSource audioSource;
@@ -39,7 +41,6 @@ public class Cangrejo : MonoBehaviour
     [SerializeField] private AudioClip clipAtaque;
     [SerializeField] private AudioClip clipDano;
 
-    IEnumerator timer;
     private bool alerted = false;
     private bool isGrounded;
 
@@ -76,6 +77,7 @@ public class Cangrejo : MonoBehaviour
                     {
                         atacando = true;
                         alerted = true;
+                        tiempoFinAtaque = Time.time + atackTime;
                         detectionRadiusFirst = detectionRadiusSecond;
                     }
                     break;
@@ -85,19 +87,17 @@ public class Cangrejo : MonoBehaviour
                     break;
                 }
             }
-            if (atacando&&Time.timeScale!=0)
+            if (atacando)
             {
-                rb.AddForce(transform.right * atackVelocity, ForceMode2D.Force);
-                timer = AddForceDuring();
-                StartCoroutine(timer);
-            }
-            if (rb.linearVelocityX > atackVelocity)
-            {
-                rb.linearVelocityX = atackVelocity;
-            }
-            if (rb.linearVelocityX < -atackVelocity)
-            {
-                rb.linearVelocityX = -atackVelocity;
+                if (Time.time >= tiempoFinAtaque)
+                {
+                    atacando = false;
+                }
+                else if (Time.timeScale != 0)
+                {
+                    // Embiste a velocidad constante, sin depender de la distancia al jugador
+                    rb.linearVelocity = new Vector2(transform.right.x * atackVelocity, rb.linearVelocity.y);
+                }
             }
             if (!atacando && alerted)
             {
@@ -127,12 +127,6 @@ public class Cangrejo : MonoBehaviour
             Destroy(gameObject,1.5f);
         }
     }
-    IEnumerator AddForceDuring()
-    {
-        yield return new WaitForSeconds(atackTime);
-        atacando = false;
-    }
-
     IEnumerator Detect()
     {
         yield return new WaitForSeconds(timeToDetect /*detectClip.length+1f*/);
