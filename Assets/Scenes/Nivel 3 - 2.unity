@@ -20832,7 +20832,7 @@ MonoBehaviour:
     texto: "Tienes raz\xF3n, le pertenece solo a los habitantes de estas tierras.
       Por nuestra parte, pudimos evitar que cayera en las manos equivocadas."
   canvasDialogosPrefab: {fileID: 5125777921953841964, guid: c70a6db9da399e749a71cd68940e66ec, type: 3}
-  tiempoEntreChar: 0.03
+  tiempoEntreChar: 0
   salida: {fileID: 3000000097}
   velocidadCaminar: 4
   separacion: 1.6

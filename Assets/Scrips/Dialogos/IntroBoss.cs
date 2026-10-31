@@ -20,7 +20,7 @@ public class IntroBoss : MonoBehaviour
         new UtilDialogos.Linea { personaje = "Leonardo", texto = "Y lo seguirá siendo, incluso cuando yo muera." },
     };
     [SerializeField] private GameObject canvasDialogosPrefab;
-    [SerializeField] private float tiempoEntreChar = 0.03f;
+    [SerializeField] private float tiempoEntreChar = 0f;
     [Tooltip("Retrato de Leonardo (se muestra en el lugar de Malo1)")]
     [SerializeField] private Sprite retratoLeonardo;
 

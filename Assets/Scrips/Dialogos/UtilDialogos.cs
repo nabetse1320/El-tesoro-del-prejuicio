@@ -30,23 +30,12 @@ public static class UtilDialogos
         TextMeshProUGUI texto = panel.GetComponentInChildren<TextMeshProUGUI>(true);
         Transform imagenes = canvas.transform.Find("Imagenes");
 
-        // El texto ocupa el panel dejando espacio a la izquierda para el retrato
-        RectTransform rtTexto = texto.rectTransform;
-        rtTexto.anchorMin = Vector2.zero;
-        rtTexto.anchorMax = Vector2.one;
-        rtTexto.pivot = new Vector2(0.5f, 0.5f);
-        rtTexto.offsetMin = new Vector2(330f, 40f);
-        rtTexto.offsetMax = new Vector2(-80f, -40f);
-        texto.textWrappingMode = TextWrappingModes.Normal;
-        texto.alignment = TextAlignmentOptions.MidlineLeft;
-        // El prefab trae un m_margin con valores negativos (x=-427) que desplaza el texto hacia
-        // la izquierda, fuera de la pantalla; el texto ya queda acotado por offsetMin/offsetMax
-        texto.margin = Vector4.zero;
+        // El texto usa el rect, margenes, alineacion y fuente del prefab, igual que Dialogos2
+        // (los margenes negativos del prefab son el area de texto que usan los dialogos normales)
         texto.text = string.Empty;
 
         panel.SetActive(true);
         panel.GetComponent<Animator>().SetBool("abrir", true);
-        yield return new WaitForSeconds(0.3f);
 
         foreach (Linea linea in lineas)
         {
@@ -96,17 +85,10 @@ public static class UtilDialogos
         Object.Destroy(canvas);
     }
 
+    // Misma tecla que Dialogos2 (accion PasarDialogos en Player.prefab): solo Enter
     private static bool PresionoContinuar()
     {
         Keyboard teclado = Keyboard.current;
-        if (teclado != null && (teclado.spaceKey.wasPressedThisFrame || teclado.enterKey.wasPressedThisFrame || teclado.eKey.wasPressedThisFrame))
-            return true;
-        Mouse mouse = Mouse.current;
-        if (mouse != null && mouse.leftButton.wasPressedThisFrame)
-            return true;
-        Gamepad mando = Gamepad.current;
-        if (mando != null && (mando.buttonSouth.wasPressedThisFrame || mando.buttonEast.wasPressedThisFrame))
-            return true;
-        return false;
+        return teclado != null && teclado.enterKey.wasPressedThisFrame;
     }
 }

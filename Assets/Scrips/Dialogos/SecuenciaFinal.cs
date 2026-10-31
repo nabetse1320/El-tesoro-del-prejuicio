@@ -12,7 +12,7 @@ public class SecuenciaFinal : MonoBehaviour
     [Tooltip("Lineas del dialogo: Liam o Izzy")]
     [SerializeField] private UtilDialogos.Linea[] dialogo;
     [SerializeField] private GameObject canvasDialogosPrefab;
-    [SerializeField] private float tiempoEntreChar = 0.03f;
+    [SerializeField] private float tiempoEntreChar = 0f;
 
     [Header("Salida")]
     [Tooltip("Punto hacia el que caminan los personajes")]
